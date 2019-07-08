@@ -22,7 +22,7 @@ ul.menu:hover {
 
 .menu li {
     display: inline-flex;
-    min-height: 45px;
+    height: 4em;
     align-items: center;
     text-transform: uppercase;
     padding: 0 5px;
@@ -69,16 +69,11 @@ ul.menu li ul {
 ul.menu li ul li ul {
     left: calc(100% + 1px);
     top: -1px;
-    font-size: 0.65em;
     border-radius: 0 5px 5px 5px;
 }
 
 ul.menu li ul li {
-    min-height: 30px;
-}
-
-ul.menu li ul li ul li {
-    min-height: 22px;
+    font-size: 0.9em;
 }
 
 ul.menu li ul li ul li:first-child {
