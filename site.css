@@ -169,7 +169,7 @@ input:focus, button:focus {
 fieldset {
     border-radius: 5px;
     border: var(--border-gray);
-    background: var(--angle-fade-to-black);
+    background: var(--angle-fade-to-trans);
     font-variant: small-caps;
     font-size: larger;
     text-shadow: var(--standard-shadow);
