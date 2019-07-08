@@ -23,6 +23,7 @@ ul.menu:hover {
 .menu li {
     display: inline-flex;
     height: 4em;
+    line-height: 4em;
     align-items: center;
     text-transform: uppercase;
     padding: 0 5px;
