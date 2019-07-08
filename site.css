@@ -1,6 +1,26 @@
+:root {
+    --main-color-light: rgb(173, 216, 230);
+    --main-color-dark: rgb(136, 169, 180);
+    --color-shadow: rgba(0, 0, 0, 0.75);
+    --color-light-gray: rgb(107, 107, 107);
+    --color-dark-gray: rgb(77, 77, 77);
+    --color-border-light: rgb(130, 130, 130);
+    --color-border-shadow: rgb(51, 51, 51);
+    --off-black: rgb(26, 26, 26);
+    --off-white: rgb(235, 235, 235);
+    --standard-shadow: 2px 2px 2px var(--color-shadow);
+    --inset-shadow: inset 2px 2px 2px var(--color-shadow);
+    --angle-fade-to-black: linear-gradient(135deg, var(--color-light-gray) 0%,rgb(0,0,0) 25%);
+    --angle-fade-to-gray: linear-gradient(135deg, var(--color-light-gray) 0%,var(--color-dark-gray) 25%);
+    --angle-fade-to-trans: linear-gradient(135deg, var(--color-light-gray) 0%,rgba(0,0,0,0) 25%);
+    --border-gray: 1px solid var(--color-dark-gray);
+    --border-shadow: 1px solid var(--color-border-shadow);
+    --border-light: 1px solid var(--color-border-light);
+  }
+
 body {
-    background: rgb(26, 26, 26);
-    color: rgb(235, 235, 235);
+    background: var(--off-black);
+    color: var(--off-white);
     font-family: 'Quattrocento', serif;
     transition: background 1s linear;
 }
@@ -9,9 +29,9 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Quattrocento Sans', sans-serif;
     letter-spacing: 0.05em;
     font-variant: small-caps;
-    background: linear-gradient(135deg, rgba(107,107,107,0.85) 0%,rgba(0,0,0,0.0) 25%);
+    background: var(--angle-fade-to-trans);
     padding-left: 0.2em;
-    text-shadow: 2px 2px 2px #2f2f2f;
+    text-shadow: var(--text-shadow);
     border-radius: 5px;
 }
 
@@ -20,19 +40,19 @@ ul {
 }
 
 a {
-    color: rgb(173, 216, 230);
+    color: var(--main-color-light);
     transition: color 0.25s linear;
 }
 
 a:hover {
-    color: rgb(136, 169, 180);
+    color: var(--main-color-dark);
 }
 
 hr {
-    background: linear-gradient(135deg, rgb(107,107,107) 0%,rgb(77,77,77) 25%);
+    background: var(--angle-fade-to-gray);
     border: none;
-    border-top: 1px solid gray;
-    border-bottom: 1px solid #333;
+    border-top: var(--border-light);
+    border-bottom: var(--border-shadow);
     height: 2px;
 }
 
@@ -43,8 +63,8 @@ table {
 thead, tfoot {
     font-variant: all-small-caps;
     font-size: larger;
-    text-shadow: 2px 2px 2px #2f2f2f;
-    background: linear-gradient(135deg, rgb(107,107,107) 0%,rgb(77,77,77) 25%);
+    text-shadow: var(--text-shadow);
+    background: var(--angle-fade-to-gray);
 }
 
 thead {
@@ -57,7 +77,7 @@ thead th, tfoot th {
 }
 
 thead th:hover, tfoot th:hover {
-    color: rgb(136, 169, 180);
+    color: var(--main-color-dark)
 }
 
 thead th:first-child {
@@ -82,15 +102,15 @@ tbody tr {
 }
 
 tbody tr:first-child {
-    box-shadow: inset 0px 5px 8px -5px black;
+    box-shadow: inset 0px 5px 8px -5px var(--color-shadow);
 }
 
 tbody tr:last-child {
-    box-shadow: inset 0px -5px 8px -5px black
+    box-shadow: inset 0px -5px 8px -5px var(--color-shadow)
 }
 
 tbody tr:nth-child(odd) {
-    background: rgb(107,107,107);
+    background: var(--color-light-gray);
 }
 
 tbody td {
@@ -98,58 +118,58 @@ tbody td {
 }
 
 tbody tr:hover {
-    background: rgb(136, 169, 180);
+    background: var(--main-color-dark);
 }
 
 input, textarea {
-    background: linear-gradient(135deg, rgba(77,77,77,0.85) 75%, rgba(107,107,107,0.85) 100%);
-    color: #dadada;
-    box-shadow: inset 2px 2px 2px black;
-    border: 1px solid #4e4e4e;
+    background: var(--angle-fade-to-gray);
+    color: var(--off-white);
+    box-shadow: var(--inset-shadow);
+    border: var(--border-gray);
     border-radius: 10px;
     padding: 4px 8px;
 }
 
 input[type="submit"], input[type="button"], input[type="reset"], button {
-    background: linear-gradient(135deg, rgba(107,107,107,0.85) 0%,rgba(77,77,77,0.85) 25%);
-    border: 1px solid #4e4e4e;
+    background: var(--angle-fade-to-gray);
+    border: var(--border-gray);
     border-radius: 10px;
     padding: 3px 6px;
-    box-shadow: 2px 2px 2px black;
-    color: #dadada;
-    text-shadow: 2px 2px 2px #2f2f2f;
+    box-shadow: var(--standard-shadow);
+    color: var(--off-white);
+    text-shadow: var(--standard-shadow);
     transition: color 0.25s linear;
 }
 
 input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover, button:hover {
-    color: rgb(136, 169, 180);
+    color: var(--main-color-dark);
 }
 
 input[type="submit"]:active, input[type="button"]:active, input[type="reset"]:active, button:active {
-    background: linear-gradient(135deg, rgba(77,77,77,0.85) 75%, rgba(107,107,107,0.85) 100%);
-    box-shadow: inset 2px 2px 2px black;
+    background: var(--angle-fade-to-gray);
+    box-shadow: var(--inset-shadow);
 }
 
 input[type="submit"]:disabled, button:disabled {
     color: #868686;
-    background: rgba(77,77,77,0.85);
+    background: var(--color-dark-gray);
     box-shadow: none;
     text-shadow: none;
 }
 
 input:focus, button:focus {
     outline-style: none;
-    border-color: rgb(136, 169, 180);
+    border-color: var(--main-color-dark);
 }
 
 fieldset {
     border-radius: 5px;
-    border: 1px solid #4e4e4e;
-    background: linear-gradient(135deg, rgba(107,107,107,0.85) 0%,rgba(0,0,0,0.0) 15%);
+    border: var(--border-gray);
+    background: var(--angle-fade-to-black);
     font-variant: small-caps;
     font-size: larger;
-    text-shadow: 2px 2px 2px #2f2f2f;
-    box-shadow: 0px 2px 5px black;
+    text-shadow: var(--standard-shadow);
+    box-shadow: var(--standard-shadow);
 }
 
 form label {
@@ -159,8 +179,8 @@ form label {
 }
 
 ul.menu, ul.menu ul {
-    background: rgb(77,77,77);
-    background: linear-gradient(135deg, rgb(107,107,107) 0%,rgb(77,77,77) 25%);
+    background: var(--color-dark-gray);
+    background: var(--angle-fade-to-gray);
     padding-inline-start: 0px;
     display: flex;
     border-radius: 5px;
@@ -175,13 +195,13 @@ ul.menu, ul.menu ul {
     align-items: center;
     text-transform: uppercase;
     padding: 0 5px;
-    text-shadow: 2px 2px 2px #2f2f2f;
+    text-shadow: var(--standard-shadow);
     font-size: 1em;
     position: relative;
-    border-top: 1px solid gray;
-    border-right: 1px solid #333;
-    border-left: 1px solid gray;
-    border-bottom: 1px solid #333;
+    border-top: var(--border-light);
+    border-right: var(--border-shadow);
+    border-left: var(--border-light);
+    border-bottom: var(--border-shadow);
     width: 100px;
     justify-content: center;
 }
@@ -211,8 +231,8 @@ ul.menu li ul {
     transition: visibility 0s, opacity 0.3s linear;
     transition-delay: 0.1s;
     border-radius: 0 0 5px 5px;
-    box-shadow: 1px 1px 3px rgb(26, 26, 26);
-    color: rgb(235, 235, 235);
+    box-shadow: var(--standard-shadow);
+    color: var(--off-white);
     font-size: 0.85em;
 }
 
@@ -237,7 +257,7 @@ ul.menu li ul li ul li:first-child {
 
 ul.menu li:hover {
     background: linear-gradient(135deg, rgba(0,0,0,0.0) 75%, rgba(107,107,107,0.85) 100%);
-    color: lightblue;
+    color: var(--main-color-light);
 }
 
 ul.menu>li:first-child:hover {
