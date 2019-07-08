@@ -100,6 +100,7 @@ ul.menu>li>ul>li:last-child:hover {
 ul.menu li:hover > ul, ul.menu li ul:hover {
     visibility: visible;
     opacity: 1;
+    z-index: 1;
 }
 
 /* BANNER */
