@@ -33,7 +33,6 @@ ul.menu:hover {
     border-right: var(--border-shadow);
     border-left: var(--border-light);
     border-bottom: var(--border-shadow);
-    width: 100px;
     justify-content: center;
 }
 
@@ -55,7 +54,7 @@ ul.menu ul {
 
 ul.menu li ul {
     position: absolute;
-    top: 46px;
+    top: calc(100% + 1px);
     left: -1px;
     visibility: hidden;
     opacity: 0;
@@ -68,7 +67,7 @@ ul.menu li ul {
 }
 
 ul.menu li ul li ul {
-    left: 111px;
+    left: calc(100% + 1px);
     top: -1px;
     font-size: 0.65em;
     border-radius: 0 5px 5px 5px;
