@@ -195,6 +195,10 @@ ul.menu, ul.menu ul {
     letter-spacing: 2px;
 }
 
+ul.menu:hover {
+    cursor: pointer;
+}
+
 .menu li {
     display: inline-flex;
     min-height: 45px;
