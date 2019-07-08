@@ -1,0 +1,58 @@
+/* FORMS */
+
+input, textarea {
+    background: var(--angle-fade-to-gray);
+    color: var(--off-white);
+    box-shadow: var(--inset-shadow);
+    border: var(--border-gray);
+    border-radius: 10px;
+    padding: 4px 8px;
+}
+
+input[type="submit"], input[type="button"], input[type="reset"], button {
+    background: var(--angle-fade-to-gray);
+    border: var(--border-gray);
+    border-radius: 10px;
+    padding: 3px 6px;
+    box-shadow: var(--standard-shadow);
+    color: var(--off-white);
+    text-shadow: var(--standard-shadow);
+    transition: color 0.25s linear;
+}
+
+input[type="submit"]:hover, input[type="button"]:hover, input[type="reset"]:hover, button:hover {
+    color: var(--main-color-dark);
+}
+
+input[type="submit"]:active, input[type="button"]:active, input[type="reset"]:active, button:active {
+    background: var(--angle-fade-to-gray);
+    box-shadow: var(--inset-shadow);
+}
+
+input[type="submit"]:disabled, button:disabled {
+    color: #868686;
+    background: var(--color-dark-gray);
+    box-shadow: none;
+    text-shadow: none;
+}
+
+input:focus, button:focus {
+    outline-style: none;
+    border-color: var(--main-color-dark);
+}
+
+fieldset {
+    border-radius: 5px;
+    border: var(--border-gray);
+    background: var(--angle-fade-to-trans);
+    font-variant: small-caps;
+    font-size: larger;
+    text-shadow: var(--standard-shadow);
+    box-shadow: var(--standard-shadow);
+}
+
+form label {
+    display: inline-block;
+    width: 150px;
+    vertical-align: top;
+}
