@@ -56,6 +56,8 @@ hr {
     height: 2px;
 }
 
+/* TABLES */
+
 table {
     border-collapse: collapse;
 }
@@ -121,6 +123,8 @@ tbody tr:hover {
     background: var(--main-color-dark);
 }
 
+/* FORMS */
+
 input, textarea {
     background: var(--angle-fade-to-gray);
     color: var(--off-white);
@@ -177,6 +181,8 @@ form label {
     width: 150px;
     vertical-align: top;
 }
+
+/* MENU */
 
 ul.menu, ul.menu ul {
     background: var(--color-dark-gray);
@@ -277,7 +283,7 @@ ul.menu li:hover > ul, ul.menu li ul:hover {
     opacity: 1;
 }
 
-/* Banner */
+/* BANNER */
 
 span#banner {
     position: relative;
