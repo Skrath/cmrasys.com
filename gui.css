@@ -1,5 +1,10 @@
 /* MENU */
 
+ul.menu a {
+    text-decoration: none;
+    color: inherit;
+}
+
 ul.menu, ul.menu ul {
     background: var(--color-dark-gray);
     background: var(--angle-fade-to-gray);
