@@ -35,6 +35,7 @@ ul.menu:hover {
     border-left: var(--border-light);
     border-bottom: var(--border-shadow);
     justify-content: center;
+    white-space: nowrap;
 }
 
 .menu>li:first-child {
