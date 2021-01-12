@@ -6,14 +6,11 @@ ul.menu a {
 }
 
 ul.menu, ul.menu ul {
-    background: var(--color-dark-gray);
-    background: var(--angle-fade-to-gray);
     padding-inline-start: 0px;
     display: flex;
-    border-radius: 5px;
-    width: fit-content;
     font-weight: bold;
     letter-spacing: 2px;
+    justify-content: space-evenly;
 }
 
 ul.menu:hover {
@@ -22,32 +19,34 @@ ul.menu:hover {
 
 .menu li {
     display: inline-flex;
-    height: 4em;
-    line-height: 4em;
+    height: 4vw;
+    line-height: 4vw;
     align-items: center;
     text-transform: uppercase;
     padding: 0 5px;
-    text-shadow: var(--standard-shadow);
-    font-size: 1em;
+    font-size: 1.5vw;
     position: relative;
-    border-top: var(--border-light);
-    border-right: var(--border-shadow);
-    border-left: var(--border-light);
-    border-bottom: var(--border-shadow);
     justify-content: center;
     white-space: nowrap;
+    flex-grow: 1;
+
+    border-right: var(--border-gray);
+    border-left: var(--border-gray);
+    border-image: linear-gradient(transparent, var(--main-color-dark), transparent) 1;
 }
 
 .menu>li:first-child {
-    border-radius: 5px 0 0 5px;
+    border-left: none;
+    border-right: var(--border-gray);
 }
 
 .menu>li:last-child {
-    border-radius: 0 5px 5px 0;
+    border-right: none;
+    border-left: var(--border-gray);
 }
 
 .menu li ul li:last-child {
-    border-radius: 0 0 5px 5px;
+    /* border-radius: 0 0 5px 5px; */
 }
 
 ul.menu ul {
@@ -56,16 +55,17 @@ ul.menu ul {
 
 ul.menu li ul {
     position: absolute;
-    top: calc(100% + 1px);
+    top: calc(100% + 3px);
     left: -1px;
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s, opacity 0.3s linear;
     transition-delay: 0.1s;
-    border-radius: 0 0 5px 5px;
-    box-shadow: var(--standard-shadow);
-    color: var(--off-white);
-    font-size: 0.85em;
+    border-radius: 5px;
+    box-shadow: 0 0 3px var(--color-shadow);
+    color: var(--off-black);
+    font-size: 1.15vw;
+    background: var(--off-white);
 }
 
 ul.menu li ul li ul {
@@ -75,7 +75,19 @@ ul.menu li ul li ul {
 }
 
 ul.menu li ul li {
-    font-size: 0.9em;
+    font-size: 1.15vw;
+    /* border: none; */
+    border-top: var(--border-gray);
+    border-bottom: var(--border-gray);
+    border-image: linear-gradient(90deg, transparent, var(--main-color-dark), transparent) 1;
+}
+
+ul.menu li ul li:first-child {
+    border-top: none;
+}
+
+ul.menu li ul li:last-child {
+    border-bottom: none;
 }
 
 ul.menu li ul li ul li:first-child {
@@ -83,20 +95,27 @@ ul.menu li ul li ul li:first-child {
 }
 
 ul.menu li:hover {
-    background: linear-gradient(135deg, rgba(0,0,0,0.0) 75%, rgba(107,107,107,0.85) 100%);
-    color: var(--main-color-light);
+    background: 
+                /* linear-gradient(55deg, rgba(55, 65, 68, 0.35) 0, rgba(173,216,230,.25) 25%, rgba(173,216,230,.25) 65%, rgba(55, 65, 68, 0.35) 100%), */
+                var(--main-color-light) linear-gradient(145deg, rgba(55, 65, 68, 0.35) 0, rgba(173,216,230,.25) 25%, rgba(173,216,230,.25) 65%, rgba(55, 65, 68, 0.35) 100%);
+                /* linear-gradient(rgba(55, 65, 68, 0.35) 0, rgba(173,216,230,.25) 25%, rgba(173,216,230,.25) 65%, rgba(55, 65, 68, 0.35) 100%); */
+    border-image: none;
+    border-radius: 5px;
+    box-shadow: 0px 0px 3px var(--color-shadow),
+                0px 0px 1px var(--color-shadow);
+    text-shadow: 1px 1px 1px var(--off-white);
 }
 
 ul.menu>li:first-child:hover {
-    border-radius: 5px 0 0 0;
+    /* border-radius: 5px 0 0 0; */
 }
 
 ul.menu>li:last-child:hover {
-    border-radius: 0 5px 0 0;
+    /* border-radius: 0 5px 0 0; */
 }
 
 ul.menu>li>ul>li:last-child:hover {
-    border-radius: 0 0 0 5px;
+    /* border-radius: 0 0 0 5px; */
 }
 
 ul.menu li:hover > ul, ul.menu li ul:hover {

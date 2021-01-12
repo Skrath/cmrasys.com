@@ -4,7 +4,7 @@
 
 :root {
     --main-color-light: rgb(173, 216, 230);
-    --main-color-dark: rgb(136, 169, 180);
+    --main-color-dark: rgb(99 124 132);
     --color-shadow: rgba(0, 0, 0, 0.75);
     --color-light-gray: rgb(107, 107, 107);
     --color-dark-gray: rgb(77, 77, 77);
@@ -79,6 +79,7 @@ hr {
 
 #main-nav {
     grid-area: nav;
+    margin: 3px;
 }
 
 #header {
