@@ -39,9 +39,8 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Quattrocento Sans', sans-serif;
     letter-spacing: 0.05em;
     font-variant: small-caps;
-    background: var(--angle-fade-to-trans);
-    text-shadow: var(--text-shadow);
-    border-radius: 5px;
+    /* background: var(--angle-fade-to-trans); */
+    /* text-shadow: var(--text-shadow); */
 }
 
 ul {
@@ -137,23 +136,35 @@ hr {
     padding: 10px 10px 5px 10px;
 }
 
-#content .article-stub h2 {
+#content .article-stub .title {
     grid-area: title;
     color: var(--main-color-light);
     border-radius: 0;
+
+    
+    
+    align-self: center;
+}
+
+#content .article-stub .title h2,h3 {
     font-size: 4vw;
     margin: 0;
     mix-blend-mode: luminosity;
     text-shadow: 1px 1px 3px var(--color-shadow);
     background: none;
-    align-self: center;
+}
+
+#content .article-stub .title h3 {
+    font-size: 2vw;
+    margin-left: 2vw;
+    font-style: italic;
 }
 
 #content .article-stub .meta {
     grid-area: meta;
     margin: 0;
     font-style: italic;
-    font-size: smaller;
+    font-size: 1.3vw;
 }
 
 #content .article-stub .meta p {
