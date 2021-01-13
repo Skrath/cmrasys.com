@@ -120,17 +120,21 @@ hr {
 
 #content .article-stub {
     display: grid;
-    grid-template-rows: 10vw 35px auto 40px;
+    grid-template-rows: 10vw 3vw auto 3vw;
     grid-template-areas: 
         "title"
         "meta"
         "content"
         "tags";
-
     box-shadow: 0 1px 10px -2px var(--color-border-shadow);
     border-radius: 5px;
+    background-color: var(--main-color-dark);
+    background-image: linear-gradient(transparent, var(--off-white) 15vw, var(--off-white)),
+                    linear-gradient(145deg, rgba(55, 65, 68, 0.35) 0, rgba(173,216,230,.25) 25%),
+                    var(--bg-image);
     background-size: 100%;
     background-repeat: no-repeat;
+    background-blend-mode: luminosity;
     min-width: 250px;
     margin-bottom: 15px;
     padding: 10px 10px 5px 10px;
@@ -138,11 +142,8 @@ hr {
 
 #content .article-stub .title {
     grid-area: title;
-    color: var(--main-color-light);
+    color: var(--off-white);
     border-radius: 0;
-
-    
-    
     align-self: center;
 }
 
@@ -164,7 +165,7 @@ hr {
     grid-area: meta;
     margin: 0;
     font-style: italic;
-    font-size: 1.3vw;
+    font-size: 1.2vw;
 }
 
 #content .article-stub .meta p {
@@ -237,7 +238,7 @@ hr {
     border-radius: 5px;
     margin-bottom: 10px;
     padding: 5px;
-    background: linear-gradient(transparent, var(--off-white)),
+    background: linear-gradient(transparent, var(--off-white) 5vw),
         var(--main-color-dark) linear-gradient(145deg, rgba(55, 65, 68, 0.35) 0, rgba(173,216,230,.25) 25%);
     box-shadow: 0 1px 10px -2px var(--color-border-shadow);
 }
