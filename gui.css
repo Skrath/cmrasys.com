@@ -29,24 +29,12 @@ ul.menu:hover {
     justify-content: center;
     white-space: nowrap;
     flex-grow: 1;
-
     border-right: var(--border-gray);
-    border-left: var(--border-gray);
     border-image: linear-gradient(transparent, var(--main-color-dark), transparent) 1;
-}
-
-.menu>li:first-child {
-    border-left: none;
-    border-right: var(--border-gray);
 }
 
 .menu>li:last-child {
     border-right: none;
-    border-left: var(--border-gray);
-}
-
-.menu li ul li:last-child {
-    /* border-radius: 0 0 5px 5px; */
 }
 
 ul.menu ul {
@@ -76,14 +64,8 @@ ul.menu li ul li ul {
 
 ul.menu li ul li {
     font-size: 1.15vw;
-    /* border: none; */
-    border-top: var(--border-gray);
     border-bottom: var(--border-gray);
     border-image: linear-gradient(90deg, transparent, var(--main-color-dark), transparent) 1;
-}
-
-ul.menu li ul li:first-child {
-    border-top: none;
 }
 
 ul.menu li ul li:last-child {
