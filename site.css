@@ -227,4 +227,23 @@ hr {
 
 #footer {
     grid-area: footer;
+    display: grid;
+    grid-template-rows: 3vw 3vw;
+    grid-template-areas: 
+        "copyright"
+        "misc";
+    justify-items: center;
+    align-items: center;
+    font-size: 1.2vw;
+    font-style: italic;
+    color: var(--color-light-gray);
+}
+
+#footer p {
+    grid-area: misc;
+    margin: 0;
+}
+
+#footer p.copyright {
+    grid-area: copyright;
 }
