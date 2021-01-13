@@ -223,6 +223,37 @@ hr {
 
 #sidebar {
     grid-area: sidebar;
+    display: flex;
+    flex-flow: column;
+}
+
+#sidebar div.side-item {
+    display: grid;
+    grid-template-rows: 4vw auto;
+    grid-template-areas: 
+        "title"
+        "content";
+    /* border: var(--border-gray); */
+    border-radius: 5px;
+    margin-bottom: 10px;
+    padding: 5px;
+    background: linear-gradient(transparent, var(--off-white)),
+        var(--main-color-dark) linear-gradient(145deg, rgba(55, 65, 68, 0.35) 0, rgba(173,216,230,.25) 25%);
+    box-shadow: 0 1px 10px -2px var(--color-border-shadow);
+}
+
+#sidebar div.side-item h3 {
+    grid-area: title;
+    font-size: 2.5vw;
+    align-self: start;
+    justify-self: center;
+    border-bottom: var(--border-gray);
+    border-image: linear-gradient(90deg, transparent, var(--main-color-dark), transparent) 1;
+    color: var(--off-white);
+}
+
+#sidebar div.side-item .content {
+    grid-area: content;
 }
 
 #footer {
