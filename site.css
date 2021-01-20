@@ -190,12 +190,18 @@ hr {
 
 #content .article-stub .tags li {
     display: inline-flex;
-    margin-right: 5px;
-    border: var(--border-gray);
-    border-radius: 8px 0 0 8px;
     padding: 2px 8px;
-    background: #c7c459;
-    box-shadow: 1px 1px 3px var(--off-black);
+    color: var(--muted-text);
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+#content .article-stub .tags li:hover {
+    font-weight: bold;
+    background: var(--off-white);
+    box-shadow: 0 0 3px var(--color-shadow);
+    color: var(--off-black);
+    border-radius: 3px;
 }
 
 #content .article-stub .content p:first-of-type::first-letter {
