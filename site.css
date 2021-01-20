@@ -30,17 +30,10 @@ body {
     transition: background 1s linear;
 }
 
-/* body:hover {
-    transition: filter 1s linear;
-    filter: blur(10px);
-} */
-
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Quattrocento Sans', sans-serif;
     letter-spacing: 0.05em;
     font-variant: small-caps;
-    /* background: var(--angle-fade-to-trans); */
-    /* text-shadow: var(--text-shadow); */
 }
 
 ul {
@@ -234,7 +227,6 @@ hr {
     grid-template-areas: 
         "title"
         "content";
-    /* border: var(--border-gray); */
     border-radius: 5px;
     margin-bottom: 10px;
     padding: 5px;

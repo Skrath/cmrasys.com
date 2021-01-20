@@ -88,18 +88,6 @@ ul.menu li:hover {
     text-shadow: 1px 1px 1px var(--off-white);
 }
 
-ul.menu>li:first-child:hover {
-    /* border-radius: 5px 0 0 0; */
-}
-
-ul.menu>li:last-child:hover {
-    /* border-radius: 0 5px 0 0; */
-}
-
-ul.menu>li>ul>li:last-child:hover {
-    /* border-radius: 0 0 0 5px; */
-}
-
 ul.menu li:hover > ul, ul.menu li ul:hover {
     visibility: visible;
     opacity: 1;
