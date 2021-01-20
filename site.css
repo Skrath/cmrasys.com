@@ -44,12 +44,27 @@ ul {
 }
 
 a {
-    color: var(--main-color-light);
-    transition: color 0.25s linear;
+    color: inherit;
+    transition: all 0.25s linear;
 }
 
 a:hover {
-    color: var(--main-color-dark);
+    font-weight: bold;
+    box-shadow: 0 0 3px var(--color-shadow);
+    border-radius: 3px;
+    text-decoration: none;
+    background: var(--off-white);
+    padding: 0 3px;
+}
+
+h2 a {
+    text-decoration: none;
+}
+
+h2 a:hover {
+    box-shadow: inherit;
+    padding: inherit;
+    background: inherit;
 }
 
 hr {
@@ -135,6 +150,11 @@ hr {
     min-width: 250px;
     margin-bottom: 15px;
     padding: 10px 10px 5px 10px;
+    transition: box-shadow 0.15s linear;
+}
+
+#content .article-stub:hover {
+    box-shadow: 0 1px 7px 1px var(--color-border-shadow);
 }
 
 #content .article-stub .title {
