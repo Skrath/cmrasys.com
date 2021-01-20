@@ -3,6 +3,8 @@
 @import "gui.css";
 
 :root {
+    --muted-text: rgba(26, 26, 26, 0.45);
+
     --main-color-light: rgb(173, 216, 230);
     --main-color-dark: rgb(99 124 132);
     --color-shadow: rgba(0, 0, 0, 0.75);
