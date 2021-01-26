@@ -196,12 +196,15 @@ hr {
 
 #content .article-stub .content {
     grid-area: content;
+    border-top: var(--border-gray);
+    border-bottom: var(--border-gray);
+    border-image: linear-gradient(90deg, transparent, var(--main-color-dark), transparent) 1;
+    margin-top: 5px;
+    padding-top: 5px;
 }
 
 #content .article-stub .tags {
     grid-area: tags;
-    border-top: var(--border-gray);
-    border-image: linear-gradient(90deg, transparent, var(--main-color-dark), transparent) 1;
     align-self: center;
 }
 
