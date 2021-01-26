@@ -114,16 +114,20 @@ hr {
     padding: 0;
     transform: rotate(-2deg);
     transition: transform 1s ease-out;
-    text-shadow: var(--standard-shadow);
+    text-shadow: 2px 2px 3px var(--color-shadow);
 }
 
 #header h1:hover {
     transition: transform 1s ease-out;
-    transform: rotate(0deg);
+    transform: rotate(1deg);
 }
 
-#subtitle p {
+#header #subtitle {
+    margin: 0;
+    font-style: italic;
     grid-area: subtitle;
+    font-size: 2vw;
+    color: var(--muted-text);
 }
 
 #content, #sidebar {
