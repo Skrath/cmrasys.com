@@ -293,7 +293,7 @@ hr {
     align-items: center;
     font-size: 1.2vw;
     font-style: italic;
-    color: var(--color-light-gray);
+    color: var(--muted-text);
 }
 
 #footer p {
