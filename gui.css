@@ -64,9 +64,10 @@ ul.menu li ul li ul {
 }
 
 ul.menu li ul li {
-    font-size: 1.15vw;
+    font-size: 1.05vw;
     border-bottom: var(--border-gray);
     border-image: linear-gradient(90deg, transparent, var(--main-color-dark), transparent) 1;
+    height: 3vw;
 }
 
 ul.menu li ul li:first-child {
