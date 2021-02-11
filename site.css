@@ -295,7 +295,7 @@ hr {
         "misc";
     justify-items: center;
     align-items: center;
-    font-size: 1.2vw;
+    font-size: max(9pt, 1.1vw);
     font-style: italic;
     color: var(--muted-text);
 }
