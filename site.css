@@ -262,7 +262,7 @@ hr {
     flex-flow: column;
     height: fit-content;
     position: sticky;
-    top: 60;
+    top: 5vw;
 }
 
 #sidebar div.side-item {
