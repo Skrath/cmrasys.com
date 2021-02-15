@@ -260,6 +260,9 @@ hr {
     grid-area: sidebar;
     display: flex;
     flex-flow: column;
+    height: fit-content;
+    position: sticky;
+    top: 60;
 }
 
 #sidebar div.side-item {
