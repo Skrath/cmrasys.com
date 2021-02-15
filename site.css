@@ -76,7 +76,6 @@ hr {
 }
 
 #container {
-    height: 100%;
     display: grid;
     padding: 5px;
     grid-template-columns: 1fr 3fr 1fr;
