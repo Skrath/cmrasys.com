@@ -136,7 +136,7 @@ hr {
 
 #header h1 {
     grid-area: title;
-    font-size: 15vw;
+    font-size: max(40pt, 15vw);
     text-transform: uppercase;
     letter-spacing: 1.15vw;
     background: none;
@@ -156,7 +156,7 @@ hr {
     margin: 0;
     font-style: italic;
     grid-area: subtitle;
-    font-size: 2vw;
+    font-size: max(10pt, 2vw);
     color: var(--muted-text);
 }
 
@@ -166,7 +166,7 @@ hr {
 
 #content .article-stub {
     display: grid;
-    grid-template-rows: 10vw 3vw auto 3vw;
+    grid-template-rows: 10vw max(30px, 3vw) auto max(30px, 3vw);
     grid-template-areas: 
         "title"
         "meta"
@@ -195,11 +195,11 @@ hr {
     grid-area: title;
     color: var(--off-white);
     border-radius: 0;
-    align-self: center;
+    align-self: start;
 }
 
 #content .article-stub .title h2,h3 {
-    font-size: 4vw;
+    font-size: max(14pt, 4vw);
     margin: 0;
     mix-blend-mode: luminosity;
     text-shadow: 1px 1px 3px var(--color-shadow);
@@ -207,7 +207,7 @@ hr {
 }
 
 #content .article-stub .title h3 {
-    font-size: 2vw;
+    font-size: max(10pt, 2vw);
     margin-left: 2vw;
     font-style: italic;
 }
@@ -216,7 +216,7 @@ hr {
     grid-area: meta;
     margin: 0;
     font-style: italic;
-    font-size: 1.2vw;
+    font-size: max(8pt, 1.2vw);
 }
 
 #content .article-stub .meta p {
