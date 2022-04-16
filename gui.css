@@ -28,7 +28,7 @@ ul.menu:hover {
     align-items: center;
     text-transform: uppercase;
     padding: 0 5px;
-    font-size: 1.5vw;
+    font-size: max(8pt, 1.5vw);
     position: relative;
     justify-content: center;
     white-space: nowrap;
