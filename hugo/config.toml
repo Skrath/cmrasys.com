@@ -23,6 +23,12 @@ theme = 'cmrasys'
         url = "/sub/"
         weight = 1
     [[menu.main]]
+        parent = 'posts'
+        identifier = 'sub2'
+        name = "Sub2"
+        url = "/sub2/"
+        weight = 2
+    [[menu.main]]
         name = "Tags"
         identifier = 'tags'
         url = "/tags/"
