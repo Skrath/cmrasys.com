@@ -2,3 +2,35 @@ baseURL = 'http://example.org/'
 languageCode = 'en-us'
 title = 'C M Rasys'
 theme = 'cmrasys'
+
+[menu]
+    [[menu.main]]
+        name = "Home"
+        identifier = 'home'
+        url = "/"
+        weight = 1
+        sub = 'yar'
+    [[menu.main]]
+        name = "Posts"
+        identifier = 'posts'
+        url = "/posts/"
+        weight = 2
+        sub = 'wut'
+    [[menu.main]]
+        parent = 'posts'
+        identifier = 'sub'
+        name = "Sub"
+        url = "/sub/"
+        weight = 1
+    [[menu.main]]
+        name = "Tags"
+        identifier = 'tags'
+        url = "/tags/"
+        weight = 3
+        sub = 'bloop'
+    [[menu.main]]
+        identifier = 'beans'
+        name = "Beans"
+        url = "/beans/"
+        weight = 4
+        sub = 'bleep'

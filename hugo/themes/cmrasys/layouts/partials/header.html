@@ -4,47 +4,20 @@
 </div>
 <nav id="main-nav">
     <ul class="menu">
-        <li><a href="#">menu 1</a>
-            <ul>
-            <li>Submenu 1</li>
-            <li>Submenu 2</li>
-            <li>submenu 3</li>
-            </ul>
-        </li>
-        <li><a href="#">menu 2</a>
-        <ul>
-            <li>Submenu 1
-            <ul>
-                <li>sub Submenu 1</li>
-                <li>sub Submenu 2</li>
-                <li>sub submenu 3</li>
-            </ul>
+
+        {{ range .Site.Menus.main }}
+            {{ $text := print .Name | safeHTML }}
+            <li><a href="{{ .URL }}">{{ $text }}</a>
+
+            {{ if .HasChildren }}
+                <ul>
+                {{ range .Children }}
+                    <li><a href="{{ .URL }}">{{ $text }}</a></li>
+                {{ end }}
+                </ul>
+            {{ end }}
             </li>
-            <li>Submenu 2
-            <ul>
-                <li>sub Submenu 1</li>
-                <li>sub Submenu 2</li>
-                <li>sub submenu 3</li>
-                <li>sub submenu 4</li>
-            </ul>
-            </li>
-        </ul>
-        </li>
-        <li><a href="#">menu 3</a></li>
-        <li><a href="#">menu 4</a>
-        <ul>
-            <li>Submenu 1</li>
-            <li>Submenu 2</li>
-            <li>submenu 3</li>
-            <li>submenu 4</li>
-        </ul>
-        </li>
-        <li><a href="#">menu 5</a>
-        <ul>
-            <li>Submenu 1</li>
-            <li>Submenu 2</li>
-            <li>submenu 3</li>
-        </ul>
-        </li>
+        {{ end }}
+
     </ul>
 </nav>
