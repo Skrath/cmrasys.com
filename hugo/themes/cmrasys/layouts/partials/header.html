@@ -12,6 +12,7 @@
             {{ if .HasChildren }}
                 <ul>
                 {{ range .Children }}
+                    {{ $text := print .Name | safeHTML }}
                     <li><a href="{{ .URL }}">{{ $text }}</a></li>
                 {{ end }}
                 </ul>
