@@ -5,7 +5,6 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    source: hugo/
 
     steps:
     - name: Checkout
@@ -13,3 +12,4 @@ jobs:
 
     - name: hugo
       uses: klakegg/actions-hugo@1.0.0
+      source: hugo/
