@@ -3,6 +3,7 @@ title: "This is a damn title"
 date: 2022-04-16T22:49:09Z
 draft: true
 tags: ["foo", "bar"]
+categories: ["Testing", "Test Longer"]
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non metus commodo, semper ante ut, venenatis mi. Quisque vel euismod risus, sed condimentum erat. Aenean consequat dolor ultricies congue facilisis. Pellentesque tempor lectus ac posuere sollicitudin. Morbi in pretium arcu. Phasellus sollicitudin volutpat porta. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus sed ligula metus. Nam efficitur risus quam, ac rhoncus quam posuere ut.
