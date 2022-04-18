@@ -12,4 +12,5 @@ jobs:
 
     - name: hugo
       uses: klakegg/actions-hugo@1.0.0
-      source: hugo/
+      with:
+        source: hugo/
