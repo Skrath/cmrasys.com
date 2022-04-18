@@ -8,12 +8,6 @@
         <div class="content">
             {{ .Content }}
         </div>
-        <div class="tags">
-            <ul>
-                <li>Fake</li>
-                <li>Test</li>
-                <li>Stuff</li>
-            </ul>
-        </div>
+        {{ partial "tags.html" . }}
     </div>
 {{ end }}
