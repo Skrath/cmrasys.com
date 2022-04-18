@@ -1,7 +1,8 @@
 <div class="tags">
     <ul>
         {{ range .Params.tags }}
-        <li><a href="/tags/{{ . }}/">{{ . }}</a></li>
+        {{ $href := print (absURL "tags/") (urlize .) }}
+        <li><a href="{{ $href }}">{{ . }}</a></li>
         {{ end }}
     </ul>
 </div>
