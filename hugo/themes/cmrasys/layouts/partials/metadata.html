@@ -10,6 +10,11 @@
 {{ end }}  */}}
 
 <div class="meta">
-    <p>Posted on <em><time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time></em> under <em><a href="#">Fake News</a></em></p>
+    <p>Posted on <em><time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time></em> under <em>
+        {{ range .Params.categories }}
+            {{ $href := print (absURL "categories/") (urlize .) }}
+            <a href="{{ $href }}">{{ . }}</a>
+        {{ end }}
+    </em></p>
     <p><em>Part one</em> of the <em><a href="#">Testing</a></em> series</p>
 </div>
