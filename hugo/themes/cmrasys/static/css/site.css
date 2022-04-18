@@ -265,6 +265,17 @@ hr {
     border-radius: 3px;
 }
 
+#content .article-stub .tags li a {
+    text-decoration: none;
+}
+
+#content .article-stub .tags li a:hover {
+    text-decoration: none;
+    box-shadow: none;
+    background: none;
+    padding: 0;
+}
+
 #content .article-stub .content p:first-of-type::first-letter {
     font-size: 6vw;
     float: left;
