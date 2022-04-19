@@ -2,10 +2,6 @@
     {{/*  <h1>{{ .Title }}</h1>  */}}
     {{ range .Pages.ByPublishDate.Reverse }}
         <div class="article-stub" style="--bg-image: url('Splash__Soma_Collapse_by_neutrix.png');">
-            <div class="title">
-                <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-                <h3>Hot damn, a subtitle</h3>
-            </div>
             {{ partial "metadata.html" . }}
             <div class="content">
                 <p>{{ .Summary }}</p>

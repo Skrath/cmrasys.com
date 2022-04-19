@@ -1,15 +1,32 @@
 {{ $dateTime := .PublishDate.Format "2006-01-02" }}
 {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
 
-{{/*  {{ with .Params.tags }}
-    <i data-feather="tag"></i>
-    {{ range . }}
-        {{ $href := print (absURL "tags/") (urlize .) }}
-        <a class="btn btn-sm btn-outline-dark tag-btn" href="{{ $href }}">{{ . }}</a>
+<div class="title">
+    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    {{ with .Params.subtitle }}
+        <h3>{{ . }}</h3>
     {{ end }}
-{{ end }}  */}}
+</div>
 
 <div class="meta">
-    <p>Posted on <em><time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time></em> under <em><a href="#">Fake News</a></em></p>
-    <p><em>Part one</em> of the <em><a href="#">Testing</a></em> series</p>
+    <p>Posted on <em><time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time></em> 
+        {{ with .Params.categories }}
+        under <em>
+            {{ range . }}
+                {{ $href := print (absURL "categories/") (urlize .) }}
+                <a href="{{ $href }}">{{ . }}</a>
+            {{ end }}
+        </em></p>
+        {{ end }}
+    {{ if ne .FirstSection.Title .Parent.Title }}
+        <p>
+            {{ with .Params.section_taxonomy }} 
+                <em>{{ . }}</em> of the 
+            {{ end }}
+             
+            <em>
+                <a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a>
+            </em> series
+        </p>
+    {{ end }}
 </div>
