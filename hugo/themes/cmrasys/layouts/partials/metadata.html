@@ -1,14 +1,6 @@
 {{ $dateTime := .PublishDate.Format "2006-01-02" }}
 {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
 
-{{/*  {{ with .Params.tags }}
-    <i data-feather="tag"></i>
-    {{ range . }}
-        {{ $href := print (absURL "tags/") (urlize .) }}
-        <a class="btn btn-sm btn-outline-dark tag-btn" href="{{ $href }}">{{ . }}</a>
-    {{ end }}
-{{ end }}  */}}
-
 <div class="meta">
     <p>Posted on <em><time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time></em> under <em>
         {{ range .Params.categories }}
@@ -16,5 +8,10 @@
             <a href="{{ $href }}">{{ . }}</a>
         {{ end }}
     </em></p>
-    <p><em>Part one</em> of the <em><a href="#">Testing</a></em> series</p>
+    {{ if ne .FirstSection.Title .Parent.Title }}
+        <p>
+            <em>Part one</em> of the <em>
+            <a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a></em> series
+        </p>
+    {{ end }}
 </div>
