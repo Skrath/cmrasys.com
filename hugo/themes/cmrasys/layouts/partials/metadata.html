@@ -1,12 +1,7 @@
 {{ $dateTime := .PublishDate.Format "2006-01-02" }}
 {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
 
-<div class="title">
-    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-    {{ with .Params.subtitle }}
-        <h3>{{ . }}</h3>
-    {{ end }}
-</div>
+{{ partial "title.html" . }}
 
 <div class="meta">
     <p>Posted on <em><time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time></em> 
