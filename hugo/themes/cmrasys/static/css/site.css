@@ -166,7 +166,7 @@ hr {
 
 #content .article-stub {
     display: grid;
-    grid-template-rows: 10vw max(30px, 3vw) auto max(30px, 3vw);
+    grid-template-rows: auto auto auto max(30px, 3vw);
     grid-template-areas: 
         "title"
         "meta"
