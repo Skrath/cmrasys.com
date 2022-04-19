@@ -15,13 +15,19 @@
         {{ end }}
     {{ if ne .FirstSection.Title .Parent.Title }}
         <p>
-            {{ with .Params.section_taxonomy }} 
-                <em>{{ . }}</em> of the 
+            {{ with .Params.chapter }} 
+                <em>{{ . }}</em>
             {{ end }}
-             
+
+            {{ with .Params.books }}
+                {{ $href := print (absURL "books/") (urlize .) }}
+                of <em><a href="{{ $href }}">{{ . }}</a></em>
+            {{ end }}
+        </p>
+        <p>
             <em>
                 <a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a>
-            </em> series
+            </em> universe
         </p>
     {{ end }}
 </div>

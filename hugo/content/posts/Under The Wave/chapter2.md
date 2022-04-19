@@ -1,14 +1,14 @@
 ---
-title: "Testing for Groups"
-subtitle: "A New Kind of Test"
+title: "Chapter 2"
 date: 2022-04-18T22:49:09Z
 draft: true
 tags: ["foo", "bar"]
-categories: ["Testing", "Test Longer"]
-chapter: "Group Test One"
+categories: ["Writing"]
+chapter: "Chapter 2"
+books: The Unchosen Child
 ---
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla non metus commodo, semper ante ut, venenatis mi. Quisque vel euismod risus, sed condimentum erat. Aenean consequat dolor ultricies congue facilisis. Pellentesque tempor lectus ac posuere sollicitudin. Morbi in pretium arcu. Phasellus sollicitudin volutpat porta. Interdum et malesuada fames ac ante ipsum primis in faucibus. Phasellus sed ligula metus. Nam efficitur risus quam, ac rhoncus quam posuere ut.
+I lift the small, blue, stone-wall-shaped bucket up and peer at the small castle underneath. It stands in a small cluster amongst several other nearly identical little castles. The visual accuracy of the dry sand isn’t anything special but my young eyes find it positively amazing. I begin scooping up some more loose sand with my tiny little hands, making a meager effort to pack the loose grains into the plastic shell.
 
 <!--more-->
 
