@@ -2,16 +2,24 @@
 {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
 
 <div class="meta">
-    <p>Posted on <em><time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time></em> under <em>
-        {{ range .Params.categories }}
-            {{ $href := print (absURL "categories/") (urlize .) }}
-            <a href="{{ $href }}">{{ . }}</a>
+    <p>Posted on <em><time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time></em> 
+        {{ with .Params.categories }}
+        under <em>
+            {{ range . }}
+                {{ $href := print (absURL "categories/") (urlize .) }}
+                <a href="{{ $href }}">{{ . }}</a>
+            {{ end }}
+        </em></p>
         {{ end }}
-    </em></p>
     {{ if ne .FirstSection.Title .Parent.Title }}
         <p>
-            <em>Part one</em> of the <em>
-            <a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a></em> series
+            {{ with .Params.section_taxonomy }} 
+                <em>{{ . }}</em> of the 
+            {{ end }}
+             
+            <em>
+                <a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a>
+            </em> series
         </p>
     {{ end }}
 </div>
