@@ -3,6 +3,11 @@ languageCode = 'en-us'
 title = 'C M Rasys'
 theme = 'cmrasys'
 
+[taxonomies]
+    category = 'categories'
+    tag = 'tags'
+    book = 'books'
+
 [menu]
     [[menu.main]]
         name = "Home"
