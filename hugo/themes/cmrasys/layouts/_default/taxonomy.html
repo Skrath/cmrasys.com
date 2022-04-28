@@ -1,6 +1,5 @@
 {{ define "main" }}
-  <div class="container">
-    <h1>All {{ .Type }}</h1>
+  {{ partial "post_top.html" . }}
     <ul>
       {{ range .Data.Pages }}
         <li>
@@ -8,5 +7,5 @@
         </li>
       {{ end }}
     </ul>
-  </div>
+  {{ partial "post_bot.html" . }}
 {{ end }}
