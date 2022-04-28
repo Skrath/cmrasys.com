@@ -1,10 +1,12 @@
-{{ $dateTime := .PublishDate.Format "2006-01-02" }}
 {{ $dateFormat := .Site.Params.dateFormat | default "Jan 2, 2006" }}
 
 {{ partial "title.html" . }}
 
 <div class="meta">
-    <p>Posted on <em><time datetime="{{ $dateTime }}">{{ .PublishDate.Format $dateFormat }}</time></em> 
+    {{ with .PublishDate }}
+        {{ $dateTime := .Format "2006-01-02" }}
+        <p>Posted on <em><time datetime="{{ $dateTime }}">{{ .Format $dateFormat }}</time></em> 
+    {{ end }}
         {{ with .Params.categories }}
         under <em>
             {{ range . }}
