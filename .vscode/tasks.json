@@ -16,11 +16,12 @@
 				"severity": "error",
 				"fileLocation": "absolute",
 				"owner": "hugo",
-				"pattern": {
-					"regexp": "template: (.*):(\\d+): (.*)",
+                "pattern": {
+					"regexp": "\"(.*):(\\d+):(\\d+)\": .*: (.*)",
 					"file": 1,
-					"location": 2,
-					"message": 3,
+					"line": 2,
+                    "column": 3,
+					"message": 4,
 					"loop": true
 				},
 				"background": {
