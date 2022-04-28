@@ -1,7 +1,7 @@
 {{ define "main" }}
-    {{/*  <h1>{{ .Title }}</h1>  */}}
     {{ range .Pages.ByPublishDate.Reverse }}
-        <div class="article-stub" style="--bg-image: url('Splash__Soma_Collapse_by_neutrix.png');">
+    {{ $bgimage := partial "bgimage.html" . }}
+        <div class="article-stub"  style="--bg-image: url('{{ $bgimage }}');">
             {{ partial "metadata.html" . }}
             <div class="content">
                 <p>{{ .Summary }}</p>

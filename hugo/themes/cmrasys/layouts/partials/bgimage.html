@@ -1,0 +1,8 @@
+{{ $url := false }}
+{{ $imageURL := printf "images/titleBackgrounds/%s" ( .Params.background | default "default.jpg" ) }}
+
+{{ with resources.Get $imageURL }}
+    {{ $url = .RelPermalink }}
+{{ end }}
+
+{{ return $url }}
