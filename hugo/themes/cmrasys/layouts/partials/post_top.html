@@ -1,0 +1,4 @@
+{{ $bgimage := partial "bgimage.html" . }}
+<div class="article-stub"  style="--bg-image: url('{{ $bgimage }}');">
+    {{ partial "metadata.html" . }}
+    <div class="content">
