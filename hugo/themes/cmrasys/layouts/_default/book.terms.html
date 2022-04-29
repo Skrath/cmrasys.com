@@ -1,0 +1,15 @@
+{{ define "main" }}
+  {{ partial "post_top.html" . }}
+    <p>{{ .Content }}</p>
+    {{ range .Pages.GroupByParam "universe" }}
+    <h3>{{ .Key }}</h3>
+      <ul>
+        {{ range .Pages }}
+          <li>
+            <a href="{{ .Permalink }}">{{ .Title }}</a>
+          </li>
+        {{ end }}
+      </ul>
+    {{ end }}
+  {{ partial "post_bot.html" . }}
+{{ end }}

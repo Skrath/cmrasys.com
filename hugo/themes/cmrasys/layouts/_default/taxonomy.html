@@ -1,5 +1,6 @@
 {{ define "main" }}
   {{ partial "post_top.html" . }}
+    <p>{{ .Content }}</p>
     <ul>
       {{ range .Data.Pages }}
         <li>

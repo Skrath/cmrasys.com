@@ -26,11 +26,11 @@
                 of <em><a href="{{ $href }}">{{ . }}</a></em>
             {{ end }}
         </p>
-    {{ if ne .FirstSection.Title .Parent.Title }}
+        
         <p>
-            <em>
+            Collected under <em>
                 <a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a>
-            </em> universe
+            </em>
         </p>
-    {{ end }}
+    
 </div>
