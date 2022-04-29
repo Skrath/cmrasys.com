@@ -8,6 +8,13 @@ theme = 'cmrasys'
     tag = 'tags'
     book = 'books'
 
+[markup]
+  [markup.goldmark]
+    [markup.goldmark.parser]
+      [markup.goldmark.parser.attribute]
+        block = true
+        title = true
+
 [menu]
     [[menu.main]]
         name = "Home"
