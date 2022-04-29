@@ -2,14 +2,23 @@
   {{ partial "post_top.html" . }}
     <p>{{ .Content }}</p>
     {{ range .Pages.GroupByParam "universe" }}
-    <h3>{{ .Key }}</h3>
-      <ul>
-        {{ range .Pages }}
-          <li>
-            <a href="{{ .Permalink }}">{{ .Title }}</a>
-          </li>
-        {{ end }}
-      </ul>
+        <h3>{{ .Key }}</h3>
+        <ul>
+            {{ range .Pages }}
+            <li>
+                <a href="{{ .Permalink }}">{{ .Title }}</a>
+            </li>
+            {{ end }}
+        </ul>
     {{ end }}
+
+    <h3>Standalone</h3>
+    <ul>
+        {{ range where .Pages "Params.universe" "eq" nil}}
+            <li>
+                <a href="{{ .Permalink }}">{{ .Title }}</a> {{ .Params.universe }}
+            </li>
+        {{ end }}
+    </ul>
   {{ partial "post_bot.html" . }}
 {{ end }}
