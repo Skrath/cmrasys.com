@@ -1,11 +1,12 @@
 ---
 title: "Chapter 1"
-date: 2022-04-18T22:49:09Z
+date: 2022-04-26T22:49:09Z
 draft: true
 tags: ["foo", "bar"]
 categories: ["Writing"]
 chapter: "Chapter 1"
 books: The Unchosen Child
+background: rift_cropped.jpg
 ---
 
 As far as I can recall, nobody ever sat me down and told me to kill anyone. That said, I’m also certain they’ve never asked me not to. It’s always ‘stop them’ or ‘remove them’ or even ‘handle with extreme prejudice’; which, frankly, I’ve always assumed meant to kill them. They don’t complain when the only thing left is a lopsided hole in the ground filled with cracked charcoal. They just fill out some paperwork and send me on my way.

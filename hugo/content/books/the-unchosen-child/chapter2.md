@@ -6,6 +6,7 @@ tags: ["foo", "bar"]
 categories: ["Writing"]
 chapter: "Chapter 2"
 books: The Unchosen Child
+background: sparkfield.jpg
 ---
 
 I lift the small, blue, stone-wall-shaped bucket up and peer at the small castle underneath. It stands in a small cluster amongst several other nearly identical little castles. The visual accuracy of the dry sand isn’t anything special but my young eyes find it positively amazing. I begin scooping up some more loose sand with my tiny little hands, making a meager effort to pack the loose grains into the plastic shell.
