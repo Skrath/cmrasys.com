@@ -293,6 +293,10 @@ hr {
     flex-flow: column;
 }
 
+#content .article-stub .content blockquote.right {
+    text-align: right;
+}
+
 #sidebar {
     grid-area: sidebar;
     display: flex;
