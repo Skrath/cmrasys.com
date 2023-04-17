@@ -1,0 +1,189 @@
+{
+  "$schema": "https://frontmatter.codes/frontmatter.schema.json",
+  "frontMatter.framework.id": "hugo",
+  "frontMatter.content.publicFolder": "static",
+  "frontMatter.extensibility.scripts": [
+    "[[workspace]]/.frontmatter/ui/books.js"
+  ],
+  "frontMatter.content.pageFolders": [
+    {
+      "title": "books",
+      "path": "[[workspace]]/hugo/content/books"
+    },
+    {
+      "title": "posts",
+      "path": "[[workspace]]/hugo/content/posts"
+    },
+    {
+      "title": "Writings",
+      "path": "[[workspace]]/hugo/content/Writings"
+    }
+  ],
+  "frontMatter.taxonomy.contentTypes": [
+    {
+      "name": "default",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "title",
+          "name": "title",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "date",
+          "name": "date",
+          "type": "datetime"
+        },
+        {
+          "title": "originalPubDate",
+          "name": "originalPubDate",
+          "type": "datetime"
+        },
+        {
+          "title": "draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "categories",
+          "name": "categories",
+          "type": "categories"
+        },
+        {
+          "title": "background",
+          "name": "background",
+          "type": "string"
+        },
+        {
+          "title": "type",
+          "name": "type",
+          "type": "string"
+        },
+        {
+          "title": "displayClass",
+          "name": "displayClass",
+          "default": "default",
+          "type": "choice",
+          "choices": ["default", "poem"]
+        }
+      ]
+    },
+    {
+      "name": "chapter",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "Title",
+          "name": "title",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "Subtitle",
+          "name": "subtitle",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "Date",
+          "name": "date",
+          "type": "datetime"
+        },
+        {
+          "title": "Draft",
+          "name": "draft",
+          "type": "draft"
+        },
+        {
+          "title": "Tags",
+          "name": "tags",
+          "type": "tags"
+        },
+        {
+          "title": "Universe",
+          "name": "universe",
+          "type": "string"
+        },
+        {
+          "title": "Categories",
+          "name": "categories",
+          "type": "categories"
+        },
+        {
+          "title": "Chapter",
+          "name": "chapter",
+          "type": "number"
+        },
+        {
+          "title": "Books",
+          "name": "books",
+          "type": "taxonomy",
+          "taxonomyId": "booksTaxonomy"
+        },
+        {
+          "title": "Background",
+          "name": "background",
+          "type": "string"
+        },
+        {
+          "title": "Type",
+          "name": "type",
+          "type": "string"
+        },
+        {
+          "title": "slug",
+          "name": "slug",
+          "type": "datetime"
+        }
+      ]
+    }
+  ],
+  "frontMatter.preview.host": "http://localhost:1313/",
+  "frontMatter.taxonomy.tags": [
+    "English Muffins",
+    "Father",
+    "Raisins",
+    "School",
+    "Stars",
+    "abstract",
+    "bar",
+    "bar2",
+    "flans",
+    "foo",
+    "jam",
+    "lambs",
+    "love",
+    "third",
+    "vacation",
+    "whimsical"
+  ],
+  "frontMatter.taxonomy.categories": [
+    "Autobiographical",
+    "Freeform",
+    "Humor",
+    "Poetry",
+    "Prose",
+    "Romantic",
+    "Short Story",
+    "Test Longer",
+    "Testing",
+    "Writing"
+  ],
+  "frontMatter.taxonomy.booksTaxonomy": [
+    {
+      "id": "booksTaxonomy",
+      "options": [
+        "Option 1",
+        "Option 2",
+        "Option 3"
+      ]
+    }
+  ],
+  "frontMatter.framework.startCommand": "hugo server -D -s hugo/ --poll 700ms"
+}
