@@ -8,9 +8,12 @@ jobs:
 
     steps:
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v3
 
-    - name: hugo
-      uses: klakegg/actions-hugo@1.0.0
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
       with:
-        source: hugo/
+        hugo-version: 'latest'
+        
+    - name: Build
+      run: hugo -s hugo/ --minify
