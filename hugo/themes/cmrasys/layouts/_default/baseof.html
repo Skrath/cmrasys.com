@@ -2,7 +2,7 @@
 <html>
     {{- partial "head.html" . -}}
     <body>
-        <div id="container">
+        <div id="container" class="{{ .Params.displayClass | default "default" }}">
             {{- partial "header.html" . -}}
             <div id="content">
             {{- block "main" . }}{{- end }}
