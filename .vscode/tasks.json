@@ -13,27 +13,26 @@
             },
             "isBackground": true,
             "problemMatcher": {
-				"severity": "error",
-				"fileLocation": "absolute",
-				"owner": "hugo",
+                "severity": "error",
+                "fileLocation": "absolute",
+                "owner": "hugo",
                 "pattern": {
-					"regexp": "\"(.*):(\\d+):(\\d+)\": .*: (.*)",
-					"file": 1,
-					"line": 2,
+                    "regexp": "\"(.*):(\\d+):(\\d+)\": .*: (.*)",
+                    "file": 1,
+                    "line": 2,
                     "column": 3,
-					"message": 4,
-					"loop": true
-				},
-				"background": {
-					"activeOnStart": true,
-					"beginsPattern": "Change detected, rebuilding site",
-					"endsPattern": "Total in \\d+ ms"
-				}
-			},
-            "options": {
-                "cwd": "${workspaceFolder}/hugo",
+                    "message": 4,
+                    "loop": true
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "Change detected, rebuilding site",
+                    "endsPattern": "Total in \\d+ ms"
+                }
             },
-            
+            "options": {
+                "cwd": "${workspaceFolder}/hugo"
+            }
         },
         {
             "label": "Build",
@@ -45,7 +44,7 @@
             },
             "problemMatcher": [],
             "options": {
-                "cwd": "${workspaceFolder}/hugo",
+                "cwd": "${workspaceFolder}/hugo"
             }
         },
         {
@@ -58,7 +57,7 @@
             },
             "problemMatcher": [],
             "options": {
-                "cwd": "${workspaceFolder}/hugo",
+                "cwd": "${workspaceFolder}/hugo"
             }
         }
     ]
