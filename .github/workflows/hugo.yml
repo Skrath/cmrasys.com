@@ -31,3 +31,9 @@ jobs:
         with:
           reporter: github-check
           stylelint_input: "hugo/themes/cmrasys/static/css/*.css"
+      - name: misspell
+        uses: reviewdog/action-misspell@v1
+        with:
+          path: "hugo/content/"
+          pattern: "*.md"
+          locale: "US"
