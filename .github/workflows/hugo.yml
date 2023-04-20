@@ -19,11 +19,15 @@ jobs:
       run: hugo -s hugo/ --minify
 
   linters:
-    name: stylelint
+    name: Linters
     runs-on: ubuntu-latest
 
     steps:
       - uses: actions/checkout@v3
-      - uses: actions-hub/stylelint@master
-        env:
-          PATTERN: "hugo/themes/cmrasys/static/css/*.css"
+      - uses: actions/setup-node@v3
+      - run: npm install stylelint stylelint-config-standard -D
+      - name: Stylelint
+        uses: reviewdog/action-stylelint@v1
+        with:
+          reporter: github-check
+          stylelint_input: "hugo/themes/cmrasys/static/css/*.css"
