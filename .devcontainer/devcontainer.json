@@ -29,7 +29,8 @@
 				"davidanson.vscode-markdownlint",
 				"budparr.language-hugo-vscode",
 				"eliostruyf.vscode-front-matter",
-				"stylelint.vscode-stylelint"
+				"stylelint.vscode-stylelint",
+				"eamodio.gitlens"
 			]
 		}
 	},
