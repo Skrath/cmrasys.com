@@ -10,7 +10,7 @@ ul.menu a {
 }
 
 ul.menu, ul.menu ul {
-    padding-inline-start: 0px;
+    padding-inline-start: 0;
     display: flex;
     font-weight: bold;
     letter-spacing: 2px;
@@ -33,6 +33,13 @@ ul.menu:hover {
     justify-content: center;
     white-space: nowrap;
     flex-grow: 1;
+}
+
+ul.menu li ul li {
+    font-size: 1.05vw;
+    border-bottom: var(--border-gray);
+    border-image: linear-gradient(90deg, transparent, var(--main-color-dark), transparent) 1;
+    height: 3vw;
 }
 
 .menu>li:last-child {
@@ -61,18 +68,11 @@ ul.menu li ul {
 ul.menu li ul li ul {
     left: calc(100% + 1px);
     top: -1px;
-    border-radius: 0 5px 5px 5px;
-}
-
-ul.menu li ul li {
-    font-size: 1.05vw;
-    border-bottom: var(--border-gray);
-    border-image: linear-gradient(90deg, transparent, var(--main-color-dark), transparent) 1;
-    height: 3vw;
+    border-radius: 0 5px 5px;
 }
 
 ul.menu li ul li:first-child {
-    box-shadow: 0px 3px 5px -3px inset var(--color-border-shadow);
+    box-shadow: 0 3px 5px -3px inset var(--color-border-shadow);
 }
 
 ul.menu li ul li:hover {
@@ -124,7 +124,7 @@ span#banner {
 }
 
 #banner h2, #banner h3, #banner h4 {
-    color: rgba(0,0,0,0.0);
+    color: rgba(0 0 0 / 0%);
     opacity: 1;
 }
 
@@ -135,14 +135,14 @@ span#banner {
 
 #banner h2 {
     font-size: 12em;
-    text-shadow: 0px 0px 30px lightgray;
+    text-shadow: 0 0 30px lightgray;
     top: -35px;
     left: 25px;
 }
 
 #banner h3 {
     font-size: 10em;
-    text-shadow: 0px 0px 16px lightgrey;
+    text-shadow: 0 0 16px lightgrey;
     top: 50px;
     left: -20px;
 }
@@ -155,8 +155,8 @@ span#banner {
 
 #banner:hover h2, #banner:hover h3, #banner:hover h4 {
     font-size: 11em;
-    top: 0px;
-    left: 0px;
+    top: 0;
+    left: 0;
     opacity: 0;
 }
 
