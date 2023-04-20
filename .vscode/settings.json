@@ -1,12 +1,20 @@
 {
-    "frontMatter.framework.startCommand": "hugo server -D -s hugo/ --poll 700ms",
     "[markdown]": {
         "editor.fontSize": 14,
         "editor.lineHeight": 26,
         "editor.wordWrap": "wordWrapColumn",
         "editor.wordWrapColumn": 64,
         "editor.lineNumbers": "off",
-        "editor.quickSuggestions": false,
+        "editor.quickSuggestions": {
+            "comments": "off",
+            "strings": "off",
+            "other": "off"
+        },
         "editor.minimap.enabled": false
-    }
+    },
+    "[css]": {
+        "editor.defaultFormatter": "stylelint.vscode-stylelint"
+    },
+    "stylelint.enable": true,
+    "stylelint.configBasedir": "/usr/local/share/npm-global/lib/node_modules/stylelint-config-standard/"
 }
