@@ -36,5 +36,5 @@ jobs:
         with:
           reporter: github-check
           path: "hugo/content"
-          pattern: "*.md"
+          pattern: "**/*.md"
           locale: "US"
