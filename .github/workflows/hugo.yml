@@ -17,3 +17,13 @@ jobs:
         
     - name: Build
       run: hugo -s hugo/ --minify
+
+  linters:
+    name: stylelint
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions-hub/stylelint@master
+        env:
+          PATTERN: "hugo/themes/cmrasys/static/css/*.css"
