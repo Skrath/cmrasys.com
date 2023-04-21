@@ -30,7 +30,8 @@
 				"budparr.language-hugo-vscode",
 				"eliostruyf.vscode-front-matter",
 				"stylelint.vscode-stylelint",
-				"eamodio.gitlens"
+				"eamodio.gitlens",
+				"znck.grammarly"
 			]
 		}
 	},

@@ -16,5 +16,10 @@
         "editor.defaultFormatter": "stylelint.vscode-stylelint"
     },
     "stylelint.enable": true,
-    "stylelint.configBasedir": "/usr/local/share/npm-global/lib/node_modules/stylelint-config-standard/"
+    "stylelint.configBasedir": "/usr/local/share/npm-global/lib/node_modules/stylelint-config-standard/",
+    "grammarly.files.include": [
+        "**/*.md"
+    ],
+    "grammarly.config.documentDialect": "american",
+    "grammarly.config.documentDomain": "creative"
 }
