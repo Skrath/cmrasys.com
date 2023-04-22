@@ -36,5 +36,5 @@ EXPOSE 1313
 
 # [Optional] Uncomment if you want to install more global node packages
 # RUN sudo -u node npm install -g <your-package-list-here>
-RUN sudo -u node npm install -g stylelint
-RUN sudo -u node npm install -g stylelint-config-standard
+RUN sudo -u node npm install -g stylelint postcss
+RUN sudo -u node npm install -g stylelint-config-standard-scss

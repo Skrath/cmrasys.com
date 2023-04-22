@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - uses: actions/setup-node@v3
-      - run: npm install stylelint stylelint-config-standard -D
+      - run: npm install stylelint postcss stylelint-config-standard-scss -D
       - name: Stylelint
         uses: reviewdog/action-stylelint@v1
         with:
