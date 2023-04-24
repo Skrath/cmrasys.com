@@ -15,11 +15,26 @@
     "[css]": {
         "editor.defaultFormatter": "stylelint.vscode-stylelint"
     },
+    "[scss]": {
+        "editor.defaultFormatter": "stylelint.vscode-stylelint"
+    },
     "stylelint.enable": true,
-    "stylelint.configBasedir": "/usr/local/share/npm-global/lib/node_modules/stylelint-config-standard/",
+    "stylelint.configBasedir": "/usr/local/share/npm-global/lib/node_modules/stylelint-config-standard-scss/",
     "grammarly.files.include": [
         "**/*.md"
     ],
     "grammarly.config.documentDialect": "american",
-    "grammarly.config.documentDomain": "creative"
+    "grammarly.config.documentDomain": "creative",
+    "stylelint.snippet": [
+        "css",
+        "less",
+        "postcss",
+        "scss"
+    ],
+    "stylelint.validate": [
+        "css",
+        "less",
+        "postcss",
+        "scss"
+    ]
 }
