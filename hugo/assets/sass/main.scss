@@ -74,43 +74,6 @@ hr {
     height: 2px;
 }
 
-// Looks like this is a remnant from something old
-// Should probably remove
-#pagenav .navlinks {
-    grid-area: pagenav;
-    box-shadow: 0 1px 10px -2px var(--color-border-shadow);
-    border-radius: 5px;
-    background-color: var(--main-color-light);
-    padding: 10px 5px;
-    transition: box-shadow 0.15s linear;
-    background-image: linear-gradient(transparent, var(--off-white) 15vw, var(--off-white)),
-                    linear-gradient(145deg, rgba(55,  65,  68, 35%) 0, rgba(173, 216, 230, 25%) 25%)
-     
-    ul {
-        padding-inline-start: 0;
-        margin: 0;
-        display: flex;
-        justify-content: flex-end;
-        align-content: center;
-    }
-
-    li {
-        display: inline-flex;
-        padding: 2px 8px;
-        color: var(--muted-text);
-        cursor: pointer;
-        margin: 0 5px;
-
-        &:hover {
-            font-weight: bold;
-            background: var(--off-white);
-            box-shadow: 0 0 3px var(--color-shadow);
-            color: var(--off-black);
-            border-radius: 3px;
-        }
-    }
-}
-
 #container {
     display: grid;
     padding: 5px;
