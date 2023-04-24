@@ -32,6 +32,20 @@ body {
     transition: background 1s linear;
 }
 
+a {
+    color: inherit;
+    transition: all 0.25s linear;
+
+    &:hover {
+        font-weight: bold;
+        box-shadow: 0 0 3px var(--color-shadow);
+        border-radius: 3px;
+        text-decoration: none;
+        background: var(--off-white);
+        padding: 0 3px;
+    }
+}
+
 h1, h2, h3, h4, h5, h6 {
     font-family: 'Quattrocento Sans', sans-serif;
     letter-spacing: 0.05em;
@@ -50,20 +64,6 @@ h1, h2, h3, h4, h5, h6 {
 
 ul {
     padding-inline-start: 30px;
-}
-
-a {
-    color: inherit;
-    transition: all 0.25s linear;
-
-    &:hover {
-        font-weight: bold;
-        box-shadow: 0 0 3px var(--color-shadow);
-        border-radius: 3px;
-        text-decoration: none;
-        background: var(--off-white);
-        padding: 0 3px;
-    }
 }
 
 hr {
