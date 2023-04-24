@@ -49,7 +49,7 @@ tfoot th {
 
 tbody {
     tr {
-        background: rgb(127, 127, 127);
+        background: var(--color-light-gray);
         transition: background 0.25s linear;
 
         &:first-child {
