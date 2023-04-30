@@ -1,7 +1,29 @@
 baseURL = 'http://cmrasys.com/'
 languageCode = 'en-us'
+DefaultContentLanguage = "en"
 title = 'C M Rasys'
 theme = 'cmrasys'
+
+paginate = 12
+
+enableEmoji = true
+enableGitInfo = true
+enableRobotsTXT = true
+canonifyURLs = true
+
+[sitemap]
+  changefreq = 'weekly'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
+[params]
+  author = "Christopher Rasys"
+  github = "https://github.com/Skrath/cmrasys.com"
+  facebook = "https://www.facebook.com/cmrasys"
+#   og_image = "/images/og.png"
+  sitename = "C M Rasys"
+  twitter = "@cmrasys"
+  description = "I dunno, an author website I guess"
 
 [taxonomies]
     category = 'categories'
