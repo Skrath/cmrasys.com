@@ -77,7 +77,6 @@ hr {
 
 #container {
     display: grid;
-    padding: 5px;
     grid-template: 
         "header header header"
         "nav nav nav"
@@ -86,6 +85,7 @@ hr {
         "footer footer footer";
     grid-template-columns: 1fr 3fr 1fr;
     grid-template-rows: 18vw auto;
+    padding: 0 5px;
 
     &.default, &.poem {
         grid-template-rows: auto;
@@ -342,7 +342,7 @@ hr {
     height: fit-content;
     position: sticky;
     top: 5vw;
-    margin: 0 0 0 5px;
+    margin: 0 0 0 10px;
 
     div.side-item {
         display: grid;
