@@ -404,6 +404,10 @@ hr {
     }
 }
 
+.highlight {
+    font-size: Max(11pt, 1.3vw);
+}
+
 $desktop-breakpoint: 1024px;
 $medium-breakpoint: 800px;
 $small-breakpoint: 600px;
