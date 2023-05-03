@@ -65,7 +65,12 @@
           "name": "displayClass",
           "default": "default",
           "type": "choice",
-          "choices": ["default", "poem", "multiple"]
+          "choices": [
+            "default",
+            "poem",
+            "article",
+            "multiple"
+          ]
         }
       ]
     },
