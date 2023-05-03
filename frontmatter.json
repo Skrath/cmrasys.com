@@ -35,6 +35,11 @@
           "single": true
         },
         {
+          "title": "description",
+          "name": "description",
+          "type": "string"
+        },
+        {
           "title": "date",
           "name": "date",
           "type": "datetime"
