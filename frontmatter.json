@@ -17,6 +17,10 @@
     {
       "title": "Writings",
       "path": "[[workspace]]/hugo/content/Writings"
+    },
+    {
+      "title": "programming",
+      "path": "[[workspace]]/hugo/content/programming"
     }
   ],
   "frontMatter.taxonomy.contentTypes": [
