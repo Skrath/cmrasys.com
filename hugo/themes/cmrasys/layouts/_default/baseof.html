@@ -2,7 +2,7 @@
 <html prefix="og: http://ogp.me/ns#" lang="{{ .Language }}">
     {{- partial "head.html" . -}}
     <body>
-        <div id="container" class="{{ .Params.displayClass | default "default" }}">
+        <div id="container" class="{{ .Params.displayClass | default "multiple" }}">
             {{- partial "header.html" . -}}
             <div id="content">
             {{- block "main" . }}{{- end }}
