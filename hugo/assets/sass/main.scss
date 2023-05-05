@@ -88,6 +88,10 @@ hr {
     grid-gap: 10px;
     padding: 0 5px;
 
+    #content {
+        font-size: Max(9pt, 1.5vw);
+    }
+
     &.default, &.poem, &.article {
         grid-template-rows: auto;
 
@@ -135,13 +139,12 @@ hr {
         }
 
         #content .article-stub {
-            grid-template-columns: 3fr 1fr;
-            grid-template-rows: 10vw 10vw auto;
-            grid-template-areas: 
-                "title ."
-                "content meta"
-                "content tags";
-            grid-column-gap: 10px;
+            grid-template: 
+                "title ." 10vw
+                "content meta" 10vw
+                "content tags" auto
+                / 3fr 1fr;
+            grid-gap: 10px;
             box-shadow: none;
             background-color: inherit;
             background-image: none;
@@ -216,7 +219,6 @@ hr {
 
     .article-stub {
         display: grid;
-        grid-template-rows: auto auto auto Max(45px, 3vw);
         grid-template-areas: 
             "title"
             "meta"
@@ -231,9 +233,9 @@ hr {
         background-size: auto;
         background-repeat: no-repeat;
         background-blend-mode: luminosity;
-        min-width: 250px;
         padding: 10px 10px 5px;
         transition: box-shadow 0.15s linear;
+        grid-gap: 5px;
 
         &:hover {
             box-shadow: 0 1px 7px 1px var(--color-border-shadow);
@@ -244,9 +246,6 @@ hr {
             border-top: var(--border-gray);
             border-bottom: var(--border-gray);
             border-image: linear-gradient(90deg, transparent, var(--main-color-dark), transparent) 1;
-            margin-top: 5px;
-            margin-bottom: 5px;
-            padding-top: 5px;
 
             blockquote.right {
                 text-align: right;
@@ -336,6 +335,7 @@ hr {
                 margin-top: 5px;
                 display: flex;
                 align-items: center;
+                flex-wrap: wrap;
             }
         }
     }
@@ -404,12 +404,12 @@ hr {
 }
 
 .highlight {
-    font-size: Max(11pt, 1.3vw);
+    font-size: Max(7pt, 1.3vw);
 }
 
 $desktop-breakpoint: 1024px;
 $medium-breakpoint: 800px;
-$small-breakpoint: 600px;
+$small-breakpoint: 650px;
 
 @media (max-width: $desktop-breakpoint) {
     #container {
@@ -455,8 +455,7 @@ $small-breakpoint: 600px;
 @media (max-width: $small-breakpoint) {
     #container.poem, #container.article {
         #content .article-stub {
-            grid-template-columns: auto;
-            grid-template-areas: 
+            grid-template: 
                 "title"
                 "content"
                 "meta"
