@@ -141,7 +141,7 @@ hr {
         #content .article-stub {
             grid-template: 
                 "title ." 10vw
-                "content meta" 10vw
+                "content meta" 7vw
                 "content tags" auto
                 / 3fr 1fr;
             grid-gap: 10px;
@@ -149,8 +149,13 @@ hr {
             background-color: inherit;
             background-image: none;
 
-            .tags ul {
-                flex-flow: row-reverse wrap;
+            .tags {
+                box-shadow: 0 1px 5px -2px var(--color-border-shadow);
+                border-radius: 5px;
+
+                ul {
+                    flex-flow: row-reverse wrap;
+                }
             }
 
             .meta {
@@ -159,7 +164,7 @@ hr {
                 border-radius: 5px;
                 padding: 5px;
                 background: var(--off-white);
-                align-self: center;
+                align-self: end;
             }
 
             .title {
