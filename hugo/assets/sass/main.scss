@@ -392,7 +392,8 @@ hr {
             grid-area: title;
             font-size: 2.5vw;
             align-self: start;
-            justify-self: center;
+            justify-self: stretch;
+            text-align: center;
             border-bottom: var(--border-gray);
             border-image: linear-gradient(90deg, transparent, var(--main-color-dark), transparent) 1;
             color: var(--off-white);
