@@ -4,6 +4,16 @@
         <div class="content">
             <p>Some content would go here probably.</p>
             <p>Gotta have a second paragraph</p>
+
+            {{ $seed := now.Unix }}
+            {{ $post := index (shuffle (where .Site.RegularPages "Section" "Writings" )) 1 }}
+            {{ $words := split ($post.RawContent) " " }}
+            {{ $end := mod (add (mul 13 $seed) 97) (len $words) }}
+            <blockquote>
+                ...{{ delimit (first 25 ( after $end ($words))) " " }}...
+                <cite><a href="{{ $post.RelPermalink }}">{{ $post.Title }}</a></cite>
+            </blockquote>
+
         </div>
     </div>
     <div class="side-item">

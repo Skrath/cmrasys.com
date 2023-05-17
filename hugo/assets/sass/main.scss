@@ -366,6 +366,27 @@ hr {
         background: linear-gradient(transparent, var(--off-white) 5vw),
             var(--main-color-dark) var(--angle-fade-to-main);
         box-shadow: 0 1px 10px -2px var(--color-border-shadow);
+        font-size: Max(10pt, 1.6vw);
+
+        blockquote {
+            font-style: normal;
+            font-size: Max(11pt, 1.9vw);
+            margin: 2vw;
+            padding: 1vw 2vw;
+            border-left: var(--border-light);
+            border-image: linear-gradient(0deg, transparent, var(--main-color-dark), transparent) 1;
+            border-radius: 5px;
+            background: linear-gradient(90deg, var(--main-color-light), transparent);
+
+            cite {
+                display: block;
+                margin-top: 1em;
+
+                &::before {
+                    content: "~";
+                }
+            }
+        }
 
         h3 {
             grid-area: title;
