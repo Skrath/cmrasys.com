@@ -6,7 +6,7 @@
             <p>Gotta have a second paragraph</p>
 
             {{ $seed := now.Unix }}
-            {{ $post := index (shuffle (where .Site.RegularPages "Section" "Writings" )) 1 }}
+            {{ $post := index (shuffle (where .Site.RegularPages "Section" "writings" )) 1 }}
             {{ $words := split ($post.RawContent) " " }}
             {{ $end := mod (add (mul 13 $seed) 97) (len $words) }}
             <blockquote>
