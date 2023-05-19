@@ -368,45 +368,6 @@ hr {
         box-shadow: 0 1px 10px -2px var(--color-border-shadow);
         font-size: Max(10pt, 1.3vw);
 
-        blockquote {
-            font-style: normal;
-            font-size: Max(11pt, 1.4vw);
-            margin: 1vw;
-            padding: 0.5vw 1vw;
-            border-left: var(--border-light);
-            border-image: linear-gradient(0deg, transparent, var(--main-color-dark), transparent) 1;
-            border-radius: 5px;
-            background: linear-gradient(90deg, var(--main-color-light), transparent);
-            position: relative;
-            font-family: 'Nothing You Could Do', cursive;
-
-            &::before {
-                content: "\"";
-                font-size: 20vw;
-                position: absolute;
-                top: -6vw;
-                left: -0.5vw;
-                text-shadow: 0 0 2px var(--main-color-dark);
-                mix-blend-mode: multiply;
-                color: var(--main-color-dark);
-                opacity: 0.5;
-            }
-
-            cite {
-                display: block;
-                margin-top: 1em;
-                font-family: 'Vollkorn SC', serif;
-
-                a {
-                    text-decoration: none;
-                }
-
-                &::before {
-                    content: "~";
-                }
-            }
-        }
-
         h3 {
             grid-area: title;
             font-size: 2.5vw;
@@ -422,6 +383,45 @@ hr {
 
         .content {
             grid-area: content;
+        }
+    }
+}
+
+blockquote {
+    font-style: normal;
+    font-size: Max(11pt, 1.4vw);
+    margin: 1vw;
+    padding: 0.5vw 1vw;
+    border-left: var(--border-light);
+    border-image: linear-gradient(0deg, transparent, var(--main-color-dark), transparent) 1;
+    border-radius: 5px;
+    background: linear-gradient(90deg, var(--main-color-light), transparent);
+    position: relative;
+    font-family: 'Nothing You Could Do', cursive;
+
+    &::before {
+        content: "\"";
+        font-size: 20vw;
+        position: absolute;
+        top: -6vw;
+        left: -0.5vw;
+        text-shadow: 0 0 2px var(--main-color-dark);
+        mix-blend-mode: multiply;
+        color: var(--main-color-dark);
+        opacity: 0.5;
+    }
+
+    cite {
+        display: block;
+        margin-top: 1em;
+        font-family: 'Vollkorn SC', serif;
+
+        a {
+            text-decoration: none;
+        }
+
+        &::before {
+            content: "~";
         }
     }
 }
