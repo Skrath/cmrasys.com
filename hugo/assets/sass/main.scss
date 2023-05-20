@@ -110,14 +110,6 @@ hr {
         }
     }
 
-    &.default {
-        grid-template-areas: 
-            "nav nav nav"
-            ". main sidebar"
-            ". pagenav sidebar"
-            "footer footer footer";
-    }
-
     .article-stub .title {
         grid-area: title;
         color: var(--off-white);
