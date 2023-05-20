@@ -379,7 +379,7 @@ hr {
     }
 }
 
-blockquote {
+blockquote, #container #content .infoblock {
     font-style: normal;
     font-size: Max(11pt, 1.4vw);
     margin: 1vw;
@@ -389,6 +389,10 @@ blockquote {
     border-radius: 5px;
     background: linear-gradient(90deg, var(--main-color-light), transparent);
     position: relative;
+    box-shadow: 0 1px 5px -2px var(--color-border-shadow);
+}
+
+blockquote {
     font-family: 'Nothing You Could Do', cursive;
 
     &::before {
@@ -443,6 +447,20 @@ blockquote {
 
 .highlight {
     font-size: Max(7pt, 1.3vw);
+}
+
+#container #content .infoblock {
+    .title {
+        color: var(--off-black);
+
+        h2 {
+            font-size: Max(12pt, 1.5vw);
+        }
+    }
+
+    .tags {
+        font-size: Max(10pt, 1.2vw);
+    }
 }
 
 $desktop-breakpoint: 1024px;

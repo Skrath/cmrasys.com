@@ -1,0 +1,7 @@
+{{ $seed := now.Unix }}
+{{ $post := index (shuffle (where .Site.RegularPages (.Get 0) (.Get 1) )) 0 }}
+
+<div class="infoblock">
+    {{ partial "metadata.html" $post }}
+    {{ partial "tags.html" $post }}
+</div>

@@ -1,25 +1,5 @@
 <div id="sidebar">
-    <div class="side-item">
-        <h3>Sidebar Title</h3>
-        <div class="content">
-            <p>Some content would go here probably.</p>
-            <p>Gotta have a second paragraph</p>
-
-            {{ $seed := now.Unix }}
-            {{ $post := index (shuffle (where .Site.RegularPages "Section" "writings" )) 1 }}
-            {{ $words := split ($post.RawContent) " " }}
-            {{ $end := mod (add (mul 13 $seed) 97) (len $words) }}
-            <blockquote>
-                ...{{ delimit (first 25 ( after $end ($words))) " " }}...
-                <cite><a href="{{ $post.RelPermalink }}">{{ $post.Title }}</a></cite>
-            </blockquote>
-
-        </div>
-    </div>
-    <div class="side-item">
-        <h3>Another Title</h3>
-        <div class="content">
-            <p>What's this? A paragraph? How unexpected.</p>
-        </div>
-    </div>
+    {{ range where .Site.RegularPages.ByPublishDate.Reverse "Section" "sidebar" }}
+        {{ partial "sidebar_item.html" . }}
+    {{ end }}
 </div>
