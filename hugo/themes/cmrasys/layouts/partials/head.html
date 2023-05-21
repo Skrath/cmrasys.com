@@ -4,7 +4,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge,chrome=1">
 
     {{ partial "meta.html" (dict "feature" . "ctx" $) }}
-    <link href="https://fonts.googleapis.com/css?family=Quattrocento|Quattrocento+Sans|Nothing+You+Could+Do|Vollkorn+SC&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Quattrocento|Quattrocento+Sans|Nothing+You+Could+Do|Vollkorn+SC|Cormorant&display=swap" rel="stylesheet">
     {{ $sass := resources.Get "sass/main.scss" }}
     {{ $style := $sass | resources.ToCSS }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
