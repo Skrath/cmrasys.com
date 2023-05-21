@@ -1,7 +1,12 @@
 {{ $seed := now.Unix }}
 {{ $post := index (shuffle (where .Site.RegularPages (.Get 0) (.Get 1) )) 0 }}
+{{ $words := split ($post.RawContent) " " }}
+{{ $end := mod (add (mul 13 $seed) 97) (len $words) }}
 
 <div class="infoblock">
     {{ partial "metadata.html" $post }}
-    {{ partial "tags.html" $post }}
+    {{/*  {{ partial "tags.html" $post }}  */}}
+    <div class="excerpt">
+        ...{{ delimit (first 25 ( after $end ($words))) " " }}...
+    </div>
 </div>
