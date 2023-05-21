@@ -43,34 +43,48 @@ canonifyURLs = true
         identifier = 'home'
         url = "/"
         weight = 1
-        sub = 'yar'
     [[menu.main]]
-        name = "Posts"
-        identifier = 'posts'
+        name = "Stuff"
+        identifier = 'stuff'
         url = "/posts/"
         weight = 2
-        sub = 'wut'
     [[menu.main]]
-        parent = 'posts'
-        identifier = 'sub'
-        name = "Sub"
-        url = "/sub/"
+        parent = 'stuff'
+        identifier = 'news'
+        name = "News and Updates"
+        url = "/posts/"
         weight = 1
     [[menu.main]]
-        parent = 'posts'
-        identifier = 'sub2'
-        name = "Sub2"
-        url = "/sub2/"
+        parent = 'stuff'
+        identifier = 'writings'
+        name = "Prose and Poetry"
+        url = "/writings/"
         weight = 2
     [[menu.main]]
+        parent = 'stuff'
+        identifier = 'programming'
+        name = "Development and Design"
+        url = "/programming/"
+        weight = 3
+    [[menu.main]]
+        name = "Meta"
+        identifier = 'meta'
+        url = "/tags/"
+        weight = 3
+    [[menu.main]]
+        parent = 'meta'
         name = "Tags"
         identifier = 'tags'
         url = "/tags/"
-        weight = 3
-        sub = 'bloop'
+        weight = 1
     [[menu.main]]
-        identifier = 'beans'
-        name = "Beans"
-        url = "/beans/"
+        parent = 'meta'
+        name = "Categories"
+        identifier = 'categories'
+        url = "/categories/"
+        weight = 2
+    [[menu.main]]
+        identifier = 'about'
+        name = "About Me"
+        url = "/about/"
         weight = 4
-        sub = 'bleep'
