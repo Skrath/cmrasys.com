@@ -355,14 +355,16 @@ hr {
             "content";
         border-radius: 5px;
         padding: 5px;
-        background: linear-gradient(transparent, var(--off-white) 5vw),
-            var(--main-color-dark) var(--angle-fade-to-main);
+        background-color: var(--main-color-light);
+        background-image: linear-gradient(transparent, var(--off-white) 5vw, 
+            var(--off-white)), var(--angle-fade-to-main);
+        background-blend-mode: luminosity;
         box-shadow: 0 1px 10px -2px var(--color-border-shadow);
         font-size: Max(10pt, 1.3vw);
 
         h3 {
             grid-area: title;
-            font-size: 2.5vw;
+            font-size: 2.4vw;
             align-self: start;
             justify-self: stretch;
             text-align: center;
@@ -379,7 +381,7 @@ hr {
     }
 }
 
-blockquote, #container #content .infoblock {
+blockquote, #container #content .infoblock, #container #content .note {
     font-style: normal;
     font-size: Max(11pt, 1.4vw);
     margin: 1vw;
@@ -447,20 +449,38 @@ blockquote {
 
 .highlight {
     font-size: Max(7pt, 1.3vw);
+
+    pre {
+        border-radius: 5px;
+        padding: 10px;
+    }
 }
 
 #container #content .infoblock {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
     .title {
         color: var(--off-black);
 
         h2 {
             font-size: Max(12pt, 1.5vw);
+            text-shadow: none;
         }
     }
 
     .tags {
         font-size: Max(10pt, 1.2vw);
     }
+
+    .excerpt {
+        margin-left: 10px;
+    }
+}
+
+#container #content .note {
+    font-family: Cormorant, serif;
 }
 
 $desktop-breakpoint: 1024px;
