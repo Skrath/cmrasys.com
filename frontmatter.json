@@ -21,6 +21,10 @@
     {
       "title": "programming",
       "path": "[[workspace]]/hugo/content/programming"
+    },
+    {
+      "title": "sidebar",
+      "path": "[[workspace]]/hugo/content/sidebar"
     }
   ],
   "frontMatter.taxonomy.contentTypes": [
@@ -80,6 +84,23 @@
             "article",
             "multiple"
           ]
+        }
+      ]
+    },
+    {
+      "name": "sidebar",
+      "pageBundle": false,
+      "fields": [
+        {
+          "title": "title",
+          "name": "title",
+          "type": "string",
+          "single": true
+        },
+        {
+          "title": "draft",
+          "name": "draft",
+          "type": "draft"
         }
       ]
     },
