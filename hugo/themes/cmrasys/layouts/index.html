@@ -1,5 +1,11 @@
 {{ define "main" }}
-    {{ range where .Site.RegularPages.ByPublishDate.Reverse "Section" "!=" "sidebar" }}
+    {{ $paginator := .Paginate (where .Site.RegularPages.ByPublishDate.Reverse "Section" "!=" "sidebar") }}
+    {{ range $paginator.Pages }}
         {{ partial "stub.html" . }}
     {{ end }}
+    <div id="pagenav">
+        <div class="navlinks">
+            {{ template "_internal/pagination.html" . }}
+        </div>
+    </div>
 {{ end }}

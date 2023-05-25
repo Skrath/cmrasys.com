@@ -6,14 +6,6 @@
             {{- partial "header.html" . -}}
             <div id="content">
             {{- block "main" . }}{{- end }}
-                <div id="pagenav">
-                    <div class="navlinks">
-                        <ul>
-                            <li><a href="#">Previous</a></li>
-                            <li><a href="#">Next</a></li>
-                        </ul>
-                    </div>
-                </div>
             </div>
             {{- partial "sidebar.html" . -}}
             {{- partial "footer.html" . -}}
