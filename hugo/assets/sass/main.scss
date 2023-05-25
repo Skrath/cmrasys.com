@@ -33,6 +33,10 @@ body {
     transition: background 1s linear;
 }
 
+div {
+    z-index: 1;
+}
+
 a {
     color: inherit;
     transition: all 0.25s linear;
@@ -360,7 +364,12 @@ hr {
             var(--off-white)), var(--angle-fade-to-main);
         background-blend-mode: luminosity;
         box-shadow: 0 1px 10px -2px var(--color-border-shadow);
-        font-size: Max(10pt, 1.3vw);
+        font-size: Max(10pt, 1.1vw);
+        transition: box-shadow 0.15s linear;
+
+        &:hover {
+            box-shadow: 0 1px 7px 1px var(--color-border-shadow);
+        }
 
         h3 {
             grid-area: title;
@@ -383,7 +392,7 @@ hr {
 
 blockquote, #container #content .infoblock, #container #content .note {
     font-style: normal;
-    font-size: Max(11pt, 1.4vw);
+    font-size: Max(11pt, 1.1vw);
     margin: 1vw;
     padding: 0.5vw 1vw;
     border-left: var(--border-light);
@@ -392,6 +401,7 @@ blockquote, #container #content .infoblock, #container #content .note {
     background: linear-gradient(90deg, var(--main-color-light), transparent);
     position: relative;
     box-shadow: 0 1px 5px -2px var(--color-border-shadow);
+    z-index: 1;
 }
 
 blockquote {
@@ -407,6 +417,7 @@ blockquote {
         mix-blend-mode: multiply;
         color: var(--main-color-dark);
         opacity: 0.5;
+        z-index: -1;
     }
 
     cite {
@@ -422,6 +433,10 @@ blockquote {
             content: "~";
         }
     }
+}
+
+.page-item.active {
+    background-image: linear-gradient(90deg, transparent, var(--main-color-light), transparent);
 }
 
 #footer {
