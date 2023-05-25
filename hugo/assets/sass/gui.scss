@@ -127,11 +127,16 @@ ul.menu {
 
 #pagenav .navlinks {
     border-radius: 5px;
-    box-shadow: 0 1px 5px -2px var(--color-border-shadow);
+    box-shadow: 0 1px 10px -2px var(--color-border-shadow);
     padding: 10px;
     background: var(--off-white);
     font-weight: bold;
     letter-spacing: 2px;
+    transition: box-shadow 0.15s linear;
+
+    &:hover {
+        box-shadow: 0 1px 7px 1px var(--color-border-shadow);
+    }
 
     ul {
         display: flex;
