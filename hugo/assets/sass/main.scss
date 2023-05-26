@@ -498,6 +498,20 @@ blockquote {
     font-family: Cormorant, serif;
 }
 
+figure {
+    margin: 5px;
+    padding: 5px;
+    box-shadow: 0 1px 5px -2px var(--color-border-shadow);
+    border-radius: 5px;
+    width: min-content;
+
+    figcaption {
+        text-align: center;
+        font-size: Max(10pt, 1.4vw);
+        font-style: italic;
+    }
+}
+
 $desktop-breakpoint: 1024px;
 $medium-breakpoint: 800px;
 $small-breakpoint: 650px;

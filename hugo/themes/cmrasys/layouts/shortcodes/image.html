@@ -1,0 +1,21 @@
+{{ $image := resources.GetMatch (.Get "src") }}
+
+{{/* Generate Thumbnail */}}
+{{ if ge $image.Width $image.Height }}
+{{ if ge $image.Width "600" }}
+    {{ $.Scratch.Set "thumbnail" ($image.Resize "600x q90") }}
+{{ else}}
+    {{ $.Scratch.Set "thumbnail" $image }}
+{{ end }}
+{{ else }}
+{{ if ge $image.Height "450" }}
+    {{ $.Scratch.Set "thumbnail" ($image.Resize "x450 q90") }}
+{{ else }}
+    {{ $.Scratch.Set "thumbnail" $image }}
+{{ end }}
+{{ end }}
+
+<figure style="float: {{ .Get "float" | default "none" }}">
+    <img src="{{ ($.Scratch.Get "thumbnail").RelPermalink }}"/>
+    <figcaption>{{ .Get "caption" }}</figcaption>
+</figure>
