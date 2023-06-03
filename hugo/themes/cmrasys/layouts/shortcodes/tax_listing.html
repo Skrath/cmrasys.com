@@ -1,0 +1,12 @@
+<div class="infoblock">
+    {{ $lookup := index .Site.Taxonomies (.Get 0) }}
+    {{ $href := absURL (printf "%s/%s" (.Get 0) (.Get 1)) }}
+    <div class="title">
+        <h2><a href="{{ $href }}">{{ .Get 1 }}</a></h2>
+    </div>
+    <ul class="tax-list">
+        {{ range (index $lookup (.Get 1)) }}
+            <li><a href="{{ .Page.RelPermalink }}">{{ .Page.Title }}</a></li>
+        {{ end }}
+    </ul>
+</div>
