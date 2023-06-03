@@ -3,9 +3,11 @@
     {{ range $paginator.Pages }}
         {{ partial "stub.html" . }}
     {{ end }}
-    <div id="pagenav">
-        <div class="navlinks">
-            {{ template "_internal/pagination.html" . }}
+    {{ if gt $paginator.TotalPages 1 }}
+        <div id="pagenav">
+            <div class="navlinks">
+                {{ template "_internal/pagination.html" . }}
+            </div>
         </div>
-    </div>
+    {{ end }}
 {{ end }}
