@@ -3,34 +3,46 @@
 {{ partial "title.html" . }}
 
 <div class="meta">
-    {{ with .PublishDate }}
+    {{ with .Date }}
         {{ $dateTime := .Format "2006-01-02" }}
         <p>Posted on <em><time datetime="{{ $dateTime }}">{{ .Format $dateFormat }}</time></em> 
     {{ end }}
-        {{ with .Params.categories }}
+    {{ with .Params.categories }}
         under <em>
             {{ range . }}
                 {{ $href := print (absURL "categories/") (urlize .) }}
                 <a href="{{ $href }}">{{ . }}</a>
             {{ end }}
         </em></p>
-        {{ end }}
-    
-        <p>
-            {{ with .Params.chapter }} 
-                <em>{{ . }}</em>
-            {{ end }}
+    {{ end }}
 
-            {{ with .Params.books }}
-                {{ $href := print (absURL "books/") (urlize .) }}
-                of <em><a href="{{ $href }}">{{ . }}</a></em>
-            {{ end }}
-        </p>
-        
-        <p>
-            Collected under <em>
-                <a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a>
-            </em>
-        </p>
+    <p>
+        {{ with .Lastmod }}
+            {{ $dateTime := .Format "2006-01-02" }}
+            Last updated on <em><time datetime="{{ $dateTime }}">{{ .Format $dateFormat }}</time></em>
+        {{ end }}
+
+        {{ with .PublishDate }}
+            {{ $dateTime := .Format "2006-01-02" }}
+            originally published on <em><time datetime="{{ $dateTime }}">{{ .Format $dateFormat }}</time></em>
+        {{ end }}
+    </p>
+
+    <p>
+        {{ with .Params.chapter }} 
+            <em>{{ . }}</em>
+        {{ end }}
+
+        {{ with .Params.books }}
+            {{ $href := print (absURL "books/") (urlize .) }}
+            of <em><a href="{{ $href }}">{{ . }}</a></em>
+        {{ end }}
+    </p>
+    
+    <p>
+        Collected under <em>
+            <a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a>
+        </em>
+    </p>
     
 </div>
