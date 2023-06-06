@@ -1,5 +1,5 @@
 {{ define "main" }}
-    {{ $paginator := .Paginate (where .Site.RegularPages.ByPublishDate.Reverse "Section" "!=" "sidebar") }}
+    {{ $paginator := .Paginate (where .Site.RegularPages.ByDate.Reverse "Section" "!=" "sidebar") }}
     {{ range $paginator.Pages }}
         {{ partial "stub.html" . }}
     {{ end }}
