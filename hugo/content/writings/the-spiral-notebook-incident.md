@@ -17,7 +17,7 @@ categories:
   - Short Story
   - Prose
 background: spiral_notebook.jpg
-displayClass: poem
+displayClass: article
 ---
 
 I had a pretty average childhood for the most part. Went to public schools, didn't move around too much. Had a decent number of friends, but wasn't super popular. It was all just pretty average.
