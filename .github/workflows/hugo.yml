@@ -25,7 +25,7 @@ jobs:
         ftp-server: ftp.cmrasys.com/cmrasys/
         ftp-username: cmrasys
         ftp-password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: public/
+        local-dir: hugo/public/
         git-ftp-args: --insecure --all
 
   linters:
