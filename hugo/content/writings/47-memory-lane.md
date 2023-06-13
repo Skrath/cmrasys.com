@@ -4,7 +4,12 @@ date: 2023-06-13T03:05:07.176Z
 publishdate: 2011-09-04T20:40:59.579Z
 draft: false
 tags:
+  - Basement
+  - Childhood
+  - Divorce
   - Father
+  - Parents
+  - Memories
 categories:
   - Prose
   - Short Story
