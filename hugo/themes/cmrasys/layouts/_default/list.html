@@ -1,5 +1,5 @@
 {{ define "main" }}
-    {{ $paginator := .Paginate  .RegularPages.ByDate.Reverse }}
+    {{ $paginator := .Paginate  .RegularPages.ByPublishDate.Reverse }}
     {{ range $paginator.Pages }}
         {{ partial "stub.html" . }}
     {{ end }}
