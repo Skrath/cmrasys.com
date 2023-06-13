@@ -1,6 +1,6 @@
 ---
 title: Random Excerpts
-draft: true
+draft: false
 type: sidebar
 ---
 
