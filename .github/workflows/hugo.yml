@@ -20,13 +20,13 @@ jobs:
       run: hugo -s hugo/ --minify
 
     - name: FTP site
-      uses: SamKirkland/FTP-Deploy-Action@3.0.0
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        ftp-server: ftp.cmrasys.com/cmrasys/
-        ftp-username: cmrasys
-        ftp-password: ${{ secrets.FTP_PASSWORD }}
-        local-dir: hugo/public/
-        git-ftp-args: --insecure --all
+        server: ftp.cmrasys.com/cmrasys/
+        username: cmrasys
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./hugo/public/
+        protocol: ftp
 
   linters:
     name: Linters
