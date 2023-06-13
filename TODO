@@ -1,0 +1,23 @@
+
+For Launch:
+  ✔ Add Google Analytics @done(23-06-13 03:23)
+  ✔ Finalize post metainfo display @done(23-06-06 20:08)
+  ✔ Create 'About' page @done(23-06-13 03:23)
+  ✔ Add better support for images in posts @done(23-05-26 20:59)
+  ✔ Add pagination @done(23-05-25 03:29)
+  ✔ Qualify the display of the pagination nav element @done(23-05-28 18:28)
+  ✔ Background images for posts @done(23-06-13 16:05)
+  ✔ Make a listings excerpt @done(23-06-03 19:32)
+
+Launch:
+  ✔ Select which content is available @done(23-06-13 18:53)
+  ✔ Figure out deployment @done(23-06-13 03:23)
+
+Future:
+  ☐ Add commenting system (Disqus/others?)
+  ☐ Update image shortcode to link to original image
+  ☐ Revisions and versions of posts
+  ☐ Disable page caching
+  ☐ Update page layout for taxonomy pages
+  ☐ Rework post background images
+  ☐ Update Github actions to only deploy on updates to master branch

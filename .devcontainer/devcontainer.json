@@ -31,7 +31,8 @@
 				"eliostruyf.vscode-front-matter",
 				"stylelint.vscode-stylelint",
 				"eamodio.gitlens",
-				"znck.grammarly"
+				"znck.grammarly",
+				"fabiospampinato.vscode-todo-plus"
 			]
 		}
 	},
