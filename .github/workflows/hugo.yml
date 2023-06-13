@@ -22,7 +22,8 @@ jobs:
     - name: FTP site
       uses: SamKirkland/FTP-Deploy-Action@v4.3.4
       with:
-        server: ftp.cmrasys.com/cmrasys/
+        server: ftp.cmrasys.com
+        server-dir: cmrasys/
         username: cmrasys
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./hugo/public/
