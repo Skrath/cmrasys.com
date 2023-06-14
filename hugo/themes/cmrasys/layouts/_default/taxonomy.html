@@ -1,12 +1,19 @@
 {{ define "main" }}
   {{ partial "post_top.html" . }}
-    <p>{{ .Content }}</p>
+  <p>{{ .Content }}</p>
+  {{ $taxonomy := (lower .Title) }}
+  {{ range $term, $weightedPages := index site.Taxonomies $taxonomy }}
+    {{ $termPage := site.GetPage (printf "%s/%s" $taxonomy $term) }}
+    <h2>
+      <a href="{{ $termPage.RelPermalink }}">{{ $termPage.LinkTitle }}</a>
+    </h2>
     <ul>
-      {{ range .Data.Pages }}
+      {{ range $weightedPages }}
         <li>
-          <a href="{{ .Permalink }}">{{ .Title }}</a>
+          <a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a>
         </li>
       {{ end }}
     </ul>
+  {{ end }}
   {{ partial "post_bot.html" . }}
 {{ end }}
