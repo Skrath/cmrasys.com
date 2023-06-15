@@ -1,11 +1,38 @@
 // MENU
-#main-nav {
+#navigation {
     grid-area: nav;
-    background: var(--off-white);
-    position: sticky;
     top: 0;
     z-index: 100;
+    position: sticky;
+    background: var(--off-white);
+}
+
+#main-nav {
+    border-bottom: var(--border-gray);
+    border-image: linear-gradient(90deg, transparent, var(--main-color-dark), transparent) 1;
+}
+
+#breadcrumb-nav {
     box-shadow: 0 4px 4px -4px var(--color-shadow);
+
+    ol {
+        display: inline-flex;
+        margin: 0;
+        padding: 0;
+
+        li {
+            display: inline;
+            padding: 5px 5px 5px 0;
+            
+            &:not(:last-child)::after {
+                content: ">";
+            }
+        }
+    }
+
+    a {
+        text-decoration: none;
+    }
 }
 
 ul.menu {

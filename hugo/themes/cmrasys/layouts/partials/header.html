@@ -2,23 +2,53 @@
     <h2 id="subtitle">{{ index (shuffle (.Site.Data.info.taglines)) 1 }}</h2>
     <h1>C M Rasys</h1>
 </div>
-<nav id="main-nav">
-    <ul class="menu">
+<div id="navigation">
+    <nav id="main-nav">
+        <ul class="menu">
+            {{ range .Site.Menus.main }}
+                {{ $text := print .Name | safeHTML }}
+                <li><a href="{{ .URL }}">{{ $text }}</a>
 
-        {{ range .Site.Menus.main }}
-            {{ $text := print .Name | safeHTML }}
-            <li><a href="{{ .URL }}">{{ $text }}</a>
-
-            {{ if .HasChildren }}
-                <ul>
-                {{ range .Children }}
-                    {{ $text := print .Name | safeHTML }}
-                    <li><a href="{{ .URL }}">{{ $text }}</a></li>
+                {{ if .HasChildren }}
+                    <ul>
+                    {{ range .Children }}
+                        {{ $text := print .Name | safeHTML }}
+                        <li><a href="{{ .URL }}">{{ $text }}</a></li>
+                    {{ end }}
+                    </ul>
                 {{ end }}
-                </ul>
+                </li>
             {{ end }}
-            </li>
-        {{ end }}
+        </ul>
+    </nav>
+    {{ if not .IsHome }}
+        <nav id="breadcrumb-nav" aria-label="breadcrumbs">
+            <ol itemscope itemtype="https://schema.org/BreadcrumbList">
+                {{- /* declare a 'variable' to store the each link position */}}
+                {{- $data := newScratch }}
 
-    </ul>
-</nav>
+                {{- range $index, $value := .Ancestors.Reverse }}
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        {{- /* read the index from loop and add 'one', because it starts counting from zero */}}
+                        {{- $data.Set "counter" $index }}
+                        {{- $data.Add "counter" 1 }}
+                        <a itemprop="item" href="{{.Permalink}}">
+                            <span itemprop="name">{{ if .IsHome }} Home {{ else }}{{.Title}}{{ end }}</span>
+                        </a>
+                        {{- /* pass the counter value into schema attribute */}}
+                        <meta itemprop="position" content='{{ $data.Get "counter"}}' />
+                    </li>         
+                {{- end }}
+                    <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                        {{- /* add 'one' one more time for the last link position */}}
+                        {{- $data.Add "counter" 1 }}
+                        <a itemprop="item" href="{{ .Permalink }}">
+                            <span itemprop="name">{{.Title}}</span>
+                        </a>
+                        {{- /* pass the counter value into schema attribute */}}
+                        <meta itemprop="position" content='{{ $data.Get "counter"}}' />
+                    </li>
+            </ol>
+        </nav>
+    {{ end }}
+</div>
