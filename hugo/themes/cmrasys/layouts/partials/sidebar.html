@@ -1,5 +1,5 @@
 <div id="sidebar">
-    {{ range where .Site.RegularPages.ByDate.Reverse "Section" "sidebar" }}
+    {{ range where .Site.RegularPages "Section" "sidebar" }}
         {{ partial "sidebar_item.html" . }}
     {{ end }}
 </div>
