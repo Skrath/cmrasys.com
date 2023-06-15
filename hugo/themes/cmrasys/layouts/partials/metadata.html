@@ -3,8 +3,10 @@
 {{ partial "title.html" . }}
 
 <div class="meta">
+    {{ $date := .Date.Format $dateFormat }}
     {{ with .Date }}
         {{ $dateTime := .Format "2006-01-02" }}
+        
         <p>Posted on <em><time datetime="{{ $dateTime }}">{{ .Format $dateFormat }}</time></em> 
     {{ end }}
     {{ with .Params.categories }}
@@ -19,12 +21,18 @@
     <p>
         {{ with .Lastmod }}
             {{ $dateTime := .Format "2006-01-02" }}
-            Last updated on <em><time datetime="{{ $dateTime }}">{{ .Format $dateFormat }}</time></em>
+            {{- if ne ($date) (.Format $dateFormat) }}
+                Last updated on <em><time datetime="{{ $dateTime }}">{{ .Format $dateFormat }}</time></em>
+            {{- end -}}
+            
         {{ end }}
 
         {{ with .PublishDate }}
             {{ $dateTime := .Format "2006-01-02" }}
-            originally published on <em><time datetime="{{ $dateTime }}">{{ .Format $dateFormat }}</time></em>
+            {{- if ne ($date) (.Format $dateFormat) }}
+                Originally published on <em><time datetime="{{ $dateTime }}">{{ .Format $dateFormat }}</time></em>
+            {{- end -}}
+            
         {{ end }}
     </p>
 
