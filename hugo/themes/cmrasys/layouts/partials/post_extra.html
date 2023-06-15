@@ -1,0 +1,19 @@
+<div class="postextra">
+    <div class="tags">
+        <ul>
+            {{ range .Params.tags }}
+            {{ $href := print (absURL "tags/") (urlize .) }}
+            <li><a href="{{ $href }}">{{ . }}</a></li>
+            {{ end }}
+        </ul>
+    </div>
+
+    <div class="gitinfo">
+        <p>
+            {{- if $.GitInfo -}}
+                <strong>Latest commit</strong>: <a href="https://github.com/Skrath/cmrasys.com/commit/{{ .GitInfo.Hash }}" rel="noopener">{{ .GitInfo.AbbreviatedHash }}</a>
+                {{ .GitInfo.Subject }}
+            {{- end -}}
+        </p>
+    </div>
+</div>

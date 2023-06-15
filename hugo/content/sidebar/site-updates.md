@@ -10,6 +10,7 @@ June 15, 2023
 - Add 'Site Updates' to Sidebar
 - Add breadcrumb navigation
 - Qualify display of dates on posts
+- Add commit info to posts
 
 June 14, 2023
 

@@ -145,14 +145,14 @@ hr {
             grid-template: 
                 "title ." 10vw
                 "content meta" 7vw
-                "content tags" auto
+                "content postextra" auto
                 / 3fr 1fr;
             grid-gap: 10px;
             box-shadow: none;
             background-color: inherit;
             background-image: none;
 
-            .tags {
+            .tags, .gitinfo {
                 box-shadow: 0 1px 5px -2px var(--color-border-shadow);
                 border-radius: 5px;
 
@@ -231,7 +231,7 @@ hr {
             "title"
             "meta"
             "content"
-            "tags";
+            "postextra";
         box-shadow: 0 1px 10px -2px var(--color-border-shadow);
         border-radius: 5px;
         background-color: var(--main-color-dark);
@@ -305,10 +305,23 @@ hr {
             }
         }
 
-        .tags {
-            grid-area: tags;
+        .postextra {
+            grid-area: postextra;
             align-self: start;
+            display: inline-flex;
+            flex-direction: column;
+            gap: 5px;
+        }
 
+        .gitinfo p {
+            font-size: Max(8pt, 1vw);
+            padding: 5px;
+            margin: 0;
+            font-style: italic;
+            color: var(--muted-text);
+        }
+
+        .tags {
             li {
                 display: inline-flex;
                 padding: 2px 8px;
@@ -602,7 +615,7 @@ $small-breakpoint: 650px;
                 "title"
                 "content"
                 "meta"
-                "tags";
+                "postextra";
         }
     }
 }
