@@ -11,6 +11,7 @@ June 15, 2023
 - Add breadcrumb navigation
 - Qualify display of dates on posts
 - Add commit info to posts
+- Fix taxonomy listings
 
 June 14, 2023
 

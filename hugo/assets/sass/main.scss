@@ -66,6 +66,12 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
+h1.list-header {
+    text-align: center;
+    border-bottom: var(--border-gray);
+    border-image: linear-gradient(90deg, transparent, var(--main-color-dark), transparent) 1;
+}
+
 ul {
     padding-inline-start: 30px;
 }
