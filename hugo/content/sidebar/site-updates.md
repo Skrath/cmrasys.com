@@ -5,6 +5,11 @@ type: sidebar
 weight: 3
 ---
 
+June 16, 2023
+
+- Compress CSS assets
+- Add section headers
+
 June 15, 2023
 
 - Add 'Site Updates' to Sidebar

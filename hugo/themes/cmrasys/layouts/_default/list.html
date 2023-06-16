@@ -1,4 +1,5 @@
 {{ define "main" }}
+    <h1 class="list-header">{{ .Title }}</h1>
     {{ $paginator := .Paginate  .RegularPages.ByPublishDate.Reverse }}
     {{ range $paginator.Pages }}
         {{ partial "stub.html" . }}
