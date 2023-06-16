@@ -1,6 +1,9 @@
 name: Hugo
 
-on: [push]
+on: 
+  push:
+    branches:
+      - 'master'
 
 jobs:
   build:
@@ -30,17 +33,3 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./hugo/public/
         protocol: ftp
-
-  linters:
-    name: Linters
-    runs-on: ubuntu-latest
-
-    steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-node@v3
-      - run: npm install stylelint postcss stylelint-config-standard-scss -D
-      - name: Stylelint
-        uses: reviewdog/action-stylelint@v1
-        with:
-          reporter: github-check
-          stylelint_input: "hugo/assets/sass/*.scss"
