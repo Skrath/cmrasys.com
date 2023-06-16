@@ -5,7 +5,8 @@
 
     {{ partial "meta.html" (dict "feature" . "ctx" $) }}
     <link href="https://fonts.googleapis.com/css?family=Quattrocento|Quattrocento+Sans|Nothing+You+Could+Do|Vollkorn+SC|Cormorant&display=swap" rel="stylesheet">
+    {{ $options := (dict "outputStyle" "compressed") }}
     {{ $sass := resources.Get "sass/main.scss" }}
-    {{ $style := $sass | resources.ToCSS }}
+    {{ $style := $sass | resources.ToCSS $options }}
     <link rel="stylesheet" href="{{ $style.RelPermalink }}" integrity="{{ $style.Data.Integrity }}">
 </head>
