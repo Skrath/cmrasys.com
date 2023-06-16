@@ -9,6 +9,7 @@ June 16, 2023
 
 - Compress CSS assets
 - Add section headers
+- Add current page in paginator to breadcrumb
 
 June 15, 2023
 
