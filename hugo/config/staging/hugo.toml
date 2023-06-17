@@ -1,0 +1,3 @@
+baseURL = 'http://staging.cmrasys.com/'
+
+disqusShortname = 'http-staging-cmrasys-com'
