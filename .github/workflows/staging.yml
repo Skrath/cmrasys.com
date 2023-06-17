@@ -33,11 +33,3 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./hugo/public/
         protocol: ftp
-
-    - name: Lighthouse
-      uses: treosh/lighthouse-ci-action@v10
-      with:
-        urls: |
-          http://cmrasys.com/
-        uploadArtifacts: true # save results as an action artifacts
-        temporaryPublicStorage: true # upload lighthouse report to the temporary storage
