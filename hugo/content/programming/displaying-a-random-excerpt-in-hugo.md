@@ -1,6 +1,6 @@
 ---
 title: Displaying a Random Excerpt in Hugo
-description: How to extract and display a randome selection of a post with a Hugo shortcode
+description: How to extract and display a random selection of a post with a Hugo shortcode
 date: 2023-06-17T17:40:38.043Z
 lastmod: 2023-06-17T17:40:38.899Z
 publishdate: 2023-06-17T17:40:39.837Z
