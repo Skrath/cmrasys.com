@@ -1,3 +1,6 @@
     </div>
     {{ partial "post_extra.html" . }}
+    <div class="comments">
+        {{ template "_internal/disqus.html" . }}
+    </div>
 </div>

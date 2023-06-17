@@ -152,6 +152,7 @@ hr {
                 "title ." 10vw
                 "content meta" 7vw
                 "content postextra" auto
+                "comments ." auto
                 / 3fr 1fr;
             grid-gap: 10px;
             box-shadow: none;
@@ -237,7 +238,8 @@ hr {
             "title"
             "meta"
             "content"
-            "postextra";
+            "postextra"
+            "comments";
         box-shadow: 0 1px 10px -2px var(--color-border-shadow);
         border-radius: 5px;
         background-color: var(--main-color-dark);
@@ -309,6 +311,10 @@ hr {
                 margin-left: 2vw;
                 font-style: italic;
             }
+        }
+
+        .comments {
+            grid-area: comments;
         }
 
         .postextra {
@@ -622,7 +628,8 @@ $small-breakpoint: 650px;
                 "title"
                 "content"
                 "meta"
-                "postextra";
+                "postextra"
+                "comments";
         }
     }
 }
