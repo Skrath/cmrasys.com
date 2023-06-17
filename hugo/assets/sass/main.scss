@@ -97,6 +97,10 @@ hr {
     grid-gap: 10px;
     padding: 0;
 
+    .comments {
+        grid-area: comments;
+    }
+
     #content {
         font-size: Max(9pt, 1.5vw);
     }
@@ -130,7 +134,7 @@ hr {
         grid-template: 
             "nav nav nav"
             ". main sidebar"
-            ". pagenav sidebar"
+            ". comments ."
             "footer footer footer";
         grid-template-columns: 1fr 3fr 1fr;
     }
@@ -139,7 +143,7 @@ hr {
         grid-template-areas:
             "nav nav nav"
             ". main main"
-            ". pagenav ."
+            ". comments ."
             "footer footer footer";
         background: linear-gradient(180deg, var(--main-color-dark) 0%, transparent 15vw);
 
@@ -311,13 +315,6 @@ hr {
                 margin-left: 2vw;
                 font-style: italic;
             }
-        }
-
-        .comments {
-            padding-top: 10px;
-            grid-area: comments;
-            border-top: var(--border-gray);
-            border-image: linear-gradient(90deg, transparent, var(--main-color-dark), transparent) 1;
         }
 
         .postextra {
@@ -580,7 +577,7 @@ $small-breakpoint: 650px;
         grid-template-areas:
             "nav nav"
             "main sidebar"
-            "pagenav sidebar"
+            "comments sidebar"
             "footer footer";
     }
     
@@ -588,7 +585,7 @@ $small-breakpoint: 650px;
         grid-template-areas: 
             "nav nav"
             "main main"
-            "pagenav ."
+            "comments ."
             "footer footer";
     }
 }
@@ -610,7 +607,7 @@ $small-breakpoint: 650px;
         grid-template-areas:
             "nav"
             "main"
-            "pagenav"
+            "comments"
             "sidebar"
             "footer";
     }
@@ -619,7 +616,7 @@ $small-breakpoint: 650px;
         grid-template-areas: 
             "nav"
             "main"
-            "pagenav"
+            "comments"
             "footer";
     }
 }
