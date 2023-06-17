@@ -314,7 +314,10 @@ hr {
         }
 
         .comments {
+            padding-top: 10px;
             grid-area: comments;
+            border-top: var(--border-gray);
+            border-image: linear-gradient(90deg, transparent, var(--main-color-dark), transparent) 1;
         }
 
         .postextra {
