@@ -5,6 +5,11 @@ type: sidebar
 weight: 3
 ---
 
+June 17, 2023
+
+- Add Disqus commenting
+- Create [staging site](http://staging.cmrasys.com/)
+
 June 16, 2023
 
 - Compress CSS assets
