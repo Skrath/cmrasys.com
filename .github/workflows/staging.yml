@@ -1,0 +1,43 @@
+name: Hugo
+
+on: 
+  push:
+    branches:
+      - 'staging'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v3
+      with:
+        fetch-depth: 0
+
+    - name: Setup Hugo
+      uses: peaceiris/actions-hugo@v2
+      with:
+        hugo-version: 'latest'
+        extended: true
+        
+    - name: Build
+      run: hugo -s hugo/ --minify
+
+    - name: FTP site
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      with:
+        server: ftp.cmrasys.com
+        server-dir: cmrasys-staging/
+        username: cmrasys
+        password: ${{ secrets.FTP_PASSWORD }}
+        local-dir: ./hugo/public/
+        protocol: ftp
+
+    - name: Lighthouse
+      uses: treosh/lighthouse-ci-action@v10
+      with:
+        urls: |
+          http://cmrasys.com/
+        uploadArtifacts: true # save results as an action artifacts
+        temporaryPublicStorage: true # upload lighthouse report to the temporary storage

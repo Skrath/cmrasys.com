@@ -4,6 +4,8 @@ DefaultContentLanguage = "en"
 title = 'C M Rasys'
 theme = 'cmrasys'
 
+disqusShortname = 'cmrasys'
+
 paginate = 12
 
 enableEmoji = true
