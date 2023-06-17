@@ -8,6 +8,11 @@
             <div id="content">
             {{- block "main" . }}{{- end }}
             </div>
+            {{ if .IsPage }}
+                <div class="comments">
+                    {{ template "_internal/disqus.html" . }}
+                </div>
+            {{ end }}
             {{- partial "sidebar.html" . -}}
             {{- partial "footer.html" . -}}
         </div>

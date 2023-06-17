@@ -97,6 +97,10 @@ hr {
     grid-gap: 10px;
     padding: 0;
 
+    .comments {
+        grid-area: comments;
+    }
+
     #content {
         font-size: Max(9pt, 1.5vw);
     }
@@ -130,7 +134,7 @@ hr {
         grid-template: 
             "nav nav nav"
             ". main sidebar"
-            ". pagenav sidebar"
+            ". comments ."
             "footer footer footer";
         grid-template-columns: 1fr 3fr 1fr;
     }
@@ -139,7 +143,7 @@ hr {
         grid-template-areas:
             "nav nav nav"
             ". main main"
-            ". pagenav ."
+            ". comments ."
             "footer footer footer";
         background: linear-gradient(180deg, var(--main-color-dark) 0%, transparent 15vw);
 
@@ -152,6 +156,7 @@ hr {
                 "title ." 10vw
                 "content meta" 7vw
                 "content postextra" auto
+                "comments ." auto
                 / 3fr 1fr;
             grid-gap: 10px;
             box-shadow: none;
@@ -237,7 +242,8 @@ hr {
             "title"
             "meta"
             "content"
-            "postextra";
+            "postextra"
+            "comments";
         box-shadow: 0 1px 10px -2px var(--color-border-shadow);
         border-radius: 5px;
         background-color: var(--main-color-dark);
@@ -571,7 +577,7 @@ $small-breakpoint: 650px;
         grid-template-areas:
             "nav nav"
             "main sidebar"
-            "pagenav sidebar"
+            "comments sidebar"
             "footer footer";
     }
     
@@ -579,7 +585,7 @@ $small-breakpoint: 650px;
         grid-template-areas: 
             "nav nav"
             "main main"
-            "pagenav ."
+            "comments ."
             "footer footer";
     }
 }
@@ -601,7 +607,7 @@ $small-breakpoint: 650px;
         grid-template-areas:
             "nav"
             "main"
-            "pagenav"
+            "comments"
             "sidebar"
             "footer";
     }
@@ -610,7 +616,7 @@ $small-breakpoint: 650px;
         grid-template-areas: 
             "nav"
             "main"
-            "pagenav"
+            "comments"
             "footer";
     }
 }
@@ -622,7 +628,8 @@ $small-breakpoint: 650px;
                 "title"
                 "content"
                 "meta"
-                "postextra";
+                "postextra"
+                "comments";
         }
     }
 }
