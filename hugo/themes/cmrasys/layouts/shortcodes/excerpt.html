@@ -1,8 +1,8 @@
 {{ $seed := now.Unix }}
 {{ $post := index (shuffle (where .Site.RegularPages (.Get 0) (.Get 1) )) 0 }}
 {{ $words := split ($post.RawContent) " " }}
-{{ $end := mod (add (mul 13 $seed) 97) (len $words) }}
+{{ $start := mod (add (mul 13 $seed) 97) (len $words) }}
 <blockquote>
-    ...{{ delimit (first (.Get 2) ( after $end ($words))) " " }}...
+    ...{{ delimit (first (.Get 2) ( after $start ($words))) " " }}...
     <cite><a href="{{ $post.RelPermalink }}">{{ $post.Title }}</a></cite>
 </blockquote>
