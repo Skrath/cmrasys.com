@@ -26,7 +26,7 @@ canonifyURLs = true
   sitename = "C M Rasys"
   twitter = "@cmrasys"
   description = "I dunno, an author website I guess"
-  googleAnalytics  = "G-5T6QD09H47"
+  ga_id = "G-5T6QD09H47"
 
 [taxonomies]
     category = 'categories'
