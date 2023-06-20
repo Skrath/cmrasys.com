@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html prefix="og: http://ogp.me/ns#" lang="{{ .Language }}">
     {{- partial "head.html" . -}}
-    {{- partial "ga.html" . -}}
+    {{ template "_internal/google_analytics.html" . }}
     <body>
         <div id="container" class="{{ .Params.displayClass | default "multiple" }}">
             {{- partial "header.html" . -}}
