@@ -17,7 +17,7 @@
     {{ end }}
 
     <figure style="float: {{ $.Get "float" | default "none" }}">
-        <img src="{{ ($.Scratch.Get "thumbnail").RelPermalink }}"/>
+        <a href="{{ $image.RelPermalink }}"><img src="{{ ($.Scratch.Get "thumbnail").RelPermalink }}"/></a>
         <figcaption>{{ $.Get "caption" }}</figcaption>
     </figure>
 
