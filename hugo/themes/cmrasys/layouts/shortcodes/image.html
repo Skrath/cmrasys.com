@@ -2,16 +2,20 @@
 
 {{/* Generate Thumbnail */}}
 {{ with $image }}
-    {{ $thumb := .Fit "600x400 q90" }}
-    {{ $mobile := .Fit "200x100 q80"}}
-
     <figure style="float: {{ $.Get "float" | default "none" }}">
         <a href="{{ .RelPermalink }}">
             <img 
-                src="{{ $thumb.RelPermalink }}"
-                srcset="{{ $mobile.RelPermalink }} {{ $mobile.Width }}w, {{ $thumb.RelPermalink }} {{ $thumb.Width }}w"
-                sizes="(max-width: 1024px) {{ $thumb.Width }}px, (max-width: 650px) {{ $mobile.Width }}px, {{ $thumb.Width }}px"
                 
+                srcset="
+                    {{ range (slice (.Resize "400x q90") (.Resize "300x q90") (.Resize "250x q90") (.Resize "200x q90") (.Resize "100x q90")) }}
+                        {{ .RelPermalink }} {{ .Width }}w,
+                    {{ end }}
+                "
+                sizes="
+                    (max-width: 650px) 40vw,
+                    (max-width: 1024px) 30vw,
+                    (min-width: 1024px) 20vw
+                "
             />
         </a>
         <figcaption>{{ $.Get "caption" }}</figcaption>
