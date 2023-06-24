@@ -2,22 +2,18 @@
 
 {{/* Generate Thumbnail */}}
 {{ with $image }}
-    {{ if ge .Width .Height }}
-        {{ if ge .Width "600" }}
-            {{ $.Scratch.Set "thumbnail" (.Resize "600x q90") }}
-        {{ else}}
-            {{ $.Scratch.Set "thumbnail" . }}
-        {{ end }}
-        {{ else }}
-            {{ if ge .Height "450" }}
-                {{ $.Scratch.Set "thumbnail" (.Resize "x450 q90") }}
-            {{ else }}
-                {{ $.Scratch.Set "thumbnail" . }}
-        {{ end }}
-    {{ end }}
+    {{ $thumb := .Fit "600x400 q90" }}
+    {{ $mobile := .Fit "200x100 q80"}}
 
     <figure style="float: {{ $.Get "float" | default "none" }}">
-        <a href="{{ $image.RelPermalink }}"><img src="{{ ($.Scratch.Get "thumbnail").RelPermalink }}"/></a>
+        <a href="{{ .RelPermalink }}">
+            <img 
+                src="{{ $thumb.RelPermalink }}"
+                srcset="{{ $mobile.RelPermalink }} {{ $mobile.Width }}w, {{ $thumb.RelPermalink }} {{ $thumb.Width }}w"
+                sizes="(max-width: 1024px) {{ $thumb.Width }}px, (max-width: 650px) {{ $mobile.Width }}px, {{ $thumb.Width }}px"
+                
+            />
+        </a>
         <figcaption>{{ $.Get "caption" }}</figcaption>
     </figure>
 
