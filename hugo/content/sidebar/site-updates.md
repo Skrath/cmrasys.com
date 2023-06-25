@@ -5,6 +5,10 @@ type: sidebar
 weight: 3
 ---
 
+June 25, 2023
+
+- Generate multiple image sizes for mobile
+
 June 17, 2023
 
 - Add Disqus commenting
