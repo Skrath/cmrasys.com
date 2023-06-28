@@ -8,6 +8,9 @@ on:
 jobs:
   staging-build:
     runs-on: ubuntu-latest
+    environment: 
+      name: Staging
+      url: http://staging.cmrasys.com
 
     steps:
     - name: Checkout
