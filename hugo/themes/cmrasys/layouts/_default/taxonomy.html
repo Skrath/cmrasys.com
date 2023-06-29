@@ -1,6 +1,6 @@
 {{ define "main" }}
   {{ if .Parent.IsHome }}
-    {{ partial "post_top.html" . }}
+    {{ partial "post_top_flat.html" . }}
     <p>{{ .Content }}</p>
     {{ $taxonomy := (lower .Title) }}
     {{ range $term, $weightedPages := index site.Taxonomies $taxonomy }}
