@@ -5,6 +5,10 @@ type: sidebar
 weight: 3
 ---
 
+June 29, 2023
+
+- Minor update to Taxonomy page layout
+
 June 25, 2023
 
 - Generate multiple image sizes for mobile
