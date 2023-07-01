@@ -91,3 +91,15 @@ canonifyURLs = true
         name = "About"
         url = "/about/"
         weight = 4
+    [[menu.main]]
+        parent = 'about'
+        name = "About Me"
+        identifier = 'about_me'
+        url = "/about/"
+        weight = 1
+    [[menu.main]]
+        parent = 'about'
+        name = "Site Updates"
+        identifier = 'updates'
+        url = "/site_updates/"
+        weight = 2
