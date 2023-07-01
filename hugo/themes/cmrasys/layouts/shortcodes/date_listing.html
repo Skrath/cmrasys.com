@@ -1,0 +1,12 @@
+{{ $lookup := index (index .Site.Data (.Get 0)) (.Get 1) }}
+{{ $format := "January 2, 2006" }}
+{{ $count := (.Get 2) | default ($lookup | len)}}
+
+{{ range first $count (sort $lookup ".date" "desc") }}
+    <p>{{ .date | int | dateFormat $format }}</p>
+    <ul>
+        {{ range .entries }}
+            <li>{{ $.Page.RenderString . }}</li>
+        {{ end }}
+    </ul>
+{{ end }}
