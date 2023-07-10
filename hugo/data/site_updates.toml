@@ -47,3 +47,9 @@
         "Added separate [Site Updates](/site_updates/) page",
         "Broke out Site Update information into data file for portability"
     ]
+
+[[updates]]
+    date = 1688918400
+    entries = [
+        "Added proper 404 page"
+    ]
