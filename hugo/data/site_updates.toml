@@ -1,0 +1,55 @@
+[[updates]]
+    date = 1686758400
+    entries = [
+        "Taxonomy pages now show posts within each section"
+    ]
+
+[[updates]]
+    date = 1686844800 
+    entries = [
+        "Add 'Site Updates' to Sidebar",
+        "Add breadcrumb navigation",
+        "Qualify display of dates on posts",
+        "Add commit info to posts",
+        "Fix taxonomy listings"
+    ]
+
+[[updates]]
+    date = 1686931200
+    entries = [
+        "Compress CSS assets",
+        "Add section headers",
+        "Add current page in paginator to breadcrumb"
+    ]
+
+[[updates]]
+    date = 1687017600
+    entries = [
+        "Add Disqus commenting",
+        "Create [staging site](http://staging.cmrasys.com/)"
+    ]
+
+[[updates]]    
+    date = 1687708800
+    entries = [
+        "Generate multiple image sizes for mobile"
+    ]
+
+[[updates]]    
+    date = 1688054400
+    entries = [
+        "Minor update to Taxonomy page layout"
+    ]
+
+[[updates]]
+    date = 1688227200
+    entries = [
+        "Added separate [Site Updates](/site_updates/) page",
+        "Broke out Site Update information into data file for portability"
+    ]
+
+[[updates]]
+    date = 1688918400
+    entries = [
+        "Added proper 404 page"
+    ]
