@@ -149,7 +149,7 @@ hr {
             linear-gradient(to bottom, transparent 150px, var(--off-white) 500px,
             var(--off-white)), var(--bg-image);
         background-size: contain;
-
+        
         #sidebar {
             display: none;
         }
@@ -547,17 +547,45 @@ blockquote {
     font-family: Cormorant, serif;
 }
 
-figure {
+figure, p.quotebox {
     margin: 5px;
     padding: 5px;
     box-shadow: 0 1px 5px -2px var(--color-border-shadow);
     border-radius: 5px;
     width: min-content;
+    background-color: var(--off-white);
 
     figcaption {
         text-align: center;
         font-size: Max(10pt, 1.4vw);
         font-style: italic;
+    }
+}
+
+p.quotebox {
+    font-size: Max(16pt, 2vw);
+    display: inline-block;
+    width: 20vw;
+    text-align: center;
+    padding: 25px;
+    font-style: italic;
+    background: var(--main-color-light);
+    border: 1px solid var(--color-border-light);
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-variant: small-caps;
+
+    &::before, &::after {
+        content: "\"";
+        font-size: Max(25pt, 2.6vw);
+        font-weight: bold;
+    }
+
+    &::before {
+        float: left;
+    }
+
+    &::after {
+        float: right;
     }
 }
 
