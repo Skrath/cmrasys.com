@@ -3,7 +3,8 @@
     {{- partial "head.html" . -}}
     {{- partial "ga.html" . -}}
     <body>
-        <div id="container" class="{{ .Params.displayClass | default "multiple" }}">
+        {{ $bgimage := partial "bgimage.html" (dict "context" . "small" false) }}
+        <div id="container" class="{{ .Params.displayClass | default "multiple" }}" style="--bg-image: url('{{ $bgimage }}');">
             {{- partial "header.html" . -}}
             <div id="content">
             {{- block "main" . }}{{- end }}

@@ -51,5 +51,12 @@
 [[updates]]
     date = 1688918400
     entries = [
-        "Added proper 404 page"
+        "Added proper [404 page](/404.html)"
+    ]
+
+[[updates]]
+    date = 1689264000
+    entries = [
+        "Enable background images for posts/articles",
+        "Use webp format for generated images"
     ]
