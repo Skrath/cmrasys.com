@@ -1,8 +1,9 @@
 {{ $url := false }}
-{{ $imageURL := printf "images/titleBackgrounds/%s" ( .Params.background | default "default.jpg" ) }}
+{{ $imageURL := printf "images/%s" ( .Params.background | default "default.jpg" ) }}
+
 
 {{ with resources.Get $imageURL }}
-    {{ $url = .RelPermalink }}
+    {{ $url = ((.Resize "1000x").Filter (images.Pixelate 5)).RelPermalink }}
 {{ end }}
 
 {{ return $url }}

@@ -145,7 +145,10 @@ hr {
             ". main main"
             ". comments ."
             "footer footer footer";
-        background: linear-gradient(180deg, var(--main-color-dark) 0%, transparent 15vw);
+        background: linear-gradient(180deg, var(--main-color-dark) 0%, transparent 15vw), 
+            linear-gradient(to bottom, transparent 150px, var(--off-white) 500px,
+            var(--off-white)), var(--bg-image);
+        background-size: contain;
 
         #sidebar {
             display: none;
@@ -166,6 +169,7 @@ hr {
             .tags, .gitinfo {
                 box-shadow: 0 1px 5px -2px var(--color-border-shadow);
                 border-radius: 5px;
+                background-color: var(--off-white);
 
                 ul {
                     flex-flow: row-reverse wrap;
