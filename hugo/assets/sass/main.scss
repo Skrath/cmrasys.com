@@ -145,10 +145,12 @@ hr {
             ". main main"
             ". comments ."
             "footer footer footer";
-        background: linear-gradient(180deg, var(--main-color-dark) 0%, transparent 15vw), 
-            linear-gradient(to bottom, transparent 150px, var(--off-white) 500px,
+        background: linear-gradient(180deg, var(--main-color-dark) 0%, transparent 25vw), 
+            linear-gradient(to bottom, transparent 10vw, var(--off-white) 40vw,
             var(--off-white)), var(--bg-image);
         background-size: contain;
+        background-repeat: no-repeat;
+        background-blend-mode: screen;
         
         #sidebar {
             display: none;
