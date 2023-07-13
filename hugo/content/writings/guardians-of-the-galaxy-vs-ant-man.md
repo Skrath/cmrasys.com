@@ -7,17 +7,20 @@ publishdate: 2023-07-13T04:33:31.932Z
 draft: false
 tags:
   - Ant-Man
+  - art
+  - emotion
   - family
   - Guardians of the Galaxy
   - Marvel
   - movie
   - plot
+  - Quantumania
   - story
   - writing
-  - emotion
-  - art
+  - character
 categories:
   - Critique
+  - Movies
 background: movies/guardians-of-the-galaxy-3-walk.png
 displayClass: article
 ---
