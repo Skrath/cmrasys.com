@@ -7,7 +7,7 @@
             <img 
                 
                 srcset="
-                    {{ range (slice (.Resize "400x q90") (.Resize "300x q90") (.Resize "250x q90") (.Resize "200x q90") (.Resize "100x q90")) }}
+                    {{ range (slice (.Resize "400x q90 webp") (.Resize "300x q90 webp") (.Resize "250x q90 webp") (.Resize "200x q90 webp") (.Resize "100x q90 webp")) }}
                         {{ .RelPermalink }} {{ .Width }}w,
                     {{ end }}
                 "

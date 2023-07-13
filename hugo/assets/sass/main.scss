@@ -41,6 +41,7 @@ a {
     color: inherit;
     transition: all 0.25s linear;
     padding: 0 3px;
+    display: inline-block;
 
     &:hover {
         font-weight: bold;
@@ -145,8 +146,13 @@ hr {
             ". main main"
             ". comments ."
             "footer footer footer";
-        background: linear-gradient(180deg, var(--main-color-dark) 0%, transparent 15vw);
-
+        background: linear-gradient(180deg, var(--main-color-dark) 0%, transparent 25vw), 
+            linear-gradient(to bottom, transparent 10vw, var(--off-white) 40vw,var(--off-white)), 
+            var(--bg-image);
+        background-size: contain;
+        background-repeat: no-repeat;
+        background-blend-mode: screen;
+        
         #sidebar {
             display: none;
         }
@@ -166,6 +172,7 @@ hr {
             .tags, .gitinfo {
                 box-shadow: 0 1px 5px -2px var(--color-border-shadow);
                 border-radius: 5px;
+                background-color: var(--off-white);
 
                 ul {
                     flex-flow: row-reverse wrap;
@@ -247,10 +254,11 @@ hr {
         box-shadow: 0 1px 10px -2px var(--color-border-shadow);
         border-radius: 5px;
         background-color: var(--main-color-dark);
-        background-image: linear-gradient(transparent, var(--off-white) 15vw, var(--off-white)),
+        background-image: linear-gradient(180deg, var(--main-color-dark) 0%, transparent 10vw),
+                        linear-gradient(transparent, var(--off-white) 30vw, var(--off-white)),
                         var(--angle-fade-to-main),
                         var(--bg-image);
-        background-size: auto;
+        background-size: cover;
         background-repeat: no-repeat;
         background-blend-mode: luminosity;
         padding: 10px 10px 5px;
@@ -543,17 +551,45 @@ blockquote {
     font-family: Cormorant, serif;
 }
 
-figure {
+figure, p.quotebox {
     margin: 5px;
     padding: 5px;
     box-shadow: 0 1px 5px -2px var(--color-border-shadow);
     border-radius: 5px;
     width: min-content;
+    background-color: var(--off-white);
 
     figcaption {
         text-align: center;
         font-size: Max(10pt, 1.4vw);
         font-style: italic;
+    }
+}
+
+p.quotebox {
+    font-size: Max(16pt, 2vw);
+    display: inline-block;
+    width: 20vw;
+    text-align: center;
+    padding: 25px;
+    font-style: italic;
+    background: var(--main-color-light);
+    border: 1px solid var(--color-border-light);
+    font-family: 'Quattrocento Sans', sans-serif;
+    font-variant: small-caps;
+
+    &::before, &::after {
+        content: "\"";
+        font-size: Max(25pt, 2.6vw);
+        font-weight: bold;
+    }
+
+    &::before {
+        float: left;
+    }
+
+    &::after {
+        float: right;
     }
 }
 
