@@ -1,9 +1,15 @@
 {{ $url := false }}
-{{ $imageURL := printf "images/%s" ( .Params.background | default "default.jpg" ) }}
+{{ $imageURL := printf "images/%s" ( .context.Params.background | default "default.jpg" ) }}
+
 
 
 {{ with resources.Get $imageURL }}
-    {{ $url = ((.Resize "1000x").Filter (images.Pixelate 5)).RelPermalink }}
+    {{ if $.small }}
+        {{ $url = (.Resize "800x webp").RelPermalink }}
+    {{ else }}
+        {{ $url = ((.Resize "1000x webp q100").Filter (images.Pixelate 5)).RelPermalink }}
+    {{ end }}
 {{ end }}
+
 
 {{ return $url }}
