@@ -24,6 +24,10 @@ displayClass: article
 
 Recently, I watched both [Guardians of the Galaxy Vol. 3](https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_Vol._3) as well as [Ant-Man and the Wasp: Quantumania](https://en.wikipedia.org/wiki/Ant-Man_and_the_Wasp:_Quantumania). It should come as no surprise to anyone who has been paying attention to movie reviews (or has actually seen them) that one of these films is great and the other is, to be kind, *disappointing*.
 
+<!--more-->
+
+{{< note >}}This article does, in fact, contain a whole slew of spoilers. **You have been warned.**{{< /note >}}
+
 It's Ant-Man. Ant-Man is the shitty one.
 
 What's interesting is how similar the two films actually are, on paper anyway. They're both the third entry in a previously successful movie series. They both star a popular, charismatic lead actor with a strong supporting cast. They both take place in a strange alien world with lots of odd creatures and bright, colorful environments. They're both about families trying to stop a megalomaniacal tyrant from causing untold death and destruction.
