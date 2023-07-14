@@ -63,7 +63,7 @@ But Ant-Man? The only connection between the main characters and the plot is bet
 
 {{< image src="images/movies/modok-face.jpg" caption="I thought this was a spoofed image on Reddit. It's not." float="left">}}
 
-The only other connection is the reveal that [M.O.D.O.K.](https://en.wikipedia.org/wiki/MODOK) is actually Darren, the main villain from the [first Ant-Man](https://en.wikipedia.org/wiki/Ant-Man_(film)) movie. There was a chance of turning this into something meaningful, but he is instead used as an ongoing joke. And no, his "learning" to "not be a dick" at the last second doesn't count. And also, ***ohmygodwhydoeshelooklikethatisthissomesortofsickjoke?***
+The only other connection is the reveal that [M.O.D.O.K.](https://en.wikipedia.org/wiki/MODOK) is actually Darren, the main villain from the [first Ant-Man](https://en.wikipedia.org/wiki/Ant-Man_(film)) movie. There was a chance of turning this into something meaningful, but he is instead used as an ongoing joke. And no, his "learning" to "not be a dick" at the last second doesn't count. And also, ***ohmygodwhydoeshelooklikethat?***
 
 But I digress...
 
