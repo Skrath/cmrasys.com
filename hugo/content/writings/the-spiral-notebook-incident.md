@@ -16,7 +16,7 @@ categories:
   - Humor
   - Short Story
   - Prose
-background: spiral_notebook.jpg
+background: titleBackgrounds/spiral_notebook.jpg
 displayClass: article
 ---
 

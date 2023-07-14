@@ -12,10 +12,10 @@ categories:
   - Prose
   - Short Story
   - Humor
-background: rift_cropped.jpg
+background: titleBackgrounds/raisins.jpg
 displayClass: article
 date: 2023-06-13T03:03:16.476Z
-lastmod: 2023-06-13T03:03:17.658Z
+lastmod: 2023-07-14T19:42:08.139Z
 ---
 
 I often tell people that I don’t eat raisins because I had a bad experience, but I don’t always tell them what that experience was. In fact, sometimes merely telling people of my experience makes them not eat raisins as well. But what horrible thing happened to make me stop eating such a seemingly harmless food?

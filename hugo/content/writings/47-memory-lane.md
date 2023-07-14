@@ -14,7 +14,7 @@ categories:
   - Prose
   - Short Story
   - Autobiographical
-background: ""
+background: titleBackgrounds/mail-box-set-up-in-milk-can-near-hydro-oklahoma.jpg
 displayClass: article
 lastmod: 2023-06-13T03:05:08.913Z
 ---
