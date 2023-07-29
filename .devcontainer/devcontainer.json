@@ -25,14 +25,14 @@
 				"html.format.templating": true
 			},
 			"extensions": [
-				"bungcip.better-toml",
 				"davidanson.vscode-markdownlint",
 				"budparr.language-hugo-vscode",
 				"eliostruyf.vscode-front-matter",
 				"stylelint.vscode-stylelint",
 				"eamodio.gitlens",
 				"znck.grammarly",
-				"fabiospampinato.vscode-todo-plus"
+				"fabiospampinato.vscode-todo-plus",
+				"tamasfe.even-better-toml"
 			]
 		}
 	},
