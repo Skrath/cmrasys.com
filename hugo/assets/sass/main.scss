@@ -121,6 +121,8 @@ hr {
     &.article {
         #content .content {
             text-align: justify;
+            overflow-wrap: break-word;
+            hyphens: manual;
         }
     }
 
@@ -553,12 +555,25 @@ figure, p.quotebox {
     border-radius: 5px;
     width: min-content;
     background-color: var(--off-white);
+    position: relative;
 
     figcaption {
         text-align: center;
         font-size: Max(10pt, 1.4vw);
         font-style: italic;
     }
+}
+
+figure.left, p.quotebox.left {
+    float: left;
+    left: -8vw;
+    margin: 5px calc(5px - 8vw) 5px 5px;
+}
+
+figure.right, p.quotebox.right {
+    float: right;
+    right: -8vw;
+    margin: 5px 5px 5px calc(5px - 8vw)
 }
 
 p.quotebox {
@@ -620,6 +635,12 @@ $small-breakpoint: 650px;
             "comments ."
             "footer footer";
     }
+
+    figure.left, p.quotebox.left {
+        left: 0;
+        right: 0;
+        margin: 5px;
+    }
 }
 
 @media (max-width: $medium-breakpoint) {
@@ -651,6 +672,12 @@ $small-breakpoint: 650px;
             "comments"
             "footer";
     }
+
+    figure.left, p.quotebox.left, figure.right, p.quotebox.right {
+        left: 0;
+        right: 0;
+        margin: 5px;
+    }
 }
 
 @media (max-width: $small-breakpoint) {
@@ -663,5 +690,11 @@ $small-breakpoint: 650px;
                 "postextra"
                 "comments";
         }
+    }
+
+    figure.left, p.quotebox.left, figure.right, p.quotebox.right {
+        left: 0;
+        right: 0;
+        margin: 5px;
     }
 }

@@ -2,19 +2,26 @@
 
 {{/* Generate Thumbnail */}}
 {{ with $image }}
-    <figure style="float: {{ $.Get "float" | default "none" }}">
+    <figure class="{{ $.Get "float" | default "" }}">
         <a href="{{ .RelPermalink }}">
             <img 
                 
                 srcset="
-                    {{ range (slice (.Resize "400x q90 webp") (.Resize "300x q90 webp") (.Resize "250x q90 webp") (.Resize "200x q90 webp") (.Resize "100x q90 webp")) }}
-                        {{ .RelPermalink }} {{ .Width }}w,
+                    {{ range (slice
+                        (.Resize "800x q90 webp")
+                        (.Resize "600x q90 webp") 
+                        (.Resize "500x q90 webp")
+                        (.Resize "400x q90 webp")
+                        (.Resize "300x q90 webp")
+                        (.Resize "200x q90 webp")
+                    ) }}
+                    {{ .RelPermalink }} {{ .Width }}w,
                     {{ end }}
                 "
                 sizes="
                     (max-width: 650px) 40vw,
                     (max-width: 1024px) 30vw,
-                    (min-width: 1024px) 20vw
+                    (min-width: 1024px) 35vw
                 "
             />
         </a>
