@@ -64,5 +64,6 @@
 [[updates]]
     date = 1691596800
     entries = [
-        "Added a shiny new site favicon"
+        "Added a shiny new site favicon",
+        "Better/larger display of images within articles"
     ]
