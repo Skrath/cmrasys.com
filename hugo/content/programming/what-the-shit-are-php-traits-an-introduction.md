@@ -5,13 +5,12 @@ date: 2023-06-13T08:13:39.176Z
 publishdate: 2013-06-30T14:47:23.642Z
 draft: false
 tags:
+  - OOP
   - classes
   - constructor
   - hierarchy
   - inheritance
   - instantiation
-  - OOP
-  - PHP
   - traits
 categories:
   - PHP

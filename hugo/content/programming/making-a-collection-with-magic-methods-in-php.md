@@ -11,7 +11,6 @@ tags:
   - invoke
   - magic methods
   - object
-  - PHP
   - set
 categories:
   - PHP

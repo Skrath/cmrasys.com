@@ -6,11 +6,11 @@ lastmod: 2023-06-13T19:00:07.221Z
 publishdate: 2023-06-13T19:00:07.222Z
 draft: false
 tags:
-  - Cmrasys.com
+  - cmrasys.com
   - Git
   - Hugo
   - Markdown
-  - Writing
+  - writing
 categories:
   - Site Updates
 background: ""

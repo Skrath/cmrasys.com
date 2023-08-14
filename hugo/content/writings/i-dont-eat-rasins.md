@@ -3,10 +3,10 @@ title: Why I Don't Eat Raisins
 publishdate: 2011-02-07T22:49:09Z
 draft: false
 tags:
-  - English Muffins
-  - Raisins
-  - School
-  - Father
+  - English muffins
+  - raisins
+  - school
+  - father
 categories:
   - Autobiographical
   - Prose

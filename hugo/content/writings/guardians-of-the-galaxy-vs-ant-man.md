@@ -12,7 +12,6 @@ tags:
   - family
   - Guardians of the Galaxy
   - Marvel
-  - movie
   - plot
   - Quantumania
   - story
