@@ -4,10 +4,10 @@ date: 2023-06-13T15:55:08.371Z
 publishdate: 2003-03-28T18:59:29.284Z
 draft: false
 tags:
-  - Age
-  - Death
-  - Old
-  - Mortality
+  - age
+  - death
+  - old
+  - mortality
 categories:
   - Poetry
   - Freeform

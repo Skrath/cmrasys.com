@@ -9,7 +9,7 @@ tags:
   - eye
   - notebook
   - paramedics
-  - School
+  - school
   - spiral
 categories:
   - Autobiographical

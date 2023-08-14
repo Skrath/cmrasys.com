@@ -4,10 +4,10 @@ date: 2023-06-13T18:02:58.775Z
 publishdate: 2010-05-26T20:44:57.863Z
 draft: false
 tags:
-  - Love
-  - Metaphor
-  - Senses
-  - Emotion
+  - love
+  - metaphor
+  - senses
+  - emotion
 categories:
   - Freeform
   - Poetry
