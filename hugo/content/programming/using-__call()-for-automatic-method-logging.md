@@ -11,7 +11,6 @@ tags:
   - logging
   - magic
   - method
-  - PHP
 categories:
   - PHP
 background: ""
