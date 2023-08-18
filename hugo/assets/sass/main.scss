@@ -604,6 +604,28 @@ p.quotebox {
     }
 }
 
+/* parallax "viewport" */
+.parallax {
+    min-height: 40vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin-left: -21vw;
+    margin-right: -20vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-position-y: calc(4vw + 30px);
+
+        p {
+            text-align: center;
+            color: var(--off-white);
+            text-shadow: 0 0 5px var(--off-black);
+        }
+  }
+
 $desktop-breakpoint: 1024px;
 $medium-breakpoint: 800px;
 $small-breakpoint: 650px;
@@ -641,6 +663,10 @@ $small-breakpoint: 650px;
         right: 0;
         margin: 5px;
     }
+
+    .parallax {
+        margin-left: 0;
+    }
 }
 
 @media (max-width: $medium-breakpoint) {
@@ -677,6 +703,11 @@ $small-breakpoint: 650px;
         left: 0;
         right: 0;
         margin: 5px;
+    }
+
+    .parallax {
+        margin-left: 0;
+        margin-right: 0;
     }
 }
 

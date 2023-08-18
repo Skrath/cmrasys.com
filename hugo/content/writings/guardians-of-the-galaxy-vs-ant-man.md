@@ -40,7 +40,7 @@ But they are *not* the same. It's not even close. It's not as simple as, say, an
 
 The difference, ultimately, is that one feels like a canned product of a giant multinational conglomerate, and the other feels like it was made by people who give a shit. One has real characters with personal arcs and growth; the other has pithy one-liners. One is a droll, monotonous slog that seemingly drains the viewer of any emotion, while the other makes the viewer, you know, *feel* things.
 
-{{< image src="images/movies/guardians-of-the-galaxy-3-1920x1080.jpg" caption="I know who all these characters are, and so does everybody else." float="right">}}
+{{< parallax src="images/movies/guardians-of-the-galaxy-3-1920x1080.jpg" caption="I know who all these characters are, and so does everybody else.">}}
 
 Ant-Man is a product; Guardians of the Galaxy is telling a story. There's a big difference between telling a story and selling a product. One is an actual piece of art while the other is nothing more than a commodity whose sole purpose is to make a profit. Art has an intrinsic value regardless of what the market might have to say about it at any particular time. A commodity is only worth what people are willing to pay for it. *At best*.
 

@@ -1,0 +1,7 @@
+{{ $image := resources.GetMatch (.Get "src") }}
+
+{{ with $image }}
+    <div class="parallax" style="background-image: url('{{ safeCSS .RelPermalink }}');">
+        <p>{{ $.Get "caption" }}</p>
+    </div>
+{{ end }}
