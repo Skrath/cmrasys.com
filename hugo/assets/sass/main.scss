@@ -617,6 +617,7 @@ p.quotebox {
     display: flex;
     align-items: flex-end;
     justify-content: center;
+    background-position-y: calc(4vw + 30px);
 
         p {
             text-align: center;
