@@ -67,3 +67,16 @@
         "Added a shiny new site favicon",
         "Better/larger display of images within articles"
     ]
+
+[[updates]]
+    date = 1692374400
+    entries = [
+        "Added shortcode for parallax images"
+    ]
+
+[[updates]]
+    date = 1692720000
+    entries = [
+        "Added a bunch of title and alt info to links and images",
+        "Added SEO descriptions on relevant pages"
+    ]

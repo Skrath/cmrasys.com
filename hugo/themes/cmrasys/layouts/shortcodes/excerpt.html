@@ -4,5 +4,5 @@
 {{ $start := mod (add (mul 13 $seed) 97) (len $words) }}
 <blockquote>
     ...{{ delimit (first (.Get 2) ( after $start ($words))) " " }}...
-    <cite><a href="{{ $post.RelPermalink }}">{{ $post.Title }}</a></cite>
+    <cite><a href="{{ $post.RelPermalink }}" title="{{ $post.Title }}">{{ $post.Title }}</a></cite>
 </blockquote>

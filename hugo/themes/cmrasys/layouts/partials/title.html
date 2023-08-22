@@ -1,5 +1,5 @@
 <div class="title">
-    <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+    <h2><a href="{{ .RelPermalink }}" title="{{ .Title }}">{{ .Title }}</a></h2>
     {{ with .Params.subtitle }}
         <h3>{{ . }}</h3>
     {{ end }}
