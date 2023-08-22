@@ -2,7 +2,13 @@
 title: About Me
 type: page
 layout: basic
+description: Some rudimentary biographical information about C M Rasys that I'm quite certain very few people will actually care about
 displayClass: article
+categories:
+  - Autobiographical
+tags:
+  - personal
+  - about
 ---
 
 I've always had a strong interest in both creative writing and computer programming. I'm sure most people might consider this an odd combination but it's never felt like that to me. They're both a way to express yourself using language. They both have grammar and syntax; a large hierarchy of complex rules; and a near-infinite number of possible permutations. You know, monkeys and typewriters and all that.
