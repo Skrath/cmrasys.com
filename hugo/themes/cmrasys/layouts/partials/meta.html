@@ -7,10 +7,10 @@
 <meta name="application-name" content="{{ $title }}" />
 <meta property="og:site_name" content="{{ .ctx.Site.Params.sitename }}" />
 
-<meta name="description" content="{{ .ctx.Site.Params.description }}" />
-<meta itemprop="description" content="{{ .ctx.Site.Params.description }}" />
-<meta property="og:description" content="{{ .ctx.Site.Params.description }}" />
-<meta name="twitter:description" content="{{ .ctx.Site.Params.description }}" />
+<meta name="description" content="{{ .ctx.Description | default .ctx.Site.Params.description }}" />
+<meta itemprop="description" content="{{ .ctx.Description | default .ctx.Site.Params.description }}" />
+<meta property="og:description" content="{{ .ctx.Description | default .ctx.Site.Params.description }}" />
+<meta name="twitter:description" content="{{ .ctx.Description | default .ctx.Site.Params.description }}" />
 
 <base href="{{ .ctx.Permalink }}" />
 <link rel="canonical" href="{{ .ctx.Permalink }}" itemprop="url" />
@@ -31,16 +31,15 @@
   <link href="{{ .Permalink }}" rel="feed" type="application/rss+xml" title="{{ $title }}" />
 {{ end }}
 
-{{ if or (eq .ctx.Section "writings") (eq .ctx.Section "programming") (eq .ctx.Section "posts") }}
     <meta property="og:type" content="article" />
     <meta property="article:publisher" content="{{ .ctx.Site.Params.facebook }}" />
     <meta property="og:article:published_time" content={{ .ctx.Date.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />
     <meta property="article:published_time" content={{ .ctx.Date.Format "2006-01-02T15:04:05Z0700" | safeHTML }} />
 
     {{ with .ctx.Site.Params.author }}
-        <meta property="og:article:author" content="{{humanize . }}" />
-        <meta property="article:author" content="{{humanize . }}" />
-        <meta name="author" content="{{humanize . }}" />
+        <meta property="og:article:author" content="{{ . }}" />
+        <meta property="article:author" content="{{ . }}" />
+        <meta name="author" content="{{ . }}" />
     {{ end }}
 
     {{ if or (.ctx.Params.Keywords) (.ctx.Params.Tags) (.ctx.Params.Categories) }}
@@ -63,7 +62,7 @@
             "name": "{{ .ctx.Site.Params.github }}"
           },
           "datePublished": "{{ .ctx.Date.Format "2006-01-02" }}",
-          "description": {{ .ctx.Description }},
+          "description": {{ .ctx.Description | default .ctx.Description }},
           "wordCount": {{ .ctx.WordCount }},
           "mainEntityOfPage": "True",
           "dateModified": "{{ .ctx.Lastmod.Format "2006-01-02" }}",
@@ -81,7 +80,6 @@
           }
         }
     </script>
-{{ end }}
 
 <meta name="robots" content="index,follow" />
 <meta name="googlebot" content="index,follow" />
