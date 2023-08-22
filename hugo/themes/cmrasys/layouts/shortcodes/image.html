@@ -3,9 +3,10 @@
 {{/* Generate Thumbnail */}}
 {{ with $image }}
     <figure class="{{ $.Get "float" | default "" }}">
-        <a href="{{ .RelPermalink }}">
+        <a href="{{ .RelPermalink }}" title="{{ $.Get "caption" }}">
             <img 
-                
+                alt="{{ $.Get "caption" }}"
+                title="{{ $.Get "caption" }}"
                 srcset="
                     {{ range (slice
                         (.Resize "800x q90 webp")

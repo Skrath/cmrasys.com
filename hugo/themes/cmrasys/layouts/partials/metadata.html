@@ -13,7 +13,7 @@
         under <em>
             {{ range . }}
                 {{ $href := print (absURL "categories/") (urlize .) }}
-                <a href="{{ $href }}">{{ . }}</a>
+                <a href="{{ $href }}" title="{{ . }}">{{ . }}</a>
             {{ end }}
         </em></p>
     {{ end }}
@@ -49,7 +49,7 @@
     
     <p>
         Collected under <em>
-            <a href="{{ .Parent.Permalink }}">{{ .Parent.Title }}</a>
+            <a href="{{ .Parent.Permalink }}" title="{{ .Parent.Title }}">{{ .Parent.Title }}</a>
         </em>
     </p>
     

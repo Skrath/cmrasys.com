@@ -7,13 +7,13 @@
         <ul class="menu">
             {{ range .Site.Menus.main }}
                 {{ $text := print .Name | safeHTML }}
-                <li><a href="{{ .URL }}">{{ $text }}</a>
+                <li><a href="{{ .URL }}" title="{{ $text }}">{{ $text }}</a>
 
                 {{ if .HasChildren }}
                     <ul>
                     {{ range .Children }}
                         {{ $text := print .Name | safeHTML }}
-                        <li><a href="{{ .URL }}">{{ $text }}</a></li>
+                        <li><a href="{{ .URL }}" title="{{ $text }}">{{ $text }}</a></li>
                     {{ end }}
                     </ul>
                 {{ end }}
@@ -32,7 +32,7 @@
                         {{- /* read the index from loop and add 'one', because it starts counting from zero */}}
                         {{- $data.Set "counter" $index }}
                         {{- $data.Add "counter" 1 }}
-                        <a itemprop="item" href="{{.Permalink}}">
+                        <a itemprop="item" href="{{.Permalink}}" title="{{ if .IsHome }} Home {{ else }}{{.Title}}{{ end }}">
                             <span itemprop="name">{{ if .IsHome }} Home {{ else }}{{.Title}}{{ end }}</span>
                         </a>
                         {{- /* pass the counter value into schema attribute */}}
@@ -42,7 +42,7 @@
                     <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                         {{- /* add 'one' one more time for the last link position */}}
                         {{- $data.Add "counter" 1 }}
-                        <a itemprop="item" href="{{ .Permalink }}">
+                        <a itemprop="item" href="{{ .Permalink }}" title="{{ .Title }}">
                             <span itemprop="name">{{.Title}}</span>
                         </a>
                         {{- /* pass the counter value into schema attribute */}}
@@ -52,7 +52,7 @@
                         <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
                             {{- /* add 'one' one more time for the last link position */}}
                             {{- $data.Add "counter" 1 }}
-                            <a itemprop="item" href="{{ .URL }}">
+                            <a itemprop="item" href="{{ .URL }}" title="Page {{ .PageNumber }}">
                                 <span itemprop="name">Page {{ .PageNumber }}</span>
                             </a>
                             {{- /* pass the counter value into schema attribute */}}
