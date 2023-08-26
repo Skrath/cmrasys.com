@@ -16,6 +16,7 @@ categories:
 background: ""
 displayClass: article
 description: A short explanation of using the __call() magic method in order to create automated method logging
+background: programming/php-code.jpg
 lastmod: 2023-06-13T08:14:41.136Z
 ---
 

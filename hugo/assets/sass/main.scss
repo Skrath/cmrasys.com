@@ -438,6 +438,11 @@ blockquote, #container #content .infoblock, #container #content .note {
     border-image: linear-gradient(0deg, transparent, var(--main-color-dark), transparent) 1;
     border-radius: 5px;
     background: linear-gradient(90deg, var(--main-color-light), transparent);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: var(--main-color-light);
+    background-position: center;
+    text-shadow: 1px 1px 1px var(--off-white);
     position: relative;
     box-shadow: 0 1px 5px -2px var(--color-border-shadow);
     z-index: 1;
