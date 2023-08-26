@@ -80,3 +80,10 @@
         "Added a bunch of title and alt info to links and images",
         "Added SEO descriptions on relevant pages"
     ]
+
+[[updates]]
+    date = 1693065600
+    entries = [
+        "Excerpts can now display background images",
+        "Added a few more background images to articles"
+    ]
