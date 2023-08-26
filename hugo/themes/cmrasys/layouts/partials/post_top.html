@@ -1,4 +1,4 @@
-{{ $bgimage := partial "bgimage.html" (dict "context" . "small" true) }}
-<div class="article-stub" style="--bg-image: url('{{ $bgimage }}');">
+{{ $bgimage := partial "bgimage.html" (dict "context" . "style" "small") }}
+<div class="article-stub" {{ if $bgimage }}style="--bg-image: url('{{ $bgimage }}');"{{ end }}>
     {{ partial "metadata.html" . }}
     <div class="content">

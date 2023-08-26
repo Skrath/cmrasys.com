@@ -4,10 +4,14 @@
 
 
 {{ with resources.Get $imageURL }}
-    {{ if $.small }}
+    {{ if eq $.style "small" }}
         {{ $url = (.Resize "800x webp").RelPermalink }}
-    {{ else }}
+    {{ end }}
+    {{ if eq $.style "pixel" }}
         {{ $url = ((.Resize "1000x webp q100").Filter (images.Pixelate 5)).RelPermalink }}
+    {{ end }}
+    {{ if eq $.style "blur" }}
+        {{ $url = ((.Resize "1000x webp q80").Filter (images.GaussianBlur 3)).RelPermalink }}
     {{ end }}
 {{ end }}
 
