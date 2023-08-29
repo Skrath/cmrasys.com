@@ -440,7 +440,7 @@ blockquote, #container #content .infoblock, #container #content .note {
     background: linear-gradient(90deg, var(--main-color-light), transparent);
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: rgba(173, 216, 230, 0.5);
+    background-color: Rgba(173 216 230 / 50%);
     background-blend-mode: saturation;
     background-position: center;
     text-shadow: 1px 1px 1px var(--off-white);
