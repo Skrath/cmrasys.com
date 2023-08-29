@@ -151,7 +151,7 @@ hr {
         background: linear-gradient(180deg, var(--main-color-dark) 0%, transparent 25vw), 
             linear-gradient(to bottom, transparent 10vw, var(--off-white) 40vw,var(--off-white)), 
             var(--bg-image);
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
         
         #sidebar {
@@ -440,7 +440,8 @@ blockquote, #container #content .infoblock, #container #content .note {
     background: linear-gradient(90deg, var(--main-color-light), transparent);
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: var(--main-color-light);
+    background-color: rgba(173, 216, 230, 0.5);
+    background-blend-mode: saturation;
     background-position: center;
     text-shadow: 1px 1px 1px var(--off-white);
     position: relative;
