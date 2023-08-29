@@ -10,7 +10,7 @@ tags:
 categories:
   - Poetry
   - Freeform
-background: ""
+background: writings/poetry.jpg
 displayClass: poem
 lastmod: 2023-06-13T15:54:06.723Z
 ---

@@ -12,7 +12,7 @@ categories:
   - Limerick
   - Poetry
   - Humor
-background: ""
+background: writings/poetry.jpg
 displayClass: poem
 lastmod: 2023-06-13T15:53:13.446Z
 ---

@@ -10,7 +10,7 @@ categories:
   - Freeform
   - Poetry
   - Romantic
-background: ""
+background: writings/poetry.jpg
 lastmod: 2023-06-13T16:01:35.370Z
 ---
 
