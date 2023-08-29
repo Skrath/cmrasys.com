@@ -11,7 +11,7 @@ tags:
 categories:
   - Poetry
   - Freeform
-background: ""
+background: writings/poetry.jpg
 displayClass: poem
 ---
 

@@ -12,7 +12,7 @@ categories:
   - Freeform
   - Poetry
   - Romantic
-background: ""
+background: writings/poetry.jpg
 displayClass: poem
 ---
 

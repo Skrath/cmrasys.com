@@ -12,7 +12,7 @@ categories:
   - Freeform
   - Poetry
   - Humor
-background: ""
+background: writings/poetry.jpg
 displayClass: poem
 ---
 
