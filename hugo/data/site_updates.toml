@@ -87,3 +87,9 @@
         "Excerpts can now display background images",
         "Added a few more background images to articles"
     ]
+
+[[updates]]
+    date = 1694707200
+    entries = [
+        "Finally installed an SSL certificate",
+    ]

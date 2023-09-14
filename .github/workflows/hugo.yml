@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: Live
-      url: http://cmrasys.com
+      url: https://cmrasys.com
 
     steps:
     - name: Checkout
@@ -41,6 +41,6 @@ jobs:
       uses: treosh/lighthouse-ci-action@v10
       with:
         urls: |
-          http://cmrasys.com/
+          https://cmrasys.com/
         uploadArtifacts: true # save results as an action artifacts
         temporaryPublicStorage: true # upload lighthouse report to the temporary storage
