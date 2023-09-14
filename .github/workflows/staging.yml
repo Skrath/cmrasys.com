@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: Staging
-      url: http://staging.cmrasys.com
+      url: https://staging.cmrasys.com
 
     steps:
     - name: Checkout
