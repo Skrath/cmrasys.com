@@ -5,18 +5,18 @@ date: 2023-06-13T18:11:09.941Z
 publishdate: 2013-09-13T16:24:30.701Z
 draft: false
 tags:
-  - class
-  - Constructor
-  - function
-  - Inheritance
-  - Javascript
+  - constructor
+  - inheritance
   - OOP
-  - prototype
+  - class
+  - function
   - magic methods
+  - prototype
 categories:
   - Javascript
 background: ""
 displayClass: article
+background: programming/javascript-code.jpg
 lastmod: 2023-06-13T18:11:11.023Z
 ---
 

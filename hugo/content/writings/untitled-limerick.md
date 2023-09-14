@@ -4,13 +4,15 @@ date: 2023-06-13T15:53:12.491Z
 publishdate: 2001-05-08T19:06:57.955Z
 draft: false
 tags:
-  - Baby
-  - Teeth
+  - baby
+  - teeth
+  - twist
+  - dark
 categories:
   - Limerick
   - Poetry
   - Humor
-background: ""
+background: writings/poetry.jpg
 displayClass: poem
 lastmod: 2023-06-13T15:53:13.446Z
 ---

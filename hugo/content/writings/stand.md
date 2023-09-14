@@ -4,12 +4,12 @@ date: 2023-06-13T18:00:03.247Z
 publishdate: 2014-02-28T20:24:29.161Z
 draft: false
 tags:
-  - Stars
-  - Peace
+  - stars
+  - peace
 categories:
   - Poetry
   - Freeform
-background: ""
+background: writings/poetry.jpg
 displayClass: poem
 ---
 

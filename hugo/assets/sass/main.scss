@@ -121,6 +121,8 @@ hr {
     &.article {
         #content .content {
             text-align: justify;
+            overflow-wrap: break-word;
+            hyphens: manual;
         }
     }
 
@@ -149,9 +151,8 @@ hr {
         background: linear-gradient(180deg, var(--main-color-dark) 0%, transparent 25vw), 
             linear-gradient(to bottom, transparent 10vw, var(--off-white) 40vw,var(--off-white)), 
             var(--bg-image);
-        background-size: contain;
+        background-size: cover;
         background-repeat: no-repeat;
-        background-blend-mode: screen;
         
         #sidebar {
             display: none;
@@ -437,6 +438,12 @@ blockquote, #container #content .infoblock, #container #content .note {
     border-image: linear-gradient(0deg, transparent, var(--main-color-dark), transparent) 1;
     border-radius: 5px;
     background: linear-gradient(90deg, var(--main-color-light), transparent);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-color: Rgba(173 216 230 / 50%);
+    background-blend-mode: saturation;
+    background-position: center;
+    text-shadow: 1px 1px 1px var(--off-white);
     position: relative;
     box-shadow: 0 1px 5px -2px var(--color-border-shadow);
     z-index: 1;
@@ -547,10 +554,6 @@ blockquote {
     }
 }
 
-#container #content .note {
-    font-family: Cormorant, serif;
-}
-
 figure, p.quotebox {
     margin: 5px;
     padding: 5px;
@@ -558,6 +561,7 @@ figure, p.quotebox {
     border-radius: 5px;
     width: min-content;
     background-color: var(--off-white);
+    position: relative;
 
     figcaption {
         text-align: center;
@@ -566,15 +570,28 @@ figure, p.quotebox {
     }
 }
 
+figure.left, p.quotebox.left {
+    float: left;
+    left: -8vw;
+    margin: 5px calc(5px - 8vw) 5px 5px;
+}
+
+figure.right, p.quotebox.right {
+    float: right;
+    right: -8vw;
+    margin: 5px 5px 5px calc(5px - 8vw)
+}
+
 p.quotebox {
     font-size: Max(16pt, 2vw);
     display: inline-block;
     width: 20vw;
     text-align: center;
-    padding: 25px;
+    padding: 2vw;
     font-style: italic;
-    background: var(--main-color-light);
-    border: 1px solid var(--color-border-light);
+    background: 
+                linear-gradient(135deg, var(--off-white) 5%, transparent 85%, var(--main-color-dark)),
+                var(--main-color-light);
     font-family: 'Quattrocento Sans', sans-serif;
     font-variant: small-caps;
 
@@ -592,6 +609,28 @@ p.quotebox {
         float: right;
     }
 }
+
+/* parallax "viewport" */
+.parallax {
+    min-height: 40vh;
+    background-attachment: fixed;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    position: relative;
+    margin-left: -21vw;
+    margin-right: -20vw;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    background-position-y: calc(4vw + 30px);
+
+        p {
+            text-align: center;
+            color: var(--off-white);
+            text-shadow: 0 0 5px var(--off-black);
+        }
+  }
 
 $desktop-breakpoint: 1024px;
 $medium-breakpoint: 800px;
@@ -624,6 +663,16 @@ $small-breakpoint: 650px;
             "comments ."
             "footer footer";
     }
+
+    figure.left, p.quotebox.left {
+        left: 0;
+        right: 0;
+        margin: 5px;
+    }
+
+    .parallax {
+        margin-left: 0;
+    }
 }
 
 @media (max-width: $medium-breakpoint) {
@@ -655,6 +704,17 @@ $small-breakpoint: 650px;
             "comments"
             "footer";
     }
+
+    figure.left, p.quotebox.left, figure.right, p.quotebox.right {
+        left: 0;
+        right: 0;
+        margin: 5px;
+    }
+
+    .parallax {
+        margin-left: 0;
+        margin-right: 0;
+    }
 }
 
 @media (max-width: $small-breakpoint) {
@@ -667,5 +727,11 @@ $small-breakpoint: 650px;
                 "postextra"
                 "comments";
         }
+    }
+
+    figure.left, p.quotebox.left, figure.right, p.quotebox.right {
+        left: 0;
+        right: 0;
+        margin: 5px;
     }
 }

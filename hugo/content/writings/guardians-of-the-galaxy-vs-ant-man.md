@@ -1,28 +1,34 @@
 ---
 title: Guardians of the Galaxy Vs. Ant-Man
-description: ""
+description: "A slightly humorous analysis of the differences between the third Guardians of the Galaxy movie and the third Ant-Man movie"
 date: 2023-07-13T04:33:29.346Z
 lastmod: 2023-07-13T04:33:30.727Z
 publishdate: 2023-07-13T04:33:31.932Z
 draft: false
 tags:
   - Ant-Man
+  - art
+  - emotion
   - family
   - Guardians of the Galaxy
   - Marvel
-  - movie
   - plot
+  - Quantumania
   - story
   - writing
-  - emotion
-  - art
+  - character
 categories:
   - Critique
+  - Movies
 background: movies/guardians-of-the-galaxy-3-walk.png
 displayClass: article
 ---
 
-Recently, I watched both [Guardians of the Galaxy Vol. 3](https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_Vol._3) as well as [Ant-Man and the Wasp: Quantumania](https://en.wikipedia.org/wiki/Ant-Man_and_the_Wasp:_Quantumania). It should come as no surprise to anyone who has been paying attention to movie reviews (or has actually seen them) that one of these films is great and the other is, to be kind, *disappointing*.
+Recently, I watched both [Guardians of the Galaxy Vol. 3](https://en.wikipedia.org/wiki/Guardians_of_the_Galaxy_Vol._3 "The good one") as well as [Ant-Man and the Wasp: Quantumania](https://en.wikipedia.org/wiki/Ant-Man_and_the_Wasp:_Quantumania "The bad one"). It should come as no surprise to anyone who has been paying attention to movie reviews (or has actually seen them) that one of these films is great and the other is, to be kind, *disappointing*.
+
+<!--more-->
+
+{{< note >}}This article does, in fact, contain a whole slew of spoilers. **You have been warned.**{{< /note >}}
 
 It's Ant-Man. Ant-Man is the shitty one.
 
@@ -34,29 +40,29 @@ But they are *not* the same. It's not even close. It's not as simple as, say, an
 
 The difference, ultimately, is that one feels like a canned product of a giant multinational conglomerate, and the other feels like it was made by people who give a shit. One has real characters with personal arcs and growth; the other has pithy one-liners. One is a droll, monotonous slog that seemingly drains the viewer of any emotion, while the other makes the viewer, you know, *feel* things.
 
-{{< image src="images/movies/guardians-of-the-galaxy-3-1920x1080.jpg" caption="I know who all these characters are, and so does everybody else." float="right">}}
+{{< parallax src="images/movies/guardians-of-the-galaxy-3-1920x1080.jpg" caption="I know who all these characters are, and so does everybody else.">}}
 
 Ant-Man is a product; Guardians of the Galaxy is telling a story. There's a big difference between telling a story and selling a product. One is an actual piece of art while the other is nothing more than a commodity whose sole purpose is to make a profit. Art has an intrinsic value regardless of what the market might have to say about it at any particular time. A commodity is only worth what people are willing to pay for it. *At best*.
 
-When people talk about so-called "superhero fatigue" they don't realize that this is actually the result of a supply-and-demand problem. Basic economics will tell you that if there's too much of a thing, then that thing will be worth less. If Marvel poops out dozens of cookie-cutter product-films, their value will continue to decline. Without any inherent artistic merit, there's nothing else of value contained within them. It's really easy to get tired of looking at landscape paintings in the hallway at a hotel, but a [Vermeer](https://en.wikipedia.org/wiki/Johannes_Vermeer) is worth a hell of a lot more than just paint and canvas.
+When people talk about so-called "superhero fatigue" they don't realize that this is actually the result of a supply-and-demand problem. Basic economics will tell you that if there's too much of a thing, then that thing will be worth less. If Marvel poops out dozens of cookie-cutter product-films, their value will continue to decline. Without any inherent artistic merit, there's nothing else of value contained within them. It's really easy to get tired of looking at landscape paintings in the hallway at a hotel, but a [Vermeer](https://en.wikipedia.org/wiki/Johannes_Vermeer "He paints things") is worth a hell of a lot more than just paint and canvas.
 
 {{< image src="images/movies/Ant-Man-and-the-Wasp-Quantumania.jpg" caption="Ugh, who cares." float="left">}}
 
-So how did the same studio machinations produce both of these films? What *actually* makes the difference? What is it that [James Gunn](https://en.wikipedia.org/wiki/James_Gunn) did that... whoever made Ant-Man didn't?
+So how did the same studio machinations produce both of these films? What *actually* makes the difference? What is it that [James Gunn](https://en.wikipedia.org/wiki/James_Gunn "He's pretty OK once you get past the hair") did that... whoever made Ant-Man didn't?
 
 It shouldn't be unexpected that the difference is largely in the writing. Guardians tells a story about a known troupe of characters who have a personal investment in the plot and go through growth and change throughout the film. Ant-Man uses a bunch of throwaway characters that have no real bearing on the story, and the primary characters have almost nothing to do with the main plot and most certainly do not show any character growth.
 
 {{< image src="images/movies/guardians-of-the-galaxy-3-ship.png" caption="That's just a cool looking ship." float="right">}}
 
-The connections between the plot and characters in Guardians are so well put together that I feel it hardly needs to be explained. But let's do it anyway. The plot gets kicked into gear when the team gets attacked as a direct result of some shenanigans they pulled in the previous movie. Rocket gets injured which leads to the inevitable showdown with [The High Evolutionary](https://en.wikipedia.org/wiki/High_Evolutionary), the individual responsible for making Rocket who he is.
+The connections between the plot and characters in Guardians are so well put together that I feel it hardly needs to be explained. But let's do it anyway. The plot gets kicked into gear when the team gets attacked as a direct result of some shenanigans they pulled in the previous movie. Rocket gets injured which leads to the inevitable showdown with [The High Evolutionary](https://en.wikipedia.org/wiki/High_Evolutionary "Don't worry, everybody else also hates him"), the individual responsible for making Rocket who he is.
 
 Throughout the film, all of the characters face personal challenges and experience growth and change. Starlord has to learn to stop only relying on others and do things for himself. Gamora eventually (re)learns the value and meaning of a real family. Mantis slowly becomes more independent. Nebula grudgingly figures out how to live and work with other people. Drax begins to settle into a life that doesn't revolve around revenge and violence. And Groot is a goddamn tree.
 
-But Ant-Man? The only connection between the main characters and the plot is between Ant-Man's um... maybe future mother-and-law and [Kang](https://en.wikipedia.org/wiki/Kang_the_Conqueror). Who are *both* brand-new characters. The connection is hidden away for half the movie and boils down to little more than "And then I realized he was a bad guy".
+But Ant-Man? The only connection between the main characters and the plot is between Ant-Man's um... maybe future mother-and-law and [Kang](https://en.wikipedia.org/wiki/Kang_the_Conqueror "No, not from The Simpsons"). Who are *both* brand-new characters. The connection is hidden away for half the movie and boils down to little more than "And then I realized he was a bad guy".
 
 {{< image src="images/movies/modok-face.jpg" caption="I thought this was a spoofed image on Reddit. It's not." float="left">}}
 
-The only other connection is the reveal that [M.O.D.O.K.](https://en.wikipedia.org/wiki/MODOK) is actually Darren, the main villain from the [first Ant-Man](https://en.wikipedia.org/wiki/Ant-Man_(film)) movie. There was a chance of turning this into something meaningful, but he is instead used as an ongoing joke. And no, his "learning" to "not be a dick" at the last second doesn't count. And also, ***ohmygodwhydoeshelooklikethatisthissomesortofsickjoke?***
+The only other connection is the reveal that [M.O.D.O.K.](https://en.wikipedia.org/wiki/MODOK "Yes, it is a dumb acronym. Yes, that's the point.") is actually Darren, the main villain from the [first Ant-Man](https://en.wikipedia.org/wiki/Ant-Man_(film) "You remember this one, right? It was a lot better.") movie. There was a chance of turning this into something meaningful, but he is instead used as an ongoing joke. And no, his "learning" to "not be a dick" at the last second doesn't count. And also, ***ohmygodwhydoeshelooklikethat?***
 
 But I digress...
 

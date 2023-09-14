@@ -4,17 +4,17 @@ date: 2023-06-13T03:05:07.176Z
 publishdate: 2011-09-04T20:40:59.579Z
 draft: false
 tags:
-  - Basement
-  - Childhood
-  - Divorce
-  - Father
-  - Parents
-  - Memories
+  - basement
+  - childhood
+  - divorce
+  - father
+  - parents
+  - memories
 categories:
   - Prose
   - Short Story
   - Autobiographical
-background: ""
+background: titleBackgrounds/mail-box-set-up-in-milk-can-near-hydro-oklahoma.jpg
 displayClass: article
 lastmod: 2023-06-13T03:05:08.913Z
 ---

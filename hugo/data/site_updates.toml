@@ -60,3 +60,30 @@
         "Enable background images for posts/articles",
         "Use webp format for generated images"
     ]
+
+[[updates]]
+    date = 1691596800
+    entries = [
+        "Added a shiny new site favicon",
+        "Better/larger display of images within articles"
+    ]
+
+[[updates]]
+    date = 1692374400
+    entries = [
+        "Added shortcode for parallax images"
+    ]
+
+[[updates]]
+    date = 1692720000
+    entries = [
+        "Added a bunch of title and alt info to links and images",
+        "Added SEO descriptions on relevant pages"
+    ]
+
+[[updates]]
+    date = 1693065600
+    entries = [
+        "Excerpts can now display background images",
+        "Added a few more background images to articles"
+    ]

@@ -4,14 +4,15 @@ date: 2023-06-13T17:58:46.567Z
 publishdate: 2004-12-10T20:57:27.659Z
 draft: false
 tags:
-  - Jam
-  - Lambs
-  - Flans
+  - jam
+  - lambs
+  - flans
+  - twist
 categories:
   - Freeform
   - Poetry
   - Humor
-background: ""
+background: writings/poetry.jpg
 displayClass: poem
 ---
 

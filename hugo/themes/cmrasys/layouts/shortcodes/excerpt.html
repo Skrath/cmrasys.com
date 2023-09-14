@@ -2,7 +2,10 @@
 {{ $post := index (shuffle (where .Site.RegularPages (.Get 0) (.Get 1) )) 0 }}
 {{ $words := split ($post.RawContent) " " }}
 {{ $start := mod (add (mul 13 $seed) 97) (len $words) }}
-<blockquote>
+
+{{ $bgimage := partial "bgimage.html" (dict "context" $post "style" "blur") }}
+
+<blockquote {{if $bgimage }}style="background-image: url('{{ $bgimage }}');"{{ end }}>
     ...{{ delimit (first (.Get 2) ( after $start ($words))) " " }}...
-    <cite><a href="{{ $post.RelPermalink }}">{{ $post.Title }}</a></cite>
+    <cite><a href="{{ $post.RelPermalink }}" title="{{ $post.Title }}">{{ $post.Title }}</a></cite>
 </blockquote>

@@ -4,13 +4,13 @@ date: 2023-06-13T15:56:24.574Z
 publishdate: 2009-04-07T20:51:37.305Z
 draft: false
 tags:
-  - Love
-  - Dream
+  - love
+  - dream
 categories:
   - Freeform
   - Poetry
   - Romantic
-background: ""
+background: writings/poetry.jpg
 lastmod: 2023-06-13T16:01:35.370Z
 ---
 

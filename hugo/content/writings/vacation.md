@@ -4,13 +4,13 @@ date: 2023-06-13T17:57:13.911Z
 publishdate: 2005-06-25T20:54:19.546Z
 draft: false
 tags:
-  - Abstract
-  - Vacation
-  - Whimsical
+  - abstract
+  - vacation
+  - whimsical
 categories:
   - Poetry
   - Freeform
-background: ""
+background: writings/poetry.jpg
 displayClass: poem
 ---
 
