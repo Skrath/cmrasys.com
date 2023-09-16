@@ -11,7 +11,7 @@ tags:
 categories:
   - Poetry
   - Freeform
-background: writings/poetry.jpg
+background: writings/cemetery-tombstone-grave-graveyard.jpg
 displayClass: poem
 ---
 
