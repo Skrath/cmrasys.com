@@ -93,3 +93,10 @@
     entries = [
         "Finally installed an SSL certificate",
     ]
+
+[[updates]]
+    date = 1694880000
+    entries = [
+        "Added background images for Programming excerpts",
+        "Numerous small tweaks to background image display"
+    ]
