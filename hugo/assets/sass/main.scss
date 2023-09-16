@@ -429,7 +429,7 @@ hr {
     }
 }
 
-blockquote, #container #content .infoblock, #container #content .note {
+blockquote, div.infoblock, #container #content .note {
     font-style: normal;
     font-size: Max(11pt, 1.1vw);
     margin: 1vw;
@@ -440,8 +440,8 @@ blockquote, #container #content .infoblock, #container #content .note {
     background: linear-gradient(90deg, var(--main-color-light), transparent);
     background-size: cover;
     background-repeat: no-repeat;
-    background-color: Rgba(173 216 230 / 50%);
-    background-blend-mode: saturation;
+    background-color: Rgba(173 216 230 / 80%);
+    background-blend-mode: soft-light;
     background-position: center;
     text-shadow: 1px 1px 1px var(--off-white);
     position: relative;
@@ -451,6 +451,7 @@ blockquote, #container #content .infoblock, #container #content .note {
 
 blockquote {
     font-family: 'Nothing You Could Do', cursive;
+    font-weight: bold;
 
     &::before {
         content: "\"";
@@ -517,7 +518,7 @@ blockquote {
     }
 }
 
-#container #content .infoblock {
+#container #content .infoblock, div.infoblock {
     display: flex;
     flex-direction: column;
     gap: 5px;
@@ -539,10 +540,6 @@ blockquote {
         font-size: Max(10pt, 1.2vw);
     }
 
-    .excerpt {
-        margin-left: 10px;
-    }
-
     ul.tax-list {
         margin: 0;
         padding: 0 10px;
@@ -551,6 +548,10 @@ blockquote {
             padding: 0 5px;
             display: block;
         }
+    }
+
+    .excerpt {
+        font-weight: bold;
     }
 }
 
