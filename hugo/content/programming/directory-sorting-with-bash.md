@@ -17,7 +17,7 @@ tags:
   - sorting
 categories:
   - Bash
-background: ""
+background: "programming/linux-dir.jpg"
 displayClass: article
 ---
 
