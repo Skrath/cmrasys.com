@@ -1,6 +1,6 @@
 ---
 title: Guardians of the Galaxy Vs. Ant-Man
-description: "A slightly humorous analysis of the differences between the third Guardians of the Galaxy movie and the third Ant-Man movie"
+description: A slightly humorous analysis of the differences between the third Guardians of the Galaxy movie and the third Ant-Man movie
 date: 2023-07-13T04:33:29.346Z
 lastmod: 2023-07-13T04:33:30.727Z
 publishdate: 2023-07-13T04:33:31.932Z
@@ -20,6 +20,7 @@ tags:
 categories:
   - Critique
   - Movies
+  - Comic Books
 background: movies/guardians-of-the-galaxy-3-walk.png
 displayClass: article
 ---
