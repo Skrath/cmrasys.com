@@ -445,6 +445,10 @@ blockquote, div.infoblock, #container #content .note {
     position: relative;
     box-shadow: 0 1px 5px -2px var(--color-border-shadow);
     z-index: 1;
+
+    ul, p {
+        margin: 0;
+    }
 }
 
 blockquote {

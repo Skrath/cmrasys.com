@@ -19,6 +19,12 @@
     {{ partial "post_bot.html" . }}
   {{ else }}
     <h1 class="list-header">{{ .Title }}</h1>
+    {{ if .Content }}
+      <div class="infoblock">
+        <p><em>{{ .Description }}</em></p>
+        {{ .Content }}
+      </div>
+    {{ end }}
     {{ $paginator := .Paginate  .Data.Pages.ByTitle }}
     {{ range $paginator.Pages }}
         {{ partial "stub.html" . }}
