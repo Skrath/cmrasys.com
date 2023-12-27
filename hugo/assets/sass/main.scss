@@ -208,8 +208,7 @@ hr {
     grid-template-areas: 
         "title"
         "subtitle";
-    justify-items: center;
-    align-items: center;
+    place-items: center;
 
     h1 {
         grid-area: title;
@@ -413,8 +412,7 @@ hr {
         h3 {
             grid-area: title;
             font-size: 2.4vw;
-            align-self: start;
-            justify-self: stretch;
+            place-self: start stretch;
             text-align: center;
             border-bottom: var(--border-gray);
             border-image: linear-gradient(90deg, transparent, var(--main-color-dark), transparent) 1;
@@ -492,8 +490,7 @@ blockquote {
     grid-template-areas: 
         "copyright"
         "misc";
-    justify-items: center;
-    align-items: center;
+    place-items: center;
     font-size: Max(9pt, 1.1vw);
     font-style: italic;
     color: var(--muted-text);
