@@ -28,7 +28,7 @@ jobs:
       run: hugo -s hugo/ --minify --environment staging
 
     - name: FTP site
-      uses: SamKirkland/FTP-Deploy-Action@v4.3.4
+      uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ftp.cmrasys.com
         server-dir: cmrasys-staging/
