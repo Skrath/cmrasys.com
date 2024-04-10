@@ -48,16 +48,18 @@
                         {{- /* pass the counter value into schema attribute */}}
                         <meta itemprop="position" content='{{ $data.Get "counter"}}' />
                     </li>
-                    {{ with .Paginator }}
-                        <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
-                            {{- /* add 'one' one more time for the last link position */}}
-                            {{- $data.Add "counter" 1 }}
-                            <a itemprop="item" href="{{ .URL }}" title="Page {{ .PageNumber }}">
-                                <span itemprop="name">Page {{ .PageNumber }}</span>
-                            </a>
-                            {{- /* pass the counter value into schema attribute */}}
-                            <meta itemprop="position" content='{{ $data.Get "counter"}}' />
-                        </li>
+                    {{ if .Store.Get "paginated" }}
+                        {{ with .Paginator }}
+                            <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
+                                {{- /* add 'one' one more time for the last link position */}}
+                                {{- $data.Add "counter" 1 }}
+                                <a itemprop="item" href='{{ .URL }}' title="Page {{ .PageNumber }}">
+                                    <span itemprop="name">Page {{ .PageNumber }}</span>
+                                </a>
+                                {{- /* pass the counter value into schema attribute */}}
+                                <meta itemprop="position" content='{{ $data.Get "counter"}}' />
+                            </li>
+                        {{ end }}
                     {{ end }}
             </ol>
         </nav>

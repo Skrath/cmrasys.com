@@ -29,6 +29,7 @@
                 {{ template "_internal/pagination.html" . }}
             </div>
         </div>
+        {{ .Store.Set "paginated" true }}
     {{ end }}
   {{ end }}
 {{ end }}
