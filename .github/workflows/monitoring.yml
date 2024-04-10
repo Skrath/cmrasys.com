@@ -45,3 +45,21 @@ jobs:
         with:
           sarif_file: hadolint-results.sarif
           wait-for-processing: true
+
+    lighthouse-check:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@master
+        - run: mkdir -p ${{ github.workspace }}/tmp/artifacts
+        - name: Run Lighthouse
+          uses: foo-software/lighthouse-check-action@master
+          with:
+            gitHubAccessToken: ${{ secrets.GITHUB_TOKEN }}
+            outputDirectory: ${{ github.workspace }}/tmp/artifacts
+            urls: 'https://cmrasys.com/'
+            sha: ${{ github.sha }}
+        - name: Upload artifacts
+          uses: actions/upload-artifact@master
+          with:
+            name: Lighthouse reports
+            path: ${{ github.workspace }}/tmp/artifacts
