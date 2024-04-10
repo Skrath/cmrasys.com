@@ -1,4 +1,4 @@
-name: Hugo
+name: Live
 
 on: 
   push:
@@ -24,10 +24,10 @@ jobs:
         hugo-version: 'latest'
         extended: true
         
-    - name: Build
+    - name: Build Hugo Site
       run: hugo -s hugo/ --minify
 
-    - name: FTP site
+    - name: FTP Upload
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ftp.cmrasys.com
@@ -36,11 +36,3 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./hugo/public/
         protocol: ftp
-
-    - name: Lighthouse
-      uses: treosh/lighthouse-ci-action@v11
-      with:
-        urls: |
-          https://cmrasys.com/
-        uploadArtifacts: true # save results as an action artifacts
-        temporaryPublicStorage: true # upload lighthouse report to the temporary storage
