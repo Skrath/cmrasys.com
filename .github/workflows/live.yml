@@ -24,10 +24,10 @@ jobs:
         hugo-version: 'latest'
         extended: true
         
-    - name: Build
+    - name: Build Hugo Site
       run: hugo -s hugo/ --minify
 
-    - name: FTP site
+    - name: FTP Upload
       uses: SamKirkland/FTP-Deploy-Action@v4.3.5
       with:
         server: ftp.cmrasys.com
