@@ -36,7 +36,6 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./hugo/public/
         protocol: ftp
-      lighthouse-check:
     - name: Audit URLs using Lighthouse
       uses: treosh/lighthouse-ci-action@v11
       with:
