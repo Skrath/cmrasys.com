@@ -36,3 +36,11 @@ jobs:
         password: ${{ secrets.FTP_PASSWORD }}
         local-dir: ./hugo/public/
         protocol: ftp
+      lighthouse-check:
+    - name: Audit URLs using Lighthouse
+      uses: treosh/lighthouse-ci-action@v11
+      with:
+        urls: |
+          https://cmrasys.com/
+        uploadArtifacts: true # save results as an action artifacts
+        temporaryPublicStorage: true # upload lighthouse report to the temporary storage
