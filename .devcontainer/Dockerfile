@@ -1,6 +1,6 @@
-# Update the NODE_VERSION arg in docker-compose.yml to pick a Node version: 10, 12, 14
-ARG NODE_VERSION=14
-FROM mcr.microsoft.com/vscode/devcontainers/javascript-node:0-${NODE_VERSION}
+# Update the NODE_VERSION arg in docker-compose.yml to pick a Node version: 18, 16, 14
+ARG NODE_VERSION=16
+FROM mcr.microsoft.com/devcontainers/javascript-node:${NODE_VERSION}
 
 # VARIANT can be either 'hugo' for the standard version or 'hugo_extended' for the extended version.
 ARG VARIANT=hugo
@@ -8,7 +8,7 @@ ARG VARIANT=hugo
 ARG VERSION=latest
 
 # Download Hugo
-RUN apt-get update && apt-get install -y ca-certificates openssl git curl && \
+RUN apt-get update && apt-get install -y ca-certificates openssl git curl --no-install-recommends && \
     rm -rf /var/lib/apt/lists/* && \
     case ${VERSION} in \
     latest) \
@@ -36,5 +36,4 @@ EXPOSE 1313
 
 # [Optional] Uncomment if you want to install more global node packages
 # RUN sudo -u node npm install -g <your-package-list-here>
-RUN sudo -u node npm install -g stylelint postcss
-RUN sudo -u node npm install -g stylelint-config-standard-scss
+RUN sudo -u node npm install -g stylelint postcss stylelint-config-standard-scss
