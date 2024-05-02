@@ -10,6 +10,6 @@ updates:
     schedule:
       interval: "weekly"
   - package-ecosystem: "devcontainers" # See documentation for possible values
-    directory: ".devcontainer"
+    directory: ".devcontainer/"
     schedule:
       interval: weekly
