@@ -8,7 +8,7 @@ ARG VARIANT=hugo
 ARG VERSION=latest
 
 # Download Hugo
-RUN apt-get update && apt-get install -y ca-certificates openssl git curl --no-install-recommends && \
+RUN apt-get update && apt-get install -y gosu ca-certificates openssl git curl --no-install-recommends && \
     rm -rf /var/lib/apt/lists/* && \
     case ${VERSION} in \
     latest) \
@@ -35,5 +35,5 @@ EXPOSE 1313
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
 
 # [Optional] Uncomment if you want to install more global node packages
-# RUN sudo -u node npm install -g <your-package-list-here>
-RUN sudo -u node npm install -g stylelint postcss stylelint-config-standard-scss
+# RUN gosu node npm install -g <your-package-list-here>
+RUN gosu node npm install -g stylelint postcss stylelint-config-standard-scss
