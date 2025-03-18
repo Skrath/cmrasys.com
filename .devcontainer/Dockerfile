@@ -2,6 +2,9 @@
 ARG NODE_VERSION=16
 FROM mcr.microsoft.com/devcontainers/javascript-node:${NODE_VERSION}
 
+# Set SHELL option -o pipefail
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
 # VARIANT can be either 'hugo' for the standard version or 'hugo_extended' for the extended version.
 ARG VARIANT=hugo
 # VERSION can be either 'latest' or a specific version number
