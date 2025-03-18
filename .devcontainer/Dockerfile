@@ -2,13 +2,16 @@
 ARG NODE_VERSION=16
 FROM mcr.microsoft.com/devcontainers/javascript-node:${NODE_VERSION}
 
+# Set SHELL option -o pipefail
+SHELL ["/bin/bash", "-o", "pipefail", "-c"]
+
 # VARIANT can be either 'hugo' for the standard version or 'hugo_extended' for the extended version.
 ARG VARIANT=hugo
 # VERSION can be either 'latest' or a specific version number
 ARG VERSION=latest
 
 # Download Hugo
-RUN apt-get update && apt-get install -y ca-certificates openssl git curl --no-install-recommends && \
+RUN apt-get update && apt-get install -y gosu ca-certificates openssl git curl --no-install-recommends && \
     rm -rf /var/lib/apt/lists/* && \
     case ${VERSION} in \
     latest) \
@@ -22,7 +25,7 @@ RUN apt-get update && apt-get install -y ca-certificates openssl git curl --no-i
     export ARCH=64bit ;; \
     esac && \
     echo ${ARCH} && \
-    wget -O ${VERSION}.tar.gz https://github.com/gohugoio/hugo/releases/download/v${VERSION}/${VARIANT}_${VERSION}_Linux-${ARCH}.tar.gz && \
+    curl -L -o "${VERSION}.tar.gz" "https://github.com/gohugoio/hugo/releases/download/v${VERSION}/${VARIANT}_${VERSION}_Linux-${ARCH}.tar.gz" && \
     tar xf ${VERSION}.tar.gz && \
     mv hugo /usr/bin/hugo
 
@@ -35,5 +38,5 @@ EXPOSE 1313
 #     && apt-get -y install --no-install-recommends <your-package-list-here>
 
 # [Optional] Uncomment if you want to install more global node packages
-# RUN sudo -u node npm install -g <your-package-list-here>
-RUN sudo -u node npm install -g stylelint postcss stylelint-config-standard-scss
+# RUN gosu node npm install -g <your-package-list-here>
+RUN gosu node npm install -g stylelint postcss stylelint-config-standard-scss
