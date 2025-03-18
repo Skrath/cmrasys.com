@@ -25,7 +25,7 @@ RUN apt-get update && apt-get install -y gosu ca-certificates openssl git curl -
     export ARCH=64bit ;; \
     esac && \
     echo ${ARCH} && \
-    curl -L -o ${VERSION}.tar.gz https://github.com/gohugoio/hugo/releases/download/v${VERSION}/${VARIANT}_${VERSION}_Linux-${ARCH}.tar.gz && \
+    curl -L -o "${VERSION}.tar.gz" "https://github.com/gohugoio/hugo/releases/download/v${VERSION}/${VARIANT}_${VERSION}_Linux-${ARCH}.tar.gz" && \
     tar xf ${VERSION}.tar.gz && \
     mv hugo /usr/bin/hugo
 
