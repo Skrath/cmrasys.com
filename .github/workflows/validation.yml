@@ -9,7 +9,7 @@ jobs:
     
         steps:
           - uses: actions/checkout@v4
-          - uses: actions/setup-node@v4
+          - uses: actions/setup-node@v5
           - run: npm install stylelint postcss stylelint-config-standard-scss -D
           - name: Stylelint
             uses: reviewdog/action-stylelint@v1
