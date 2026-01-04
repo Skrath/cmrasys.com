@@ -1,5 +1,5 @@
 # Update the NODE_VERSION arg in docker-compose.yml to pick a Node version: 18, 16, 14
-ARG NODE_VERSION=16
+ARG NODE_VERSION=18
 FROM mcr.microsoft.com/devcontainers/javascript-node:${NODE_VERSION}
 
 # Set SHELL option -o pipefail
@@ -39,4 +39,23 @@ EXPOSE 1313
 
 # [Optional] Uncomment if you want to install more global node packages
 # RUN gosu node npm install -g <your-package-list-here>
-RUN gosu node npm install -g stylelint postcss stylelint-config-standard-scss
+# Install stylelint/postcss. If a project `package.json` exists, prefer installing devDependencies using `npm ci` into /usr/local so tools are available globally.
+COPY package.json package-lock.json* /tmp/
+# Make /usr/local writable by the 'node' user so `npm --prefix /usr/local` can write files there
+RUN mkdir -p /usr/local && chown -R node:node /usr/local
+RUN if [ -f /tmp/package.json ]; then \
+      cd /tmp && \
+      mkdir -p /usr/local/bin && \
+      if [ -f package-lock.json ]; then \
+        # Install into /tmp first to avoid npm looking for package.json under /usr/local
+        gosu node npm ci --no-audit --no-fund --prefix /tmp; \
+      else \
+        gosu node npm install --no-audit --no-fund --prefix /tmp; \
+      fi && \
+      # Move installed modules and executables into /usr/local
+      cp -a /tmp/node_modules /usr/local/ || true && \
+      if [ -d /tmp/node_modules/.bin ]; then cp -a /tmp/node_modules/.bin /usr/local/bin/ || true; fi && \
+      chown -R node:node /usr/local && rm -rf /tmp/node_modules || true; \
+    else \
+      gosu node npm install -g stylelint postcss stylelint-config-standard-scss; \
+    fi
