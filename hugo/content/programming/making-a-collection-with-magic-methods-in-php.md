@@ -14,7 +14,6 @@ tags:
   - set
 categories:
   - PHP
-background: ""
 displayClass: article
 background: programming/php-code.jpg
 lastmod: 2023-06-13T18:12:04.782Z
