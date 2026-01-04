@@ -16,10 +16,13 @@
         "editor.defaultFormatter": "stylelint.vscode-stylelint"
     },
     "[scss]": {
-        "editor.defaultFormatter": "stylelint.vscode-stylelint"
+        "editor.defaultFormatter": "stylelint.vscode-stylelint",
+        "editor.codeActionsOnSave": {
+            "source.fixAll.stylelint": "explicit"
+        }
     },
     "stylelint.enable": true,
-    "stylelint.configBasedir": "/usr/local/share/npm-global/lib/node_modules/stylelint-config-standard-scss/",
+    "stylelint.configBasedir": "${workspaceFolder}",
     "grammarly.files.include": [
         "**/*.md"
     ],

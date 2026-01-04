@@ -1,0 +1,12 @@
+# Ignore generated site and compiled CSS
+hugo/public/
+hugo/resources/_gen/
+# Ignore any compiled CSS in the repo
+**/public/**/*.css
+**/public/**/*.css.map
+# Ignore compiled sass output (if present)
+**/public/**/*.scss
+
+# Node modules and lockfiles (optional for some tooling)
+node_modules/
+package-lock.json

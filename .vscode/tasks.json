@@ -53,7 +53,7 @@
             "command": "hugo -D",
             "group": {
                 "kind": "test",
-                "isDefault": true
+                "isDefault": false
             },
             "problemMatcher": [],
             "options": {

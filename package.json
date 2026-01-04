@@ -1,0 +1,13 @@
+{
+  "name": "cmrasys-site",
+  "version": "1.0.0",
+  "private": true,
+  "devDependencies": {
+    "stylelint": "^16.23.1",
+    "postcss": "^8.4.0",
+    "stylelint-config-standard-scss": "^16.0.0"
+  },
+  "scripts": {
+    "lint:styles": "stylelint 'hugo/assets/sass/**/*.scss'"
+  }
+}
