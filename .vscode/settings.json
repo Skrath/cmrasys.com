@@ -19,7 +19,6 @@
         "editor.defaultFormatter": "stylelint.vscode-stylelint"
     },
     "stylelint.enable": true,
-    "stylelint.configBasedir": "/usr/local/share/npm-global/lib/node_modules/stylelint-config-standard-scss/",
     "grammarly.files.include": [
         "**/*.md"
     ],
