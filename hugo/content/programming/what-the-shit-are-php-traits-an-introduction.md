@@ -14,7 +14,6 @@ tags:
   - traits
 categories:
   - PHP
-background: ""
 displayClass: article
 background: programming/php-code.jpg
 lastmod: 2023-06-13T08:13:40.412Z
