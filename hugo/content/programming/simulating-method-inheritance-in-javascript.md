@@ -14,7 +14,6 @@ tags:
   - prototype
 categories:
   - Javascript
-background: ""
 displayClass: article
 background: programming/javascript-code.jpg
 lastmod: 2023-06-13T18:11:11.023Z
