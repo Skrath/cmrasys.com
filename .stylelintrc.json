@@ -4,6 +4,9 @@
       "no-descending-specificity": null,
       "function-name-case": ["lower", {
         "ignoreFunctions": ["Max", "Min", "Rgba"]
-      }]
+      }],
+      "color-function-notation": "legacy",
+      "alpha-value-notation": "number",
+      "color-function-alias-notation": null
     }
 }
