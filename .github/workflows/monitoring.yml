@@ -17,6 +17,7 @@ on:
   
 permissions:
   contents: read
+  issues: write
 
 jobs:
   hadolint:
@@ -43,6 +44,60 @@ jobs:
         with:
           sarif_file: hadolint-results.sarif
           wait-for-processing: true
+
+      - name: Create GitHub issues from hadolint SARIF
+        if: always()
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const path = 'hadolint-results.sarif';
+            if (!fs.existsSync(path)) {
+              console.log(`SARIF file not found: ${path}`);
+              return;
+            }
+            const sarif = JSON.parse(fs.readFileSync(path, 'utf8'));
+            const runs = sarif.runs || [];
+            const findings = [];
+            for (const run of runs) {
+              const results = run.results || [];
+              for (const r of results) {
+                const ruleId = r.ruleId || (r.rule && r.rule.id) || 'hadolint';
+                const message = r.message && (r.message.text || r.message.markdown) || 'No message';
+                const location = (r.locations && r.locations[0] && r.locations[0].physicalLocation && r.locations[0].physicalLocation.artifactLocation && r.locations[0].physicalLocation.artifactLocation.uri) || '.devcontainer/Dockerfile';
+                const startLine = r.locations && r.locations[0] && r.locations[0].physicalLocation && r.locations[0].physicalLocation.region && r.locations[0].physicalLocation.region.startLine;
+                findings.push({ruleId, message, location, startLine});
+              }
+            }
+            const grouped = {};
+            for (const f of findings) {
+              const key = `${f.ruleId}|${f.location}|${f.startLine || ''}`;
+              if (!grouped[key]) grouped[key] = f;
+            }
+            const { data: existing } = await github.rest.issues.listForRepo({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              state: 'open',
+              labels: 'hadolint'
+            });
+            const seenTitles = new Set(existing.map(i => i.title));
+            for (const key of Object.keys(grouped)) {
+              const f = grouped[key];
+              const title = `hadolint: ${f.ruleId} in ${f.location}${f.startLine ? `:${f.startLine}` : ''}`;
+              if (seenTitles.has(title)) {
+                console.log(`Issue already exists: ${title}`);
+                continue;
+              }
+              const body = `**hadolint rule:** ${f.ruleId}\n\n**Location:** ${f.location}${f.startLine ? `:${f.startLine}` : ''}\n\n**Message:**\n${f.message}\n\n> Automatically created by workflow \`monitoring.yml\`.`;
+              await github.rest.issues.create({
+                owner: context.repo.owner,
+                repo: context.repo.repo,
+                title,
+                body,
+                labels: ['hadolint','automation']
+              });
+              console.log(`Created issue: ${title}`);
+            }
   linkChecker:
     runs-on: ubuntu-latest
     steps:
