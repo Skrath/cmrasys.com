@@ -30,7 +30,7 @@ jobs:
       issues: write # allow creating issues from SARIF results
     steps:
       - name: Checkout code
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Run hadolint
         uses: hadolint/hadolint-action@2332a7b74a6de0dda2e2221d575162eba76ba5e5
@@ -102,7 +102,7 @@ jobs:
   linkChecker:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v5
+      - uses: actions/checkout@v6
 
       - name: Link Checker
         uses: lycheeverse/lychee-action@v2.6.1
