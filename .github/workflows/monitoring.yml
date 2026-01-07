@@ -105,7 +105,7 @@ jobs:
       - uses: actions/checkout@v6
 
       - name: Link Checker
-        uses: lycheeverse/lychee-action@v2.6.1
+        uses: lycheeverse/lychee-action@v2.7.0
         with:
           fail: true
-          args: --base . --verbose --no-progress './hugo/content/**/*.md' --exclude '.*RelPermalink.*'
+          args: --base-url 'http://cmrasys.com' --verbose --no-progress './hugo/content/**/*.md' --exclude '.*RelPermalink.*'
