@@ -43,8 +43,8 @@ EXPOSE 1313
 COPY package.json package-lock.json* /tmp/
 # Make /usr/local writable by the 'node' user so `npm --prefix /usr/local` can write files there
 RUN mkdir -p /usr/local && chown -R node:node /usr/local
+WORKDIR /tmp
 RUN if [ -f /tmp/package.json ]; then \
-      cd /tmp && \
       mkdir -p /usr/local/bin && \
       if [ -f package-lock.json ]; then \
         # Install into /tmp first to avoid npm looking for package.json under /usr/local
