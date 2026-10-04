@@ -10,9 +10,17 @@ ARG VARIANT=hugo
 # VERSION can be either 'latest' or a specific version number
 ARG VERSION=latest
 
-# Download Hugo
+# Install Dart Sass and download Hugo
 RUN apt-get update && apt-get install -y gosu ca-certificates openssl git curl --no-install-recommends && \
     rm -rf /var/lib/apt/lists/* && \
+    case $(uname -m) in \
+    aarch64) export SASS_ARCH=arm64 ;; \
+    x86_64) export SASS_ARCH=x64 ;; \
+    *) echo "Unsupported Dart Sass architecture: $(uname -m)" >&2; exit 1 ;; \
+    esac && \
+    curl -fsSL "https://github.com/sass/dart-sass/releases/download/1.105.1/dart-sass-1.105.1-linux-${SASS_ARCH}.tar.gz" -o /tmp/dart-sass.tar.gz && \
+    tar -xzf /tmp/dart-sass.tar.gz -C /usr/local/lib && \
+    rm /tmp/dart-sass.tar.gz && \
     case ${VERSION} in \
     latest) \
     export VERSION=$(curl -s https://api.github.com/repos/gohugoio/hugo/releases/latest | grep "tag_name" | awk '{print substr($2, 3, length($2)-4)}') ;;\
@@ -28,6 +36,8 @@ RUN apt-get update && apt-get install -y gosu ca-certificates openssl git curl -
     curl -L -o "${VERSION}.tar.gz" "https://github.com/gohugoio/hugo/releases/download/v${VERSION}/${VARIANT}_${VERSION}_Linux-${ARCH}.tar.gz" && \
     tar xf ${VERSION}.tar.gz && \
     mv hugo /usr/bin/hugo
+
+ENV PATH="/usr/local/lib/dart-sass:${PATH}"
 
 # Hugo dev server port
 EXPOSE 1313
