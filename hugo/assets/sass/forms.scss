@@ -1,6 +1,6 @@
 input, textarea {
     background: var(--angle-fade-to-gray);
-    color: var(--off-white);
+    color: var(--off-black);
     box-shadow: var(--inset-shadow);
     border: var(--border-gray);
     border-radius: 10px;
@@ -13,7 +13,7 @@ input[type="submit"], input[type="button"], input[type="reset"], button {
     border-radius: 10px;
     padding: 3px 6px;
     box-shadow: var(--standard-shadow);
-    color: var(--off-white);
+    color: var(--off-black);
     text-shadow: var(--standard-shadow);
     transition: color 0.25s linear;
 
