@@ -1,4 +1,4 @@
-{{ $lookup := index (index .Site.Data (.Get 0)) (.Get 1) }}
+{{ $lookup := index (index hugo.Data (.Get 0)) (.Get 1) }}
 {{ $format := "January 2, 2006" }}
 {{ $count := (.Get 2) | default ($lookup | len)}}
 
