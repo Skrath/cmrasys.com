@@ -1,6 +1,6 @@
-@import 'gui';
-@import 'tables';
-@import 'forms';
+@use 'gui';
+@use 'tables';
+@use 'forms';
 
 :root {
     --muted-text: rgba(26, 26, 26, 0.45);
