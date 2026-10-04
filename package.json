@@ -4,7 +4,7 @@
   "private": true,
   "devDependencies": {
     "stylelint": "^16.23.1",
-    "postcss": "^8.5.12",
+    "postcss": "^8.5.25",
     "stylelint-config-standard-scss": "^16.0.0"
   },
   "scripts": {
