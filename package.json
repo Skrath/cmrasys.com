@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "devDependencies": {
-    "stylelint": "^16.23.1",
+    "stylelint": "^17.16.0",
     "postcss": "^8.5.29",
     "stylelint-config-standard-scss": "^16.0.0"
   },
