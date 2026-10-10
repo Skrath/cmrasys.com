@@ -1,0 +1,11 @@
+{
+  "hugo": {
+    "assets": {
+      "images": {
+        "programming": {
+          "linux-dir.jpg": {}
+        }
+      }
+    }
+  }
+}
