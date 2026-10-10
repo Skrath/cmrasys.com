@@ -13,6 +13,11 @@ updates:
     directory: "/"
     schedule:
       interval: "weekly"
+    groups:
+      stylelint:
+        patterns:
+          - "stylelint"
+          - "stylelint-config-standard-scss"
   - package-ecosystem: "devcontainers" # See documentation for possible values
     directory: "/"
     schedule:
