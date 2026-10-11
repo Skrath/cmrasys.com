@@ -11,7 +11,12 @@ ARG VARIANT=hugo
 ARG VERSION=latest
 
 # Install Dart Sass and download Hugo
-RUN apt-get update && apt-get install -y gosu ca-certificates openssl git curl --no-install-recommends && \
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    gosu=1.14-1+b10 \
+    ca-certificates=20250419~deb12u1 \
+    openssl=3.0.22-1~deb12u1 \
+    git=1:2.39.5-0+deb12u3 \
+    curl=7.88.1-10+deb12u15 && \
     rm -rf /var/lib/apt/lists/* && \
     case $(uname -m) in \
     aarch64) export SASS_ARCH=arm64 ;; \
